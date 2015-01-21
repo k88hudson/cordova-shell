@@ -1,0 +1,22 @@
+{
+  "name": "cordova-shell",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack && node ./build.js && cordova prepare && cordova run android",
+    "android": "webpack && cordova prepare && cordova run android"
+  },
+  "author": "",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "fs-extra": "^0.14.0",
+    "async": "^0.9.0",
+    "colors": "^1.0.3",
+    "webpack": "^1.5.3",
+    "jsx-loader": "^0.12.2"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
+  }
+}
