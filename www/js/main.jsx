@@ -1,14 +1,17 @@
- var React = require('react');
- var Draggable = require('react-draggable');
- React.initializeTouchEvents(true);
+var React = require('react');
+var Router = require('react-router'); // or var Router = ReactRouter; in browsers
+var Route = Router.Route;
+var DefaultRoute = Router.DefaultRoute;
+var RouteHandler = Router.RouteHandler;
+var NavState = Router.Navigation;
+var TransitionGroup = React.addons.CSSTransitionGroup;
 
- var Click = React.createClass({
-
+var Click = React.createClass({
     defaults: {
-      touched: false,
-      touchdown: false,
-      coords: { x:0, y:0 },
-      evObj: {}
+        touched: false,
+        touchdown: false,
+        coords: { x:0, y:0 },
+        evObj: {}
     },
 
     getInitialState: function() {
@@ -73,6 +76,7 @@
 
       return React.DOM[this.props.nodeName || 'button']({
         className: classNames.join(' '),
+        href: this.props.href,
         onTouchStart: this.onTouchStart,
         onTouchMove: this.onTouchMove,
         onTouchEnd: this.onTouchEnd,
@@ -80,64 +84,6 @@
       }, this.props.children)
     }
   });
-
-var SlideToggle = React.createClass({
-    getInitialState: function() {
-        return {
-            checked: false
-        };
-    },
-    onStart: function (e, ui) {
-        e.stopPropagation();
-        this.setState({
-            max: this.el.offsetWidth - this.toggleEl.offsetWidth,
-            dragStart: ui.position.left
-        });
-    },
-    onDrag: function (e, ui) {
-        var left = ui.position.left;
-        if (left < 0) {
-            this.toggleEl.style.left = 0;
-        } else if (left > this.state.max) {
-            this.toggleEl.style.left = this.state.max + 'px';
-        }
-    },
-    onStop: function (e, ui) {
-        var isChecked = this.state.checked;
-        var diff = ui.position.left - this.state.dragStart;
-        var half = this.state.max / 2;
-        if (Math.abs(diff) < 4) {
-            isChecked = !isChecked;
-        } else if (ui.position.left < half) {
-            isChecked = false;
-        } else {
-            isChecked = true;
-        }
-        this.setState({
-            dragStart: false,
-            checked: isChecked
-        });
-        this.toggleEl.style.left = (isChecked ? this.state.max : 0) + 'px';
-    },
-    componentDidMount: function () {
-        this.el = this.getDOMNode();
-        this.toggleEl = this.refs.toggle.getDOMNode();
-    },
-    render: function () {
-        var className = 'checkbox' + (this.state.checked ? ' on' : '');
-        return (<div className={className}>
-            <Draggable
-                axis="x"
-                onStart={this.onStart}
-                onDrag={this.onDrag}
-                onStop={this.onStop}
-                ref="toggle">
-                <div className="checkbox-toggle"></div>
-            </Draggable>
-            <input type="checkbox" />
-        </div>);
-    }
-});
 
 var Switch = React.createClass({
     getInitialState: function() {
@@ -157,32 +103,86 @@ var Switch = React.createClass({
     }
 });
 
+console.log(NavState);
+var Link = React.createClass({
+    mixins: [NavState],
+    switchView: function () {
+        this.transitionTo(this.props.to, this.props.params, this.props.query);
+    },
+    render: function () {
+        return (
+            <Click nodeName="a" href={this.props.to} handler={this.switchView}>
+            {this.props.children}
+            </Click>
+        );
+    }
+});
+
+var Forms = React.createClass({
+    getInitialState: function() {
+        return {
+            isOn: false
+        }
+    },
+    flip: function (e) {
+        this.setState({isOn: !this.state.isOn});
+    },
+    render: function () {
+        return (<div>
+            <p><Click
+                nodeName="button"
+                handler={this.flip}
+                className={this.state.isOn ? 'on' : ''}>
+                Standard button
+            </Click></p>
+            <p><Switch /></p>
+        </div>);
+    }
+});
+
+var Other = React.createClass({
+    render: function () {
+        return (
+            <div>Other</div>
+        );
+    }
+});
+
 module.exports = function() {
+
     var parentElement = document.getElementById('app');
     React.initializeTouchEvents(true);
-    var Test = React.createClass({
-        getInitialState: function() {
-            return {
-                isOn: false
-            }
-        },
-        flip: function (e) {
-            this.setState({isOn: !this.state.isOn});
-        },
+
+    var App = React.createClass({
+        mixins: [ Router.State ],
         render: function () {
-            return (<div>
-                <p><Click
-                    nodeName="button"
-                    handler={this.flip}
-                    className={this.state.isOn ? 'on' : ''}>
-                    Standard button
-                </Click></p>
-                <p><SlideToggle /></p>
-                <p><Switch /></p>
-            </div>);
+            var name = this.getRoutes().reverse()[0].name;
+            return (
+                <div className="wrapper">
+                    <header>
+                      <ul className="nav">
+                        <li><Link to="forms">Forms</Link></li>
+                        <li><Link to="other">Other</Link></li>
+                      </ul>
+                    </header>
+                    <TransitionGroup component="div" className="page-container" transitionName="moveOver">
+                        <RouteHandler key={name} />
+                    </TransitionGroup>
+                </div>
+            );
         }
     });
 
-    React.render(<Test />, parentElement);
+    var routes = (
+      <Route name="app" path="/" handler={App}>
+        <Route name="forms" handler={Forms}/>
+        <Route name="other" handler={Other}/>
+        <DefaultRoute handler={Forms}/>
+      </Route>
+    );
+    // Router.HistoryLocation,
+    Router.run(routes, function (Handler) {
+      React.render(<Handler/>, document.body);
+    });
 
 };
