@@ -148,7 +148,7 @@ body,
   z-index: 10000;
 }
 
-.moveOver-enter.moveDown-enter-active {
+.moveOver-enter.moveOver-enter-active {
   -webkit-transform: translateX(0);
 }
 
@@ -162,7 +162,7 @@ body,
 /*  opacity: 1;*/
 }
 
-.moveOver-leave.moveDown-leave-active {
+.moveOver-leave.moveOver-leave-active {
   -webkit-transform: translateX(100%);
 /*  opacity: 0.3;*/
 }

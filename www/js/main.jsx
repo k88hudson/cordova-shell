@@ -1,9 +1,10 @@
-var React = require('react');
+var React = require('react/addons');
 var Router = require('react-router'); // or var Router = ReactRouter; in browsers
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var RouteHandler = Router.RouteHandler;
 var NavState = Router.Navigation;
+console.log(React);
 var TransitionGroup = React.addons.CSSTransitionGroup;
 
 var Click = React.createClass({
