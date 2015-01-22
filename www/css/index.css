@@ -66,20 +66,25 @@ button:focus {
     border-radius: 30px;
     display: inline-block;
     width: auto;
+    transition: background-color 0.1s ease-in-out;
+    -webkit-transition: background-color 0.1s ease-in-out;
 }
 .track {
     width: 60px;
     border-radius: 30px;
 }
 .switch-toggle {
-    background: #999;
+    background: white;
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    transition: all 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out;
+}
+.switch.on {
+    background-color: #0181E4;
 }
 .switch.on .switch-toggle {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    background-color: #0181E4;
 }
