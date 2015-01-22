@@ -1,4 +1,4 @@
-var React = require('React');
+var main = require('./main.jsx');
 var app = {
     initialize: function() {
         this.bindEvents();
@@ -9,29 +9,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
-    // Update DOM on a Received Event
-    receivedEvent: function() {
-        var parentElement = document.getElementById('app');
-        React.initializeTouchEvents(true);
-        var Test = React.createClass({
-            getInitialState: function() {
-                return {
-                    isOn: false
-                }
-            },
-            flip: function (e) {
-                this.setState({isOn: !this.state.isOn});
-            },
-            render: function () {
-                return (<div>
-                    <button onTouchEnd={this.flip} className={this.state.isOn ? 'on' : ''}>Standard button</button>
-                </div>);
-            }
-        });
-
-        React.render(<Test />, parentElement);
-
-    }
+    receivedEvent: main
 };
 
 var isApp = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;

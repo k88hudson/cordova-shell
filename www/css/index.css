@@ -6,16 +6,25 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    font-size: 20px;
 }
 
 button {
     padding: 14px;
     display: block;
     width: 100%;
-    background-color: green;
+    color: white;
+    background-color: #0183E7;
+    border: none;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+button:active,
+button:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .on {
-    background-color: blue;
+    background-color: #F9E977;
 }
