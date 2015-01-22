@@ -1,6 +1,6 @@
- var React = require('React');
-
- React.initializeTouchEvents(true)
+ var React = require('react');
+ var Draggable = require('react-draggable');
+ React.initializeTouchEvents(true);
 
  var Click = React.createClass({
 
@@ -39,6 +39,7 @@
     },
 
     onTouchMove: function(e) {
+        if (this.props.swipe) return;
         var coords = this.getCoords(e);
         var distance = Math.max(
             Math.abs(this.state.coords.x - coords.x),
@@ -80,6 +81,81 @@
     }
   });
 
+var SlideToggle = React.createClass({
+    getInitialState: function() {
+        return {
+            checked: false
+        };
+    },
+    onStart: function (e, ui) {
+        e.stopPropagation();
+        this.setState({
+            max: this.el.offsetWidth - this.toggleEl.offsetWidth,
+            dragStart: ui.position.left
+        });
+    },
+    onDrag: function (e, ui) {
+        var left = ui.position.left;
+        if (left < 0) {
+            this.toggleEl.style.left = 0;
+        } else if (left > this.state.max) {
+            this.toggleEl.style.left = this.state.max + 'px';
+        }
+    },
+    onStop: function (e, ui) {
+        var isChecked = this.state.checked;
+        var diff = ui.position.left - this.state.dragStart;
+        var half = this.state.max / 2;
+        if (Math.abs(diff) < 4) {
+            isChecked = !isChecked;
+        } else if (ui.position.left < half) {
+            isChecked = false;
+        } else {
+            isChecked = true;
+        }
+        this.setState({
+            dragStart: false,
+            checked: isChecked
+        });
+        this.toggleEl.style.left = (isChecked ? this.state.max : 0) + 'px';
+    },
+    componentDidMount: function () {
+        this.el = this.getDOMNode();
+        this.toggleEl = this.refs.toggle.getDOMNode();
+    },
+    render: function () {
+        var className = 'checkbox' + (this.state.checked ? ' on' : '');
+        return (<div className={className}>
+            <Draggable
+                axis="x"
+                onStart={this.onStart}
+                onDrag={this.onDrag}
+                onStop={this.onStop}
+                ref="toggle">
+                <div className="checkbox-toggle"></div>
+            </Draggable>
+            <input type="checkbox" />
+        </div>);
+    }
+});
+
+var Switch = React.createClass({
+    getInitialState: function() {
+        return {
+            on: false
+        };
+    },
+    onSwitch: function () {
+        this.setState({ on: !this.state.on });
+    },
+    render: function () {
+        return (<Click swipe handler={this.onSwitch} className={'switch' + (this.state.on ? ' on' : '')}>
+            <div className="track">
+                <div className="switch-toggle"></div>
+            </div>
+        </Click>);
+    }
+});
 
 module.exports = function() {
     var parentElement = document.getElementById('app');
@@ -95,12 +171,14 @@ module.exports = function() {
         },
         render: function () {
             return (<div>
-                <Click
+                <p><Click
                     nodeName="button"
                     handler={this.flip}
                     className={this.state.isOn ? 'on' : ''}>
                     Standard button
-                </Click>
+                </Click></p>
+                <p><SlideToggle /></p>
+                <p><Switch /></p>
             </div>);
         }
     });

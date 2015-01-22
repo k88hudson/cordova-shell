@@ -1,5 +1,6 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    box-sizing: border-box;
 }
 
 body {
@@ -25,6 +26,60 @@ button:focus {
     box-shadow: none;
 }
 
+.checkbox {
+    position: relative;
+    background: #CCC;
+    padding: 2px;
+    width: 100px;
+    height: 50px;
+}
+.checkbox input {
+    display: none;
+}
+.checkbox-toggle {
+    position: absolute;
+    background: #999;
+    width: 50%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.checkbox.on .checkbox-toggle {
+    background-color: #333;
+}
+
+.checkbox-toggle.click {
+    top: 0;
+    left: 0;
+}
+.checkbox.on .checkbox-toggle.click {
+    left: 50px;
+}
+
 .on {
     background-color: #F9E977;
+}
+
+.switch {
+    background: #CCC;
+    padding: 2px;
+    border-radius: 30px;
+    display: inline-block;
+    width: auto;
+}
+.track {
+    width: 60px;
+    border-radius: 30px;
+}
+.switch-toggle {
+    background: #999;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    transition: all 0.2s ease-in-out;
+}
+.switch.on .switch-toggle {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    background-color: #0181E4;
 }
