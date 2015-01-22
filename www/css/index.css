@@ -83,8 +83,8 @@ p {
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    transition: transform 0.1s ease-in-out;
-    -webkit-transition: transform 0.1s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    -webkit-transition: transform 0.2s ease-in-out;
 }
 .switch.on {
     background-color: #0181E4;
