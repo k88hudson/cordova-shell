@@ -53,6 +53,8 @@ gulp.task('watch-webpack', ['webpack'], function () {
     gulp.watch('./www/src/**/*.js', ['webpack']);
 });
 
+gulp.task('build', ['less', 'webpack']);
+
 gulp.task('dev', ['watch-less', 'watch-webpack'], function () {
     return gulp.src('www')
         .pipe(webserver({

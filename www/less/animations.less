@@ -35,10 +35,10 @@
 
 .moveDown-enter {
     position: absolute;
-    transition-duration: .4s;
+    transition-duration: .6s;
     transition-property: transform, opacity;
-    transition-timing-function: ease-in-out;
-    transform: translateY(-100%);
+    transition-timing-function: ease;
+    transform: translateY(100%);
     z-index: 10000;
 }
 
@@ -48,14 +48,14 @@
 
 .moveDown-leave {
     position: absolute;
-    transition-duration: .4s;
+    transition-duration: .6s;
     transition-property: transform, opacity;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease;
     transform: translateY(0);
     opacity: 1;
 }
 
 .moveDown-leave.moveDown-leave-active {
-    transform: translateY(100%);
-    opacity: 0.3;
+    transform: translateY(-100%);
+    opacity: 0;
 }
