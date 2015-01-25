@@ -19,13 +19,21 @@
 -->
 <html>
     <head>
+        <script>
+            var isCordova = window.location.protocol === 'file:';
+            var basePath = isCordova ? window.pathname : '/';
+            document.write('<base href="' + basePath + '">');
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="compiled/css/style.css" />
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,400italic' rel='stylesheet' type='text/css'>
         <title>Hello World</title>
     </head>
     <body>
+        <script src="http://wmk8.ngrok.com/target/target-script-min.js#anonymous"></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script src="js/bundle.js"></script>
+        <script src="compiled/js/bundle.js"></script>
     </body>
 </html>

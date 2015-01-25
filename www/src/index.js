@@ -1,4 +1,4 @@
-var main = require('./main.jsx');
+var main = require('./router');
 var app = {
     initialize: function() {
         this.bindEvents();
