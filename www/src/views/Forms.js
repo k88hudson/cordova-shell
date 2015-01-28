@@ -1,7 +1,5 @@
 var React = require('react');
-var Click = require('../components/Click');
-var Switch = require('../components/Switch');
-var Checkbox = require('../components/Checkbox');
+var {Click, Switch, Checkbox, Input} = require('../components/formComponents');
 
 var Forms = React.createClass({
     getInitialState: function() {
@@ -17,15 +15,17 @@ var Forms = React.createClass({
             <p><Click
                 nodeName="button"
                 handler={this.flip}>
-                {this.state.isOn ? 'On': 'Off'}
+                {this.state.isOn ? 'Button On': 'Off'}
             </Click></p>
-            <p><Switch /></p>
-            <p><input type="text" /></p>
-            <label className="select"><select>
-                <option>one</option>
-                <option>two</option>
-                <option>three</option>
-            </select></label>
+            <p><Input type="text" label="Name"/></p>
+            <label className="select">
+                <select>
+                    <option>one</option>
+                    <option>two</option>
+                    <option>three</option>
+                </select>
+                <div className="caret ion-chevron-down" />
+            </label>
             <p><Checkbox>Hello world</Checkbox></p>
         </main>);
     }

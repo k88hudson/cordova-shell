@@ -1,0 +1,1228 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'rrouter', '--save' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 warn package.json cordova-shell@0.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'rrouter', null ]
+7 verbose cache add name=undefined spec="rrouter" args=["rrouter",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'rrouter',
+8 verbose parsed url   path: 'rrouter',
+8 verbose parsed url   href: 'rrouter' }
+9 silly lockFile be6bc619-rrouter rrouter
+10 verbose lock rrouter /Users/k88hudson/.npm/be6bc619-rrouter.lock
+11 silly lockFile be6bc619-rrouter rrouter
+12 silly lockFile be6bc619-rrouter rrouter
+13 verbose addNamed [ 'rrouter', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 30ce8ebb-rrouter rrouter@
+16 verbose lock rrouter@ /Users/k88hudson/.npm/30ce8ebb-rrouter.lock
+17 silly addNameRange { name: 'rrouter', range: '*', hasData: false }
+18 verbose url raw rrouter
+19 verbose url resolving [ 'https://registry.npmjs.org/', './rrouter' ]
+20 verbose url resolved https://registry.npmjs.org/rrouter
+21 info trying registry request attempt 1 at 12:22:38
+22 http GET https://registry.npmjs.org/rrouter
+23 http 200 https://registry.npmjs.org/rrouter
+24 silly registry.get cb [ 200,
+24 silly registry.get   { date: 'Wed, 28 Jan 2015 17:22:39 GMT',
+24 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly registry.get     etag: '"3MPOF8H7OD9A61WXRD9480WI4"',
+24 silly registry.get     'content-type': 'application/json',
+24 silly registry.get     'cache-control': 'max-age=60',
+24 silly registry.get     'content-length': '12981',
+24 silly registry.get     'accept-ranges': 'bytes',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     age: '0',
+24 silly registry.get     'x-served-by': 'cache-iad2139-IAD',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1422465758.743198,VS0,VE356',
+24 silly registry.get     vary: 'Accept',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     connection: 'Keep-Alive' } ]
+25 silly addNameRange number 2 { name: 'rrouter', range: '*', hasData: true }
+26 silly addNameRange versions [ 'rrouter',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.3.1',
+26 silly addNameRange     '0.3.2',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.2' ] ]
+27 verbose addNamed [ 'rrouter', '0.4.2' ]
+28 verbose addNamed [ '0.4.2', '0.4.2' ]
+29 silly lockFile c0087e10-rrouter-0-4-2 rrouter@0.4.2
+30 verbose lock rrouter@0.4.2 /Users/k88hudson/.npm/c0087e10-rrouter-0-4-2.lock
+31 silly lockFile 9c4ccfa7-js-org-rrouter-rrouter-0-4-2-tgz https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz
+32 verbose lock https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz /Users/k88hudson/.npm/9c4ccfa7-js-org-rrouter-rrouter-0-4-2-tgz.lock
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz',
+33 verbose addRemoteTarball   '51843f47f5e4ffad23a0309192e211bae845db5c' ]
+34 info retry fetch attempt 1 at 12:22:39
+35 verbose fetch to= /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/tmp.tgz
+36 http GET https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz
+37 http 200 https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz
+38 verbose tar unpack /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/tmp.tgz
+39 silly lockFile 41a87149-59138-0-9670033764559776-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package
+40 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package /Users/k88hudson/.npm/41a87149-59138-0-9670033764559776-package.lock
+41 silly lockFile df39c8b1-59138-0-9670033764559776-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/tmp.tgz
+42 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/tmp.tgz /Users/k88hudson/.npm/df39c8b1-59138-0-9670033764559776-tmp-tgz.lock
+43 silly gunzTarPerm modes [ '755', '644' ]
+44 silly gunzTarPerm extractEntry package.json
+45 silly gunzTarPerm extractEntry README.md
+46 silly gunzTarPerm extractEntry LICENSE
+47 silly gunzTarPerm extractEntry lib/Link.js
+48 silly gunzTarPerm extractEntry lib/descriptors.js
+49 silly gunzTarPerm extractEntry lib/emptyFunction.js
+50 silly gunzTarPerm extractEntry lib/fetchViews.js
+51 silly gunzTarPerm extractEntry lib/getStepProps.js
+52 silly gunzTarPerm extractEntry lib/data.js
+53 silly gunzTarPerm extractEntry lib/invariant.js
+54 silly gunzTarPerm extractEntry lib/isString.js
+55 silly gunzTarPerm extractEntry lib/keyMirror.js
+56 silly gunzTarPerm extractEntry lib/makeHref.js
+57 silly gunzTarPerm extractEntry lib/makeViewFactoryForMatch.js
+58 silly gunzTarPerm extractEntry lib/createView.js
+59 silly gunzTarPerm extractEntry lib/matchRoutes.js
+60 silly gunzTarPerm extractEntry lib/copyProperties.js
+61 silly gunzTarPerm extractEntry lib/merge.js
+62 silly gunzTarPerm extractEntry lib/route.js
+63 silly gunzTarPerm extractEntry lib/mergeHelpers.js
+64 silly gunzTarPerm extractEntry lib/RoutingContextMixin.js
+65 silly gunzTarPerm extractEntry lib/mergeInto.js
+66 silly gunzTarPerm extractEntry lib/LinkMixin.js
+67 silly gunzTarPerm extractEntry lib/index.js
+68 silly gunzTarPerm extractEntry lib/__tests__/Link-test.js
+69 silly gunzTarPerm extractEntry lib/__tests__/createView-test.js
+70 silly gunzTarPerm extractEntry lib/__tests__/data-test.js
+71 silly gunzTarPerm extractEntry lib/__tests__/descriptors-test.js
+72 silly gunzTarPerm extractEntry lib/__tests__/makeHref-test.js
+73 silly gunzTarPerm extractEntry lib/__tests__/makeViewFactoryForMatch-test.js
+74 silly gunzTarPerm extractEntry lib/__tests__/matchRoutes-test.js
+75 silly gunzTarPerm extractEntry lib/__tests__/route-test.js
+76 silly gunzTarPerm extractEntry lib/routing/DummyRouting.js
+77 silly gunzTarPerm extractEntry lib/routing/HashRouting.js
+78 silly gunzTarPerm extractEntry lib/routing/PathnameRouting.js
+79 silly gunzTarPerm extractEntry lib/routing/Routing.js
+80 silly gunzTarPerm extractEntry lib/routing/ServerRouting.js
+81 silly gunzTarPerm extractEntry lib/routing/__tests__/HashRouting-test.js
+82 silly gunzTarPerm extractEntry lib/routing/__tests__/PathnameRouting-test.js
+83 silly lockFile 41a87149-59138-0-9670033764559776-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package
+84 silly lockFile 41a87149-59138-0-9670033764559776-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package
+85 silly lockFile df39c8b1-59138-0-9670033764559776-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/tmp.tgz
+86 silly lockFile df39c8b1-59138-0-9670033764559776-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/tmp.tgz
+87 verbose tar pack [ '/Users/k88hudson/.npm/rrouter/0.4.2/package.tgz',
+87 verbose tar pack   '/var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package' ]
+88 verbose tarball /Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+89 verbose folder /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package
+90 silly lockFile 41a87149-59138-0-9670033764559776-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package
+91 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package /Users/k88hudson/.npm/41a87149-59138-0-9670033764559776-package.lock
+92 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+93 verbose lock tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz /Users/k88hudson/.npm/411db2a0-on-npm-rrouter-0-4-2-package-tgz.lock
+94 silly lockFile 41a87149-59138-0-9670033764559776-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package
+95 silly lockFile 41a87149-59138-0-9670033764559776-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759138-0.9670033764559776/package
+96 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+97 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+98 silly lockFile 1ddc0ea8-hudson-npm-rrouter-0-4-2-package /Users/k88hudson/.npm/rrouter/0.4.2/package
+99 verbose lock /Users/k88hudson/.npm/rrouter/0.4.2/package /Users/k88hudson/.npm/1ddc0ea8-hudson-npm-rrouter-0-4-2-package.lock
+100 silly lockFile 1ddc0ea8-hudson-npm-rrouter-0-4-2-package /Users/k88hudson/.npm/rrouter/0.4.2/package
+101 silly lockFile 1ddc0ea8-hudson-npm-rrouter-0-4-2-package /Users/k88hudson/.npm/rrouter/0.4.2/package
+102 verbose tar unpack /Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+103 silly lockFile 105f0f76-hudson-npm-rrouter-0-4-2-package tar:///Users/k88hudson/.npm/rrouter/0.4.2/package
+104 verbose lock tar:///Users/k88hudson/.npm/rrouter/0.4.2/package /Users/k88hudson/.npm/105f0f76-hudson-npm-rrouter-0-4-2-package.lock
+105 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+106 verbose lock tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz /Users/k88hudson/.npm/411db2a0-on-npm-rrouter-0-4-2-package-tgz.lock
+107 silly gunzTarPerm modes [ '755', '644' ]
+108 silly gunzTarPerm extractEntry package.json
+109 silly gunzTarPerm extractEntry README.md
+110 silly gunzTarPerm extractEntry LICENSE
+111 silly gunzTarPerm extractEntry lib/Link.js
+112 silly gunzTarPerm extractEntry lib/descriptors.js
+113 silly gunzTarPerm extractEntry lib/emptyFunction.js
+114 silly gunzTarPerm extractEntry lib/fetchViews.js
+115 silly gunzTarPerm extractEntry lib/getStepProps.js
+116 silly gunzTarPerm extractEntry lib/data.js
+117 silly gunzTarPerm extractEntry lib/invariant.js
+118 silly gunzTarPerm extractEntry lib/isString.js
+119 silly gunzTarPerm extractEntry lib/keyMirror.js
+120 silly gunzTarPerm extractEntry lib/makeHref.js
+121 silly gunzTarPerm extractEntry lib/makeViewFactoryForMatch.js
+122 silly gunzTarPerm extractEntry lib/createView.js
+123 silly gunzTarPerm extractEntry lib/matchRoutes.js
+124 silly gunzTarPerm extractEntry lib/copyProperties.js
+125 silly gunzTarPerm extractEntry lib/merge.js
+126 silly gunzTarPerm extractEntry lib/route.js
+127 silly gunzTarPerm extractEntry lib/mergeHelpers.js
+128 silly gunzTarPerm extractEntry lib/RoutingContextMixin.js
+129 silly gunzTarPerm extractEntry lib/mergeInto.js
+130 silly gunzTarPerm extractEntry lib/LinkMixin.js
+131 silly gunzTarPerm extractEntry lib/index.js
+132 silly gunzTarPerm extractEntry lib/__tests__/Link-test.js
+133 silly gunzTarPerm extractEntry lib/__tests__/createView-test.js
+134 silly gunzTarPerm extractEntry lib/__tests__/data-test.js
+135 silly gunzTarPerm extractEntry lib/__tests__/descriptors-test.js
+136 silly gunzTarPerm extractEntry lib/__tests__/makeHref-test.js
+137 silly gunzTarPerm extractEntry lib/__tests__/makeViewFactoryForMatch-test.js
+138 silly gunzTarPerm extractEntry lib/__tests__/matchRoutes-test.js
+139 silly gunzTarPerm extractEntry lib/__tests__/route-test.js
+140 silly gunzTarPerm extractEntry lib/routing/DummyRouting.js
+141 silly gunzTarPerm extractEntry lib/routing/HashRouting.js
+142 silly gunzTarPerm extractEntry lib/routing/PathnameRouting.js
+143 silly gunzTarPerm extractEntry lib/routing/Routing.js
+144 silly gunzTarPerm extractEntry lib/routing/ServerRouting.js
+145 silly gunzTarPerm extractEntry lib/routing/__tests__/HashRouting-test.js
+146 silly gunzTarPerm extractEntry lib/routing/__tests__/PathnameRouting-test.js
+147 silly lockFile 105f0f76-hudson-npm-rrouter-0-4-2-package tar:///Users/k88hudson/.npm/rrouter/0.4.2/package
+148 silly lockFile 105f0f76-hudson-npm-rrouter-0-4-2-package tar:///Users/k88hudson/.npm/rrouter/0.4.2/package
+149 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+150 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+151 verbose chmod /Users/k88hudson/.npm/rrouter/0.4.2/package.tgz 644
+152 verbose chown /Users/k88hudson/.npm/rrouter/0.4.2/package.tgz [ 501, 20 ]
+153 silly lockFile 9c4ccfa7-js-org-rrouter-rrouter-0-4-2-tgz https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz
+154 silly lockFile 9c4ccfa7-js-org-rrouter-rrouter-0-4-2-tgz https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz
+155 silly lockFile c0087e10-rrouter-0-4-2 rrouter@0.4.2
+156 silly lockFile c0087e10-rrouter-0-4-2 rrouter@0.4.2
+157 silly lockFile 30ce8ebb-rrouter rrouter@
+158 silly lockFile 30ce8ebb-rrouter rrouter@
+159 silly resolved [ { name: 'rrouter',
+159 silly resolved     version: '0.4.2',
+159 silly resolved     description: 'React Router',
+159 silly resolved     main: './lib/index.js',
+159 silly resolved     files: [ 'lib/', 'LICENSE', 'package.json', 'README.md' ],
+159 silly resolved     dependencies: { qs: '^0.6.6', 'url-pattern': '^0.6.0' },
+159 silly resolved     peerDependencies: { bluebird: '^2.1.1', react: '0.10.0 - 0.11.x' },
+159 silly resolved     devDependencies:
+159 silly resolved      { reactify: '^0.13.1',
+159 silly resolved        bluebird: '^2.1.1',
+159 silly resolved        'eslint-jsx': 'git+https://github.com/andreypopp/eslint#jsx',
+159 silly resolved        mocha: '^1.19.0',
+159 silly resolved        mochify: '^0.9.2',
+159 silly resolved        react: '0.10.0 - 0.11.x',
+159 silly resolved        'react-tools': '0.10.0 - 0.11.x',
+159 silly resolved        sinon: '^1.10.0',
+159 silly resolved        'url-pattern': '^0.6.0' },
+159 silly resolved     scripts: { test: 'mocha', prepublish: 'make build' },
+159 silly resolved     repository: { type: 'git', url: 'git://github.com/andreypopp/rrouter' },
+159 silly resolved     keywords: [ 'react', 'router' ],
+159 silly resolved     author: { name: 'Andrey Popp', email: '8mayday@gmail.com' },
+159 silly resolved     license: 'MIT',
+159 silly resolved     bugs: { url: 'https://github.com/andreypopp/rrouter/issues' },
+159 silly resolved     homepage: 'https://github.com/andreypopp/rrouter',
+159 silly resolved     readme: '# rrouter\n\nRRouter is a declarative routing layer for React applications.\n\nThe usage is as simple as:\n\n    var React = require(\'react\')\n    var RRouter = require(\'rrouter\')\n    var Route = RRouter.Route\n\n    var routes = (\n      <Route>\n        <Route path="/" view={MainPage} />\n        <Route path="/about" view={AboutPage} />\n      </Route>\n    )\n\n    RRouter.start(routes, function(view) {\n      React.renderComponent(view, document.body)\n    })\n\nSee [documentation][] for details.\n\n[documentation]: http://andreypopp.github.io/rrouter/\n',
+159 silly resolved     readmeFilename: 'README.md',
+159 silly resolved     _id: 'rrouter@0.4.2',
+159 silly resolved     dist: { shasum: '51843f47f5e4ffad23a0309192e211bae845db5c' },
+159 silly resolved     _from: 'rrouter@',
+159 silly resolved     _resolved: 'https://registry.npmjs.org/rrouter/-/rrouter-0.4.2.tgz' } ]
+160 info install rrouter@0.4.2 into /Users/k88hudson/github/cordova-shell
+161 info installOne rrouter@0.4.2
+162 info /Users/k88hudson/github/cordova-shell/node_modules/rrouter unbuild
+163 verbose tar unpack /Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+164 silly lockFile 299a4776-rdova-shell-node-modules-rrouter tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter
+165 verbose lock tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter /Users/k88hudson/.npm/299a4776-rdova-shell-node-modules-rrouter.lock
+166 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+167 verbose lock tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz /Users/k88hudson/.npm/411db2a0-on-npm-rrouter-0-4-2-package-tgz.lock
+168 silly gunzTarPerm modes [ '755', '644' ]
+169 silly gunzTarPerm extractEntry package.json
+170 silly gunzTarPerm extractEntry README.md
+171 silly gunzTarPerm extractEntry LICENSE
+172 silly gunzTarPerm extractEntry lib/Link.js
+173 silly gunzTarPerm extractEntry lib/descriptors.js
+174 silly gunzTarPerm extractEntry lib/emptyFunction.js
+175 silly gunzTarPerm extractEntry lib/fetchViews.js
+176 silly gunzTarPerm extractEntry lib/getStepProps.js
+177 silly gunzTarPerm extractEntry lib/data.js
+178 silly gunzTarPerm extractEntry lib/invariant.js
+179 silly gunzTarPerm extractEntry lib/isString.js
+180 silly gunzTarPerm extractEntry lib/keyMirror.js
+181 silly gunzTarPerm extractEntry lib/makeHref.js
+182 silly gunzTarPerm extractEntry lib/makeViewFactoryForMatch.js
+183 silly gunzTarPerm extractEntry lib/createView.js
+184 silly gunzTarPerm extractEntry lib/matchRoutes.js
+185 silly gunzTarPerm extractEntry lib/copyProperties.js
+186 silly gunzTarPerm extractEntry lib/merge.js
+187 silly gunzTarPerm extractEntry lib/route.js
+188 silly gunzTarPerm extractEntry lib/mergeHelpers.js
+189 silly gunzTarPerm extractEntry lib/RoutingContextMixin.js
+190 silly gunzTarPerm extractEntry lib/mergeInto.js
+191 silly gunzTarPerm extractEntry lib/LinkMixin.js
+192 silly gunzTarPerm extractEntry lib/index.js
+193 silly gunzTarPerm extractEntry lib/__tests__/Link-test.js
+194 silly gunzTarPerm extractEntry lib/__tests__/createView-test.js
+195 silly gunzTarPerm extractEntry lib/__tests__/data-test.js
+196 silly gunzTarPerm extractEntry lib/__tests__/descriptors-test.js
+197 silly gunzTarPerm extractEntry lib/__tests__/makeHref-test.js
+198 silly gunzTarPerm extractEntry lib/__tests__/makeViewFactoryForMatch-test.js
+199 silly gunzTarPerm extractEntry lib/__tests__/matchRoutes-test.js
+200 silly gunzTarPerm extractEntry lib/__tests__/route-test.js
+201 silly gunzTarPerm extractEntry lib/routing/DummyRouting.js
+202 silly gunzTarPerm extractEntry lib/routing/HashRouting.js
+203 silly gunzTarPerm extractEntry lib/routing/PathnameRouting.js
+204 silly gunzTarPerm extractEntry lib/routing/Routing.js
+205 silly gunzTarPerm extractEntry lib/routing/ServerRouting.js
+206 silly gunzTarPerm extractEntry lib/routing/__tests__/HashRouting-test.js
+207 silly gunzTarPerm extractEntry lib/routing/__tests__/PathnameRouting-test.js
+208 silly lockFile 299a4776-rdova-shell-node-modules-rrouter tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter
+209 silly lockFile 299a4776-rdova-shell-node-modules-rrouter tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter
+210 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+211 silly lockFile 411db2a0-on-npm-rrouter-0-4-2-package-tgz tar:///Users/k88hudson/.npm/rrouter/0.4.2/package.tgz
+212 info preinstall rrouter@0.4.2
+213 verbose readDependencies using package.json deps
+214 verbose readDependencies using package.json deps
+215 verbose cache add [ 'qs@^0.6.6', null ]
+216 verbose cache add name=undefined spec="qs@^0.6.6" args=["qs@^0.6.6",null]
+217 verbose parsed url { protocol: null,
+217 verbose parsed url   slashes: null,
+217 verbose parsed url   auth: null,
+217 verbose parsed url   host: null,
+217 verbose parsed url   port: null,
+217 verbose parsed url   hostname: null,
+217 verbose parsed url   hash: null,
+217 verbose parsed url   search: null,
+217 verbose parsed url   query: null,
+217 verbose parsed url   pathname: 'qs@^0.6.6',
+217 verbose parsed url   path: 'qs@^0.6.6',
+217 verbose parsed url   href: 'qs@^0.6.6' }
+218 verbose cache add name="qs" spec="^0.6.6" args=["qs","^0.6.6"]
+219 verbose parsed url { protocol: null,
+219 verbose parsed url   slashes: null,
+219 verbose parsed url   auth: null,
+219 verbose parsed url   host: null,
+219 verbose parsed url   port: null,
+219 verbose parsed url   hostname: null,
+219 verbose parsed url   hash: null,
+219 verbose parsed url   search: null,
+219 verbose parsed url   query: null,
+219 verbose parsed url   pathname: '^0.6.6',
+219 verbose parsed url   path: '^0.6.6',
+219 verbose parsed url   href: '^0.6.6' }
+220 verbose addNamed [ 'qs', '^0.6.6' ]
+221 verbose addNamed [ null, '>=0.6.6-0 <0.7.0-0' ]
+222 silly lockFile 3afe0012-qs-0-6-6 qs@^0.6.6
+223 verbose lock qs@^0.6.6 /Users/k88hudson/.npm/3afe0012-qs-0-6-6.lock
+224 verbose cache add [ 'url-pattern@^0.6.0', null ]
+225 verbose cache add name=undefined spec="url-pattern@^0.6.0" args=["url-pattern@^0.6.0",null]
+226 verbose parsed url { protocol: null,
+226 verbose parsed url   slashes: null,
+226 verbose parsed url   auth: null,
+226 verbose parsed url   host: null,
+226 verbose parsed url   port: null,
+226 verbose parsed url   hostname: null,
+226 verbose parsed url   hash: null,
+226 verbose parsed url   search: null,
+226 verbose parsed url   query: null,
+226 verbose parsed url   pathname: 'url-pattern@^0.6.0',
+226 verbose parsed url   path: 'url-pattern@^0.6.0',
+226 verbose parsed url   href: 'url-pattern@^0.6.0' }
+227 verbose cache add name="url-pattern" spec="^0.6.0" args=["url-pattern","^0.6.0"]
+228 verbose parsed url { protocol: null,
+228 verbose parsed url   slashes: null,
+228 verbose parsed url   auth: null,
+228 verbose parsed url   host: null,
+228 verbose parsed url   port: null,
+228 verbose parsed url   hostname: null,
+228 verbose parsed url   hash: null,
+228 verbose parsed url   search: null,
+228 verbose parsed url   query: null,
+228 verbose parsed url   pathname: '^0.6.0',
+228 verbose parsed url   path: '^0.6.0',
+228 verbose parsed url   href: '^0.6.0' }
+229 verbose addNamed [ 'url-pattern', '^0.6.0' ]
+230 verbose addNamed [ null, '>=0.6.0-0 <0.7.0-0' ]
+231 silly lockFile e9d1c09c-url-pattern-0-6-0 url-pattern@^0.6.0
+232 verbose lock url-pattern@^0.6.0 /Users/k88hudson/.npm/e9d1c09c-url-pattern-0-6-0.lock
+233 silly addNameRange { name: 'qs', range: '>=0.6.6-0 <0.7.0-0', hasData: false }
+234 silly addNameRange { name: 'url-pattern',
+234 silly addNameRange   range: '>=0.6.0-0 <0.7.0-0',
+234 silly addNameRange   hasData: false }
+235 verbose url raw url-pattern
+236 verbose url resolving [ 'https://registry.npmjs.org/', './url-pattern' ]
+237 verbose url resolved https://registry.npmjs.org/url-pattern
+238 info trying registry request attempt 1 at 12:22:39
+239 http GET https://registry.npmjs.org/url-pattern
+240 verbose url raw qs
+241 verbose url resolving [ 'https://registry.npmjs.org/', './qs' ]
+242 verbose url resolved https://registry.npmjs.org/qs
+243 info trying registry request attempt 1 at 12:22:39
+244 verbose etag "8WSNAKBR9GFTD6ZB99BTLISXN"
+245 http GET https://registry.npmjs.org/qs
+246 http 304 https://registry.npmjs.org/qs
+247 silly registry.get cb [ 304,
+247 silly registry.get   { date: 'Wed, 28 Jan 2015 17:22:39 GMT',
+247 silly registry.get     server: 'Apache',
+247 silly registry.get     via: '1.1 varnish',
+247 silly registry.get     'last-modified': 'Wed, 28 Jan 2015 17:22:39 GMT',
+247 silly registry.get     'cache-control': 'max-age=60',
+247 silly registry.get     etag: '"8WSNAKBR9GFTD6ZB99BTLISXN"',
+247 silly registry.get     age: '2',
+247 silly registry.get     'x-served-by': 'cache-iad2127-IAD',
+247 silly registry.get     'x-cache': 'HIT',
+247 silly registry.get     'x-cache-hits': '1',
+247 silly registry.get     'x-timer': 'S1422465759.644765,VS0,VE0',
+247 silly registry.get     vary: 'Accept',
+247 silly registry.get     'content-length': '0',
+247 silly registry.get     'keep-alive': 'timeout=10, max=50',
+247 silly registry.get     connection: 'Keep-Alive' } ]
+248 verbose etag qs from cache
+249 silly addNameRange number 2 { name: 'qs', range: '>=0.6.6-0 <0.7.0-0', hasData: true }
+250 silly addNameRange versions [ 'qs',
+250 silly addNameRange   [ '0.0.1',
+250 silly addNameRange     '0.0.2',
+250 silly addNameRange     '0.0.3',
+250 silly addNameRange     '0.0.4',
+250 silly addNameRange     '0.0.5',
+250 silly addNameRange     '0.0.6',
+250 silly addNameRange     '0.0.7',
+250 silly addNameRange     '0.1.0',
+250 silly addNameRange     '0.2.0',
+250 silly addNameRange     '0.3.0',
+250 silly addNameRange     '0.3.1',
+250 silly addNameRange     '0.3.2',
+250 silly addNameRange     '0.4.0',
+250 silly addNameRange     '0.4.1',
+250 silly addNameRange     '0.4.2',
+250 silly addNameRange     '0.5.0',
+250 silly addNameRange     '0.5.1',
+250 silly addNameRange     '0.5.2',
+250 silly addNameRange     '0.5.3',
+250 silly addNameRange     '0.5.4',
+250 silly addNameRange     '0.5.5',
+250 silly addNameRange     '0.5.6',
+250 silly addNameRange     '0.6.0',
+250 silly addNameRange     '0.6.1',
+250 silly addNameRange     '0.6.2',
+250 silly addNameRange     '0.6.3',
+250 silly addNameRange     '0.6.4',
+250 silly addNameRange     '0.6.5',
+250 silly addNameRange     '0.6.6',
+250 silly addNameRange     '1.0.0',
+250 silly addNameRange     '1.0.1',
+250 silly addNameRange     '1.0.2',
+250 silly addNameRange     '1.1.0',
+250 silly addNameRange     '1.2.0',
+250 silly addNameRange     '1.2.1',
+250 silly addNameRange     '1.2.2',
+250 silly addNameRange     '2.0.0',
+250 silly addNameRange     '2.1.0',
+250 silly addNameRange     '2.2.0',
+250 silly addNameRange     '2.2.1',
+250 silly addNameRange     '2.2.2',
+250 silly addNameRange     '2.2.3',
+250 silly addNameRange     '2.2.4',
+250 silly addNameRange     '2.2.5',
+250 silly addNameRange     '2.3.0',
+250 silly addNameRange     '2.3.1',
+250 silly addNameRange     '2.3.2',
+250 silly addNameRange     '2.3.3' ] ]
+251 verbose addNamed [ 'qs', '0.6.6' ]
+252 verbose addNamed [ '0.6.6', '0.6.6' ]
+253 silly lockFile b8bccda2-qs-0-6-6 qs@0.6.6
+254 verbose lock qs@0.6.6 /Users/k88hudson/.npm/b8bccda2-qs-0-6-6.lock
+255 silly lockFile b8bccda2-qs-0-6-6 qs@0.6.6
+256 silly lockFile b8bccda2-qs-0-6-6 qs@0.6.6
+257 silly lockFile 3afe0012-qs-0-6-6 qs@^0.6.6
+258 silly lockFile 3afe0012-qs-0-6-6 qs@^0.6.6
+259 http 200 https://registry.npmjs.org/url-pattern
+260 silly registry.get cb [ 200,
+260 silly registry.get   { date: 'Wed, 28 Jan 2015 17:22:39 GMT',
+260 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+260 silly registry.get     etag: '"3XPOP3RGGYHUT8X0QGDPKKR4K"',
+260 silly registry.get     'content-type': 'application/json',
+260 silly registry.get     'cache-control': 'max-age=60',
+260 silly registry.get     'content-length': '15913',
+260 silly registry.get     'accept-ranges': 'bytes',
+260 silly registry.get     via: '1.1 varnish',
+260 silly registry.get     age: '0',
+260 silly registry.get     'x-served-by': 'cache-iad2126-IAD',
+260 silly registry.get     'x-cache': 'MISS',
+260 silly registry.get     'x-cache-hits': '0',
+260 silly registry.get     'x-timer': 'S1422465759.643856,VS0,VE53',
+260 silly registry.get     vary: 'Accept',
+260 silly registry.get     'keep-alive': 'timeout=10, max=50',
+260 silly registry.get     connection: 'Keep-Alive' } ]
+261 silly addNameRange number 2 { name: 'url-pattern',
+261 silly addNameRange   range: '>=0.6.0-0 <0.7.0-0',
+261 silly addNameRange   hasData: true }
+262 silly addNameRange versions [ 'url-pattern',
+262 silly addNameRange   [ '0.1.0',
+262 silly addNameRange     '0.2.0',
+262 silly addNameRange     '0.2.1',
+262 silly addNameRange     '0.2.2',
+262 silly addNameRange     '0.3.1',
+262 silly addNameRange     '0.4.0',
+262 silly addNameRange     '0.5.0',
+262 silly addNameRange     '0.6.0' ] ]
+263 verbose addNamed [ 'url-pattern', '0.6.0' ]
+264 verbose addNamed [ '0.6.0', '0.6.0' ]
+265 silly lockFile 5c2a08f8-url-pattern-0-6-0 url-pattern@0.6.0
+266 verbose lock url-pattern@0.6.0 /Users/k88hudson/.npm/5c2a08f8-url-pattern-0-6-0.lock
+267 silly lockFile 718e7cfc-rl-pattern-url-pattern-0-6-0-tgz https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz
+268 verbose lock https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz /Users/k88hudson/.npm/718e7cfc-rl-pattern-url-pattern-0-6-0-tgz.lock
+269 verbose addRemoteTarball [ 'https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz',
+269 verbose addRemoteTarball   '81b94ebe2b821840e7cdf03c95a8fd8e18ee8bba' ]
+270 info retry fetch attempt 1 at 12:22:39
+271 verbose fetch to= /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/tmp.tgz
+272 http GET https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz
+273 http 200 https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz
+274 verbose tar unpack /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/tmp.tgz
+275 silly lockFile 8903cad3-9751-0-16273202886804938-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package
+276 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package /Users/k88hudson/.npm/8903cad3-9751-0-16273202886804938-package.lock
+277 silly lockFile 3a7fb659-9751-0-16273202886804938-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/tmp.tgz
+278 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/tmp.tgz /Users/k88hudson/.npm/3a7fb659-9751-0-16273202886804938-tmp-tgz.lock
+279 silly gunzTarPerm modes [ '755', '644' ]
+280 silly gunzTarPerm extractEntry package.json
+281 silly gunzTarPerm extractEntry .npmignore
+282 silly gunzTarPerm extractEntry README.md
+283 silly gunzTarPerm extractEntry LICENSE
+284 silly gunzTarPerm extractEntry .travis.yml
+285 silly gunzTarPerm extractEntry src/url-pattern.js
+286 silly gunzTarPerm extractEntry src/url-pattern.coffee
+287 silly gunzTarPerm extractEntry test/url-pattern.coffee
+288 silly lockFile 8903cad3-9751-0-16273202886804938-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package
+289 silly lockFile 8903cad3-9751-0-16273202886804938-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package
+290 silly lockFile 3a7fb659-9751-0-16273202886804938-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/tmp.tgz
+291 silly lockFile 3a7fb659-9751-0-16273202886804938-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/tmp.tgz
+292 verbose tar pack [ '/Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz',
+292 verbose tar pack   '/var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package' ]
+293 verbose tarball /Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+294 verbose folder /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package
+295 silly lockFile 8903cad3-9751-0-16273202886804938-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package
+296 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package /Users/k88hudson/.npm/8903cad3-9751-0-16273202886804938-package.lock
+297 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+298 verbose lock tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz /Users/k88hudson/.npm/bf68ad4f-pm-url-pattern-0-6-0-package-tgz.lock
+299 silly lockFile 8903cad3-9751-0-16273202886804938-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package
+300 silly lockFile 8903cad3-9751-0-16273202886804938-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465759751-0.16273202886804938/package
+301 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+302 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+303 silly lockFile 7fcd109c-on-npm-url-pattern-0-6-0-package /Users/k88hudson/.npm/url-pattern/0.6.0/package
+304 verbose lock /Users/k88hudson/.npm/url-pattern/0.6.0/package /Users/k88hudson/.npm/7fcd109c-on-npm-url-pattern-0-6-0-package.lock
+305 silly lockFile 7fcd109c-on-npm-url-pattern-0-6-0-package /Users/k88hudson/.npm/url-pattern/0.6.0/package
+306 silly lockFile 7fcd109c-on-npm-url-pattern-0-6-0-package /Users/k88hudson/.npm/url-pattern/0.6.0/package
+307 verbose tar unpack /Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+308 silly lockFile 9d7cbc69-on-npm-url-pattern-0-6-0-package tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package
+309 verbose lock tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package /Users/k88hudson/.npm/9d7cbc69-on-npm-url-pattern-0-6-0-package.lock
+310 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+311 verbose lock tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz /Users/k88hudson/.npm/bf68ad4f-pm-url-pattern-0-6-0-package-tgz.lock
+312 silly gunzTarPerm modes [ '755', '644' ]
+313 silly gunzTarPerm extractEntry package.json
+314 silly gunzTarPerm extractEntry .npmignore
+315 silly gunzTarPerm extractEntry README.md
+316 silly gunzTarPerm extractEntry LICENSE
+317 silly gunzTarPerm extractEntry .travis.yml
+318 silly gunzTarPerm extractEntry src/url-pattern.js
+319 silly gunzTarPerm extractEntry src/url-pattern.coffee
+320 silly gunzTarPerm extractEntry test/url-pattern.coffee
+321 silly lockFile 9d7cbc69-on-npm-url-pattern-0-6-0-package tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package
+322 silly lockFile 9d7cbc69-on-npm-url-pattern-0-6-0-package tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package
+323 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+324 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+325 verbose chmod /Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz 644
+326 verbose chown /Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz [ 501, 20 ]
+327 silly lockFile 718e7cfc-rl-pattern-url-pattern-0-6-0-tgz https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz
+328 silly lockFile 718e7cfc-rl-pattern-url-pattern-0-6-0-tgz https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz
+329 silly lockFile 5c2a08f8-url-pattern-0-6-0 url-pattern@0.6.0
+330 silly lockFile 5c2a08f8-url-pattern-0-6-0 url-pattern@0.6.0
+331 silly lockFile e9d1c09c-url-pattern-0-6-0 url-pattern@^0.6.0
+332 silly lockFile e9d1c09c-url-pattern-0-6-0 url-pattern@^0.6.0
+333 silly resolved [ { name: 'qs',
+333 silly resolved     description: 'querystring parser',
+333 silly resolved     version: '0.6.6',
+333 silly resolved     keywords: [ 'query string', 'parser', 'component' ],
+333 silly resolved     repository:
+333 silly resolved      { type: 'git',
+333 silly resolved        url: 'git://github.com/visionmedia/node-querystring.git' },
+333 silly resolved     devDependencies: { mocha: '*', 'expect.js': '*' },
+333 silly resolved     scripts: { test: 'make test' },
+333 silly resolved     author:
+333 silly resolved      { name: 'TJ Holowaychuk',
+333 silly resolved        email: 'tj@vision-media.ca',
+333 silly resolved        url: 'http://tjholowaychuk.com' },
+333 silly resolved     main: 'index',
+333 silly resolved     engines: { node: '*' },
+333 silly resolved     readme: '# node-querystring\n\n  query string parser for node and the browser supporting nesting, as it was removed from `0.3.x`, so this library provides the previous and commonly desired behaviour (and twice as fast). Used by [express](http://expressjs.com), [connect](http://senchalabs.github.com/connect) and others.\n\n## Installation\n\n    $ npm install qs\n\n## Examples\n\n```js\nvar qs = require(\'qs\');\n\nqs.parse(\'user[name][first]=Tobi&user[email]=tobi@learnboost.com\');\n// => { user: { name: { first: \'Tobi\' }, email: \'tobi@learnboost.com\' } }\n\nqs.stringify({ user: { name: \'Tobi\', email: \'tobi@learnboost.com\' }})\n// => user[name]=Tobi&user[email]=tobi%40learnboost.com\n```\n\n## Testing\n\nInstall dev dependencies:\n\n    $ npm install -d\n\nand execute:\n\n    $ make test\n\nbrowser:\n\n    $ open test/browser/index.html\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2010 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+333 silly resolved     readmeFilename: 'Readme.md',
+333 silly resolved     bugs: { url: 'https://github.com/visionmedia/node-querystring/issues' },
+333 silly resolved     homepage: 'https://github.com/visionmedia/node-querystring',
+333 silly resolved     _id: 'qs@0.6.6',
+333 silly resolved     _from: 'qs@^0.6.6' },
+333 silly resolved   { name: 'url-pattern',
+333 silly resolved     version: '0.6.0',
+333 silly resolved     description: 'url-pattern is easy pattern matching and segment extraction for urls, domains, filepaths and any string composed of segments joined by a separator character',
+333 silly resolved     keywords:
+333 silly resolved      [ 'url',
+333 silly resolved        'pattern',
+333 silly resolved        'matching',
+333 silly resolved        'routing',
+333 silly resolved        'route',
+333 silly resolved        'regex',
+333 silly resolved        'match',
+333 silly resolved        'segment',
+333 silly resolved        'path',
+333 silly resolved        'domain',
+333 silly resolved        'separator' ],
+333 silly resolved     homepage: 'http://github.com/snd/url-pattern',
+333 silly resolved     author:
+333 silly resolved      { name: 'Maximilian Krüger',
+333 silly resolved        email: 'kruemaxi@gmail.com',
+333 silly resolved        url: 'http://github.com/snd' },
+333 silly resolved     contributors: [ [Object], [Object] ],
+333 silly resolved     bugs:
+333 silly resolved      { url: 'http://github.com/snd/url-pattern/issues',
+333 silly resolved        email: 'kruemaxi@gmail.com' },
+333 silly resolved     repository: { type: 'git', url: 'git://github.com/snd/url-pattern.git' },
+333 silly resolved     licenses: { type: 'MIT', url: 'git://github.com/snd/url-pattern/LICENSE' },
+333 silly resolved     engines: { node: '>=0.8.5' },
+333 silly resolved     dependencies: {},
+333 silly resolved     devDependencies: { nodeunit: '0.8.6', 'coffee-script': '1.7.1' },
+333 silly resolved     main: 'src/url-pattern',
+333 silly resolved     scripts:
+333 silly resolved      { prepublish: 'coffee --bare --compile --output src src/*.coffee',
+333 silly resolved        pretest: 'coffee --bare --compile --output src src/*.coffee && coffee --bare --compile --output test test/*.coffee',
+333 silly resolved        test: 'node_modules/nodeunit/bin/nodeunit test/*.js' },
+333 silly resolved     readme: '# url-pattern\n\n[![Build Status](https://travis-ci.org/snd/url-pattern.png)](https://travis-ci.org/snd/url-pattern)\n\nurl-pattern is easy pattern matching and segment extraction for\nurls, domains, filepaths and any string composed of segments joined\nby a separator character\n\n[check out **passage** if you are looking for simple composable routing that builds on top of url-pattern](https://github.com/snd/passage)\n\n- [install](#install)\n- [require](#require)\n- [match urls or filepaths](#match-urls-or-filepaths)\n- [match domains](#match-domains)\n- [license](#license-mit)\n\n### install\n\n```\nnpm install url-pattern\n```\n\n**or**\n\nput this line in the dependencies section of your `package.json`:\n\n```\n"url-pattern": "0.6.0"\n```\n\nthen run:\n\n```\nnpm install\n```\n\n### require\n\n```javascript\nvar urlPattern = require(\'url-pattern\');\n```\n\n### match urls or filepaths\n\n##### make pattern from string\n\n```javascript\nvar pattern = urlPattern.newPattern(\'/users/:id\');\n```\n\nthe default separator is `/`. you can pass a custom separator\nas the second argument to `newPattern`.\n\n##### match pattern against url\n\nmatch returns the extracted parameters or `null` if there was no match:\n\n```javascript\npattern.match(\'/users/5\'); // => {id: \'5\'}\npattern.match(\'/projects/5\'); // => null\n```\n\n##### make pattern from regex\n\n```javascript\nvar regexPattern = urlPattern.newPattern(/\\/test\\/(.*)/);\n```\n\n##### match regex pattern against url\n\nif the pattern was created from a regex an array of the captured groups is returned on match:\n\n```javascript\nregexPattern.match(\'/test/users\'); // => [\'users\']\nregexPattern.match(\'/users/test\'); // => null\n```\n\n##### make wildcard pattern from string\n\n```javascript\nvar wildcardPattern = urlPattern.newPattern(\'*/users/:id/*\');\n```\n\n##### match wildcard pattern against url\n\nwildcard matches are collected in the `_` property:\n\n```javascript\nwildcardPattern.match(\'/api/v1/users/10/followers/20\');\n// => {id: \'10\', _: [\'/api/v1\', \'followers/20\']}\n```\n\n##### make optional pattern from string\n\n```javascript\nvar optionalPattern = urlPattern.newPattern(\'(/)users(/:foo)/bar(/*)\');\n```\n\n##### match optional pattern against url\n\noptional matches are stored in the corresponding property, if they exist.\n\n```javascript\noptionalPattern.match(\'users/bar\');\n// => {}\noptionalPattern.match(\'/users/bar\');\n// => {}\noptionalPattern.match(\'/users/biff/bar\');\n// => {foo: \'biff\'}\noptionalPattern.match(\'/users/biff/bar/beep/boop\');\n// => {foo: \'biff\', _: [\'beep/boop\']}\n```\n\n### match domains\n\n##### make pattern from string\n\n```javascript\nvar pattern = urlPattern.newPattern(\':sub.google.com\', \'.\');\n```\n\nthe default separator is `/`. you can pass a custom separator\nas the second argument to `newPattern`.\n\n##### match pattern against domain\n\nmatch returns the extracted parameters or `null` if there was no match:\n\n```javascript\npattern.match(\'www.google.com\'); // => {sub: \'www\'}\npattern.match(\'www.google.io\'); // => null\n```\n\n##### make pattern from regex\n\n```javascript\nvar regexPattern = urlPattern.newPattern(/example\\.(.*)/);\n```\n\n##### match regex pattern against domain\n\nif the pattern was created from a regex an array of the captured groups is returned on match:\n\n```javascript\nregexPattern.match(\'example.com\'); // => [\'com\']\nregexPattern.match(\'google.com\'); // => null\n```\n\n##### make wildcard pattern from string\n\n```javascript\nvar wildcardPattern = urlPattern.newPattern(\'*.:sub.google.*\');\n```\n\n##### match wildcard pattern against url\n\nwildcard matches are collected in the `_` property:\n\n```javascript\nwildcardPattern.match(\'subsub.www.google.com\');\n// => {sub: \'www\', _: [\'subsub\', \'com\']}\n```\n\n### license: MIT\n',
+333 silly resolved     readmeFilename: 'README.md',
+333 silly resolved     _id: 'url-pattern@0.6.0',
+333 silly resolved     dist: { shasum: '81b94ebe2b821840e7cdf03c95a8fd8e18ee8bba' },
+333 silly resolved     _from: 'url-pattern@^0.6.0',
+333 silly resolved     _resolved: 'https://registry.npmjs.org/url-pattern/-/url-pattern-0.6.0.tgz' } ]
+334 info install qs@0.6.6 into /Users/k88hudson/github/cordova-shell/node_modules/rrouter
+335 info install url-pattern@0.6.0 into /Users/k88hudson/github/cordova-shell/node_modules/rrouter
+336 info installOne qs@0.6.6
+337 info installOne url-pattern@0.6.0
+338 info /Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/qs unbuild
+339 info /Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/url-pattern unbuild
+340 verbose tar unpack /Users/k88hudson/.npm/qs/0.6.6/package.tgz
+341 silly lockFile 87af09f0--modules-rrouter-node-modules-qs tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/qs
+342 verbose lock tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/qs /Users/k88hudson/.npm/87af09f0--modules-rrouter-node-modules-qs.lock
+343 silly lockFile cd939954-8hudson-npm-qs-0-6-6-package-tgz tar:///Users/k88hudson/.npm/qs/0.6.6/package.tgz
+344 verbose lock tar:///Users/k88hudson/.npm/qs/0.6.6/package.tgz /Users/k88hudson/.npm/cd939954-8hudson-npm-qs-0-6-6-package-tgz.lock
+345 verbose tar unpack /Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+346 silly lockFile ec7bb68b-rrouter-node-modules-url-pattern tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/url-pattern
+347 verbose lock tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/url-pattern /Users/k88hudson/.npm/ec7bb68b-rrouter-node-modules-url-pattern.lock
+348 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+349 verbose lock tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz /Users/k88hudson/.npm/bf68ad4f-pm-url-pattern-0-6-0-package-tgz.lock
+350 silly gunzTarPerm modes [ '755', '644' ]
+351 silly gunzTarPerm modes [ '755', '644' ]
+352 silly gunzTarPerm extractEntry package.json
+353 silly gunzTarPerm extractEntry package.json
+354 silly gunzTarPerm extractEntry .npmignore
+355 silly gunzTarPerm extractEntry index.js
+356 silly gunzTarPerm extractEntry .npmignore
+357 silly gunzTarPerm extractEntry README.md
+358 silly gunzTarPerm extractEntry .gitmodules
+359 silly gunzTarPerm extractEntry Readme.md
+360 silly gunzTarPerm extractEntry LICENSE
+361 silly gunzTarPerm extractEntry .travis.yml
+362 silly gunzTarPerm extractEntry src/url-pattern.js
+363 silly gunzTarPerm extractEntry src/url-pattern.coffee
+364 silly gunzTarPerm extractEntry test/url-pattern.coffee
+365 silly lockFile 87af09f0--modules-rrouter-node-modules-qs tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/qs
+366 silly lockFile 87af09f0--modules-rrouter-node-modules-qs tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/qs
+367 silly lockFile cd939954-8hudson-npm-qs-0-6-6-package-tgz tar:///Users/k88hudson/.npm/qs/0.6.6/package.tgz
+368 silly lockFile cd939954-8hudson-npm-qs-0-6-6-package-tgz tar:///Users/k88hudson/.npm/qs/0.6.6/package.tgz
+369 info preinstall qs@0.6.6
+370 verbose readDependencies using package.json deps
+371 verbose readDependencies using package.json deps
+372 silly resolved []
+373 verbose about to build /Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/qs
+374 info build /Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/qs
+375 verbose linkStuff [ false,
+375 verbose linkStuff   false,
+375 verbose linkStuff   false,
+375 verbose linkStuff   '/Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules' ]
+376 info linkStuff qs@0.6.6
+377 verbose linkBins qs@0.6.6
+378 verbose linkMans qs@0.6.6
+379 verbose rebuildBundles qs@0.6.6
+380 info install qs@0.6.6
+381 info postinstall qs@0.6.6
+382 silly lockFile ec7bb68b-rrouter-node-modules-url-pattern tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/url-pattern
+383 silly lockFile ec7bb68b-rrouter-node-modules-url-pattern tar:///Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/url-pattern
+384 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+385 silly lockFile bf68ad4f-pm-url-pattern-0-6-0-package-tgz tar:///Users/k88hudson/.npm/url-pattern/0.6.0/package.tgz
+386 info preinstall url-pattern@0.6.0
+387 verbose readDependencies using package.json deps
+388 verbose readDependencies using package.json deps
+389 silly resolved []
+390 verbose about to build /Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/url-pattern
+391 info build /Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules/url-pattern
+392 verbose linkStuff [ false,
+392 verbose linkStuff   false,
+392 verbose linkStuff   false,
+392 verbose linkStuff   '/Users/k88hudson/github/cordova-shell/node_modules/rrouter/node_modules' ]
+393 info linkStuff url-pattern@0.6.0
+394 verbose linkBins url-pattern@0.6.0
+395 verbose linkMans url-pattern@0.6.0
+396 verbose rebuildBundles url-pattern@0.6.0
+397 info install url-pattern@0.6.0
+398 info postinstall url-pattern@0.6.0
+399 verbose about to build /Users/k88hudson/github/cordova-shell/node_modules/rrouter
+400 info build /Users/k88hudson/github/cordova-shell/node_modules/rrouter
+401 verbose linkStuff [ false,
+401 verbose linkStuff   false,
+401 verbose linkStuff   false,
+401 verbose linkStuff   '/Users/k88hudson/github/cordova-shell/node_modules' ]
+402 info linkStuff rrouter@0.4.2
+403 verbose linkBins rrouter@0.4.2
+404 verbose linkMans rrouter@0.4.2
+405 verbose rebuildBundles rrouter@0.4.2
+406 verbose rebuildBundles [ 'qs', 'url-pattern' ]
+407 info install rrouter@0.4.2
+408 info postinstall rrouter@0.4.2
+409 verbose readDependencies using package.json deps
+410 verbose cache add [ 'bluebird@^2.1.1', null ]
+411 verbose cache add name=undefined spec="bluebird@^2.1.1" args=["bluebird@^2.1.1",null]
+412 verbose parsed url { protocol: null,
+412 verbose parsed url   slashes: null,
+412 verbose parsed url   auth: null,
+412 verbose parsed url   host: null,
+412 verbose parsed url   port: null,
+412 verbose parsed url   hostname: null,
+412 verbose parsed url   hash: null,
+412 verbose parsed url   search: null,
+412 verbose parsed url   query: null,
+412 verbose parsed url   pathname: 'bluebird@^2.1.1',
+412 verbose parsed url   path: 'bluebird@^2.1.1',
+412 verbose parsed url   href: 'bluebird@^2.1.1' }
+413 verbose cache add name="bluebird" spec="^2.1.1" args=["bluebird","^2.1.1"]
+414 verbose parsed url { protocol: null,
+414 verbose parsed url   slashes: null,
+414 verbose parsed url   auth: null,
+414 verbose parsed url   host: null,
+414 verbose parsed url   port: null,
+414 verbose parsed url   hostname: null,
+414 verbose parsed url   hash: null,
+414 verbose parsed url   search: null,
+414 verbose parsed url   query: null,
+414 verbose parsed url   pathname: '^2.1.1',
+414 verbose parsed url   path: '^2.1.1',
+414 verbose parsed url   href: '^2.1.1' }
+415 verbose addNamed [ 'bluebird', '^2.1.1' ]
+416 verbose addNamed [ null, '>=2.1.1-0 <3.0.0-0' ]
+417 silly lockFile d12458ea-bluebird-2-1-1 bluebird@^2.1.1
+418 verbose lock bluebird@^2.1.1 /Users/k88hudson/.npm/d12458ea-bluebird-2-1-1.lock
+419 verbose already installed skipping react@0.10.0 - 0.11.x /Users/k88hudson/github/cordova-shell
+420 silly addNameRange { name: 'bluebird', range: '>=2.1.1-0 <3.0.0-0', hasData: false }
+421 verbose url raw bluebird
+422 verbose url resolving [ 'https://registry.npmjs.org/', './bluebird' ]
+423 verbose url resolved https://registry.npmjs.org/bluebird
+424 info trying registry request attempt 1 at 12:22:39
+425 verbose etag "4Z63AT6X4RY96HKAX8IV6VIAT"
+426 http GET https://registry.npmjs.org/bluebird
+427 http 200 https://registry.npmjs.org/bluebird
+428 silly registry.get cb [ 200,
+428 silly registry.get   { date: 'Wed, 28 Jan 2015 17:22:40 GMT',
+428 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+428 silly registry.get     etag: '"DGOO0TJVJDO4CUYNP5SOURPPK"',
+428 silly registry.get     'content-type': 'application/json',
+428 silly registry.get     'cache-control': 'max-age=60',
+428 silly registry.get     'content-length': '279194',
+428 silly registry.get     'accept-ranges': 'bytes',
+428 silly registry.get     via: '1.1 varnish',
+428 silly registry.get     age: '7',
+428 silly registry.get     'x-served-by': 'cache-iad2141-IAD',
+428 silly registry.get     'x-cache': 'HIT',
+428 silly registry.get     'x-cache-hits': '1',
+428 silly registry.get     'x-timer': 'S1422465760.003995,VS0,VE1',
+428 silly registry.get     vary: 'Accept',
+428 silly registry.get     'keep-alive': 'timeout=10, max=50',
+428 silly registry.get     connection: 'Keep-Alive' } ]
+429 silly addNameRange number 2 { name: 'bluebird', range: '>=2.1.1-0 <3.0.0-0', hasData: true }
+430 silly addNameRange versions [ 'bluebird',
+430 silly addNameRange   [ '0.7.1-1',
+430 silly addNameRange     '0.7.1-2',
+430 silly addNameRange     '0.7.1-3',
+430 silly addNameRange     '0.7.1-4',
+430 silly addNameRange     '0.7.1-5',
+430 silly addNameRange     '0.7.2-0',
+430 silly addNameRange     '0.7.3-0',
+430 silly addNameRange     '0.7.4-0',
+430 silly addNameRange     '0.7.4-1',
+430 silly addNameRange     '0.7.5-0',
+430 silly addNameRange     '0.7.6-0',
+430 silly addNameRange     '0.7.7-0',
+430 silly addNameRange     '0.7.7-1',
+430 silly addNameRange     '0.7.8-0',
+430 silly addNameRange     '0.7.8-1',
+430 silly addNameRange     '0.7.9-0',
+430 silly addNameRange     '0.7.9-1',
+430 silly addNameRange     '0.7.10-0',
+430 silly addNameRange     '0.7.10-1',
+430 silly addNameRange     '0.7.11-0',
+430 silly addNameRange     '0.7.12-0',
+430 silly addNameRange     '0.7.12-1',
+430 silly addNameRange     '0.7.12-2',
+430 silly addNameRange     '0.8.0-0',
+430 silly addNameRange     '0.8.0-1',
+430 silly addNameRange     '0.8.0-2',
+430 silly addNameRange     '0.8.0-3',
+430 silly addNameRange     '0.8.1-0',
+430 silly addNameRange     '0.8.2-0',
+430 silly addNameRange     '0.8.2-1',
+430 silly addNameRange     '0.8.2-2',
+430 silly addNameRange     '0.8.3-0',
+430 silly addNameRange     '0.8.3-1',
+430 silly addNameRange     '0.8.3-2',
+430 silly addNameRange     '0.8.3-3',
+430 silly addNameRange     '0.8.4-0',
+430 silly addNameRange     '0.8.4-1',
+430 silly addNameRange     '0.8.5-0',
+430 silly addNameRange     '0.8.5-1',
+430 silly addNameRange     '0.9.0-0',
+430 silly addNameRange     '0.9.1-0',
+430 silly addNameRange     '0.9.1-1',
+430 silly addNameRange     '0.9.2-0',
+430 silly addNameRange     '0.9.2-1',
+430 silly addNameRange     '0.9.3-0',
+430 silly addNameRange     '0.9.4-0',
+430 silly addNameRange     '0.9.4-1',
+430 silly addNameRange     '0.9.5-0',
+430 silly addNameRange     '0.9.6-0',
+430 silly addNameRange     '0.9.7-0',
+430 silly addNameRange     '0.9.8-0',
+430 silly addNameRange     '0.9.9-0',
+430 silly addNameRange     '0.9.10-0',
+430 silly addNameRange     '0.9.10-1',
+430 silly addNameRange     '0.9.11-0',
+430 silly addNameRange     '0.9.11-1',
+430 silly addNameRange     '0.10.0-0',
+430 silly addNameRange     '0.10.0-1',
+430 silly addNameRange     '0.10.1-0',
+430 silly addNameRange     '0.10.2-0',
+430 silly addNameRange     '0.10.2-1',
+430 silly addNameRange     '0.10.3-0',
+430 silly addNameRange     '0.10.4-0',
+430 silly addNameRange     '0.10.4-1',
+430 silly addNameRange     '0.10.5-0',
+430 silly addNameRange     '0.10.6-0',
+430 silly addNameRange     '0.10.7-0',
+430 silly addNameRange     '0.10.8-0',
+430 silly addNameRange     '0.10.9-0',
+430 silly addNameRange     '0.10.9-1',
+430 silly addNameRange     '0.10.10-0',
+430 silly addNameRange     '0.10.11-0',
+430 silly addNameRange     '0.10.11-1',
+430 silly addNameRange     '0.10.11-2',
+430 silly addNameRange     '0.10.11-4',
+430 silly addNameRange     '0.10.12-0',
+430 silly addNameRange     '0.10.13-0',
+430 silly addNameRange     '0.10.13-1',
+430 silly addNameRange     '0.10.14-0',
+430 silly addNameRange     '0.11.0-0',
+430 silly addNameRange     '0.11.1-0',
+430 silly addNameRange     '0.11.2-0',
+430 silly addNameRange     '0.11.3-0',
+430 silly addNameRange     '0.11.4-0',
+430 silly addNameRange     '0.11.4-1',
+430 silly addNameRange     '0.11.5-0',
+430 silly addNameRange     '0.11.5-1',
+430 silly addNameRange     '0.11.6-0',
+430 silly addNameRange     '1.0.0',
+430 silly addNameRange     '1.0.1',
+430 silly addNameRange     '1.0.2',
+430 silly addNameRange     '1.0.3',
+430 silly addNameRange     '1.0.4',
+430 silly addNameRange     '1.0.5',
+430 silly addNameRange     '1.0.7',
+430 silly addNameRange     '1.0.8',
+430 silly addNameRange     '1.1.0',
+430 silly addNameRange     '1.1.1',
+430 silly addNameRange     '1.2.0',
+430 silly addNameRange     '1.2.1',
+430 silly addNameRange     '1.2.2',
+430 silly addNameRange     '1.2.3',
+430 silly addNameRange     '1.2.4',
+430 silly addNameRange     '2.0.2',
+430 silly addNameRange     '2.0.3',
+430 silly addNameRange     '2.0.4',
+430 silly addNameRange     '2.0.5',
+430 silly addNameRange     '2.0.6',
+430 silly addNameRange     '2.0.7',
+430 silly addNameRange     '2.1.1',
+430 silly addNameRange     '2.1.2',
+430 silly addNameRange     '2.1.3',
+430 silly addNameRange     '2.2.0',
+430 silly addNameRange     '2.2.1',
+430 silly addNameRange     '2.2.2',
+430 silly addNameRange     '2.3.0',
+430 silly addNameRange     '2.3.1',
+430 silly addNameRange     '2.3.2',
+430 silly addNameRange     '2.3.3',
+430 silly addNameRange     '2.3.4',
+430 silly addNameRange     '2.3.5',
+430 silly addNameRange     '0.11.6',
+430 silly addNameRange     '2.3.6',
+430 silly addNameRange     '2.3.9',
+430 silly addNameRange     '2.3.10',
+430 silly addNameRange     '2.3.11',
+430 silly addNameRange     '2.4.0',
+430 silly addNameRange     '2.4.1',
+430 silly addNameRange     '2.4.2',
+430 silly addNameRange     '2.4.3',
+430 silly addNameRange     '2.5.0',
+430 silly addNameRange     '2.5.1',
+430 silly addNameRange     '2.5.2',
+430 silly addNameRange     '2.5.3',
+430 silly addNameRange     '2.6.0',
+430 silly addNameRange     '2.6.1',
+430 silly addNameRange     '2.6.2',
+430 silly addNameRange     '2.6.3',
+430 silly addNameRange     '2.6.4',
+430 silly addNameRange     '2.7.0',
+430 silly addNameRange     '2.7.1',
+430 silly addNameRange     '2.8.0',
+430 silly addNameRange     '2.8.1',
+430 silly addNameRange     '2.8.2',
+430 silly addNameRange     '2.9.0',
+430 silly addNameRange     '2.9.1',
+430 silly addNameRange     '2.9.2',
+430 silly addNameRange     '2.9.3' ] ]
+431 verbose addNamed [ 'bluebird', '2.9.3' ]
+432 verbose addNamed [ '2.9.3', '2.9.3' ]
+433 silly lockFile 5dbd0f8e-bluebird-2-9-3 bluebird@2.9.3
+434 verbose lock bluebird@2.9.3 /Users/k88hudson/.npm/5dbd0f8e-bluebird-2-9-3.lock
+435 silly lockFile 1862273e--org-bluebird-bluebird-2-9-3-tgz https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz
+436 verbose lock https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz /Users/k88hudson/.npm/1862273e--org-bluebird-bluebird-2-9-3-tgz.lock
+437 verbose addRemoteTarball [ 'https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz',
+437 verbose addRemoteTarball   '4ba2da87743cb8d32ffcf58a6cd95b0b9b5eaebb' ]
+438 info retry fetch attempt 1 at 12:22:40
+439 verbose fetch to= /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/tmp.tgz
+440 http GET https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz
+441 http 200 https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz
+442 verbose tar unpack /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/tmp.tgz
+443 silly lockFile 5422d18d-165-0-028227951610460877-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package
+444 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package /Users/k88hudson/.npm/5422d18d-165-0-028227951610460877-package.lock
+445 silly lockFile c543a37e-165-0-028227951610460877-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/tmp.tgz
+446 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/tmp.tgz /Users/k88hudson/.npm/c543a37e-165-0-028227951610460877-tmp-tgz.lock
+447 silly gunzTarPerm modes [ '755', '644' ]
+448 silly gunzTarPerm extractEntry package.json
+449 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+450 silly gunzTarPerm extractEntry README.md
+451 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+452 silly gunzTarPerm extractEntry LICENSE
+453 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+454 silly gunzTarPerm extractEntry zalgo.js
+455 silly gunzTarPerm modified mode [ 'zalgo.js', 438, 420 ]
+456 silly gunzTarPerm extractEntry changelog.md
+457 silly gunzTarPerm modified mode [ 'changelog.md', 438, 420 ]
+458 silly gunzTarPerm extractEntry js/browser/bluebird.js
+459 silly gunzTarPerm modified mode [ 'js/browser/bluebird.js', 438, 420 ]
+460 silly gunzTarPerm extractEntry js/browser/bluebird.min.js
+461 silly gunzTarPerm modified mode [ 'js/browser/bluebird.min.js', 438, 420 ]
+462 silly gunzTarPerm extractEntry js/main/any.js
+463 silly gunzTarPerm modified mode [ 'js/main/any.js', 438, 420 ]
+464 silly gunzTarPerm extractEntry js/main/finally.js
+465 silly gunzTarPerm modified mode [ 'js/main/finally.js', 438, 420 ]
+466 silly gunzTarPerm extractEntry js/main/generators.js
+467 silly gunzTarPerm modified mode [ 'js/main/generators.js', 438, 420 ]
+468 silly gunzTarPerm extractEntry js/main/join.js
+469 silly gunzTarPerm modified mode [ 'js/main/join.js', 438, 420 ]
+470 silly gunzTarPerm extractEntry js/main/filter.js
+471 silly gunzTarPerm modified mode [ 'js/main/filter.js', 438, 420 ]
+472 silly gunzTarPerm extractEntry js/main/method.js
+473 silly gunzTarPerm modified mode [ 'js/main/method.js', 438, 420 ]
+474 silly gunzTarPerm extractEntry js/main/nodeify.js
+475 silly gunzTarPerm modified mode [ 'js/main/nodeify.js', 438, 420 ]
+476 silly gunzTarPerm extractEntry js/main/progress.js
+477 silly gunzTarPerm modified mode [ 'js/main/progress.js', 438, 420 ]
+478 silly gunzTarPerm extractEntry js/main/promise.js
+479 silly gunzTarPerm modified mode [ 'js/main/promise.js', 438, 420 ]
+480 silly gunzTarPerm extractEntry js/main/promise_array.js
+481 silly gunzTarPerm modified mode [ 'js/main/promise_array.js', 438, 420 ]
+482 silly gunzTarPerm extractEntry js/main/es5.js
+483 silly gunzTarPerm modified mode [ 'js/main/es5.js', 438, 420 ]
+484 silly gunzTarPerm extractEntry js/main/promise_resolver.js
+485 silly gunzTarPerm modified mode [ 'js/main/promise_resolver.js', 438, 420 ]
+486 silly gunzTarPerm extractEntry js/main/errors.js
+487 silly gunzTarPerm modified mode [ 'js/main/errors.js', 438, 420 ]
+488 silly gunzTarPerm extractEntry js/main/promisify.js
+489 silly gunzTarPerm modified mode [ 'js/main/promisify.js', 438, 420 ]
+490 silly gunzTarPerm extractEntry js/main/each.js
+491 silly gunzTarPerm modified mode [ 'js/main/each.js', 438, 420 ]
+492 silly gunzTarPerm extractEntry js/main/props.js
+493 silly gunzTarPerm modified mode [ 'js/main/props.js', 438, 420 ]
+494 silly gunzTarPerm extractEntry js/main/direct_resolve.js
+495 silly gunzTarPerm modified mode [ 'js/main/direct_resolve.js', 438, 420 ]
+496 silly gunzTarPerm extractEntry js/main/queue.js
+497 silly gunzTarPerm modified mode [ 'js/main/queue.js', 438, 420 ]
+498 silly gunzTarPerm extractEntry js/main/debuggability.js
+499 silly gunzTarPerm modified mode [ 'js/main/debuggability.js', 438, 420 ]
+500 silly gunzTarPerm extractEntry js/main/race.js
+501 silly gunzTarPerm modified mode [ 'js/main/race.js', 438, 420 ]
+502 silly gunzTarPerm extractEntry js/main/context.js
+503 silly gunzTarPerm modified mode [ 'js/main/context.js', 438, 420 ]
+504 silly gunzTarPerm extractEntry js/main/reduce.js
+505 silly gunzTarPerm modified mode [ 'js/main/reduce.js', 438, 420 ]
+506 silly gunzTarPerm extractEntry js/main/catch_filter.js
+507 silly gunzTarPerm modified mode [ 'js/main/catch_filter.js', 438, 420 ]
+508 silly gunzTarPerm extractEntry js/main/schedule.js
+509 silly gunzTarPerm modified mode [ 'js/main/schedule.js', 438, 420 ]
+510 silly gunzTarPerm extractEntry js/main/captured_trace.js
+511 silly gunzTarPerm modified mode [ 'js/main/captured_trace.js', 438, 420 ]
+512 silly gunzTarPerm extractEntry js/main/settle.js
+513 silly gunzTarPerm modified mode [ 'js/main/settle.js', 438, 420 ]
+514 silly gunzTarPerm extractEntry js/main/cancel.js
+515 silly gunzTarPerm modified mode [ 'js/main/cancel.js', 438, 420 ]
+516 silly gunzTarPerm extractEntry js/main/some.js
+517 silly gunzTarPerm modified mode [ 'js/main/some.js', 438, 420 ]
+518 silly gunzTarPerm extractEntry js/main/call_get.js
+519 silly gunzTarPerm modified mode [ 'js/main/call_get.js', 438, 420 ]
+520 silly gunzTarPerm extractEntry js/main/synchronous_inspection.js
+521 silly gunzTarPerm modified mode [ 'js/main/synchronous_inspection.js', 438, 420 ]
+522 silly gunzTarPerm extractEntry js/main/bluebird.js
+523 silly gunzTarPerm modified mode [ 'js/main/bluebird.js', 438, 420 ]
+524 silly gunzTarPerm extractEntry js/main/thenables.js
+525 silly gunzTarPerm modified mode [ 'js/main/thenables.js', 438, 420 ]
+526 silly gunzTarPerm extractEntry js/main/bind.js
+527 silly gunzTarPerm modified mode [ 'js/main/bind.js', 438, 420 ]
+528 silly gunzTarPerm extractEntry js/main/timers.js
+529 silly gunzTarPerm modified mode [ 'js/main/timers.js', 438, 420 ]
+530 silly gunzTarPerm extractEntry js/main/async.js
+531 silly gunzTarPerm modified mode [ 'js/main/async.js', 438, 420 ]
+532 silly gunzTarPerm extractEntry js/main/using.js
+533 silly gunzTarPerm modified mode [ 'js/main/using.js', 438, 420 ]
+534 silly gunzTarPerm extractEntry js/main/assert.js
+535 silly gunzTarPerm modified mode [ 'js/main/assert.js', 438, 420 ]
+536 silly gunzTarPerm extractEntry js/main/util.js
+537 silly gunzTarPerm modified mode [ 'js/main/util.js', 438, 420 ]
+538 silly gunzTarPerm extractEntry js/main/map.js
+539 silly gunzTarPerm modified mode [ 'js/main/map.js', 438, 420 ]
+540 silly lockFile 5422d18d-165-0-028227951610460877-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package
+541 silly lockFile 5422d18d-165-0-028227951610460877-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package
+542 silly lockFile c543a37e-165-0-028227951610460877-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/tmp.tgz
+543 silly lockFile c543a37e-165-0-028227951610460877-tmp-tgz tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/tmp.tgz
+544 verbose tar pack [ '/Users/k88hudson/.npm/bluebird/2.9.3/package.tgz',
+544 verbose tar pack   '/var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package' ]
+545 verbose tarball /Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+546 verbose folder /var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package
+547 silly lockFile 5422d18d-165-0-028227951610460877-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package
+548 verbose lock tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package /Users/k88hudson/.npm/5422d18d-165-0-028227951610460877-package.lock
+549 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+550 verbose lock tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz /Users/k88hudson/.npm/6473e3f0-n-npm-bluebird-2-9-3-package-tgz.lock
+551 silly lockFile 5422d18d-165-0-028227951610460877-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package
+552 silly lockFile 5422d18d-165-0-028227951610460877-package tar:///var/folders/_c/3yxrq6211ln27wd2fqq61ggw0000gn/T/npm-47832-zLlvhKNF/1422465760165-0.028227951610460877/package
+553 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+554 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+555 silly lockFile 1d786b3a-udson-npm-bluebird-2-9-3-package /Users/k88hudson/.npm/bluebird/2.9.3/package
+556 verbose lock /Users/k88hudson/.npm/bluebird/2.9.3/package /Users/k88hudson/.npm/1d786b3a-udson-npm-bluebird-2-9-3-package.lock
+557 silly lockFile 1d786b3a-udson-npm-bluebird-2-9-3-package /Users/k88hudson/.npm/bluebird/2.9.3/package
+558 silly lockFile 1d786b3a-udson-npm-bluebird-2-9-3-package /Users/k88hudson/.npm/bluebird/2.9.3/package
+559 verbose tar unpack /Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+560 silly lockFile 5c33f232-udson-npm-bluebird-2-9-3-package tar:///Users/k88hudson/.npm/bluebird/2.9.3/package
+561 verbose lock tar:///Users/k88hudson/.npm/bluebird/2.9.3/package /Users/k88hudson/.npm/5c33f232-udson-npm-bluebird-2-9-3-package.lock
+562 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+563 verbose lock tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz /Users/k88hudson/.npm/6473e3f0-n-npm-bluebird-2-9-3-package-tgz.lock
+564 silly gunzTarPerm modes [ '755', '644' ]
+565 silly gunzTarPerm extractEntry package.json
+566 silly gunzTarPerm extractEntry README.md
+567 silly gunzTarPerm extractEntry LICENSE
+568 silly gunzTarPerm extractEntry zalgo.js
+569 silly gunzTarPerm extractEntry js/browser/bluebird.js
+570 silly gunzTarPerm extractEntry js/browser/bluebird.min.js
+571 silly gunzTarPerm extractEntry js/main/any.js
+572 silly gunzTarPerm extractEntry js/main/finally.js
+573 silly gunzTarPerm extractEntry js/main/generators.js
+574 silly gunzTarPerm extractEntry js/main/join.js
+575 silly gunzTarPerm extractEntry js/main/filter.js
+576 silly gunzTarPerm extractEntry js/main/method.js
+577 silly gunzTarPerm extractEntry js/main/nodeify.js
+578 silly gunzTarPerm extractEntry js/main/progress.js
+579 silly gunzTarPerm extractEntry js/main/promise.js
+580 silly gunzTarPerm extractEntry js/main/promise_array.js
+581 silly gunzTarPerm extractEntry js/main/es5.js
+582 silly gunzTarPerm extractEntry js/main/promise_resolver.js
+583 silly gunzTarPerm extractEntry js/main/errors.js
+584 silly gunzTarPerm extractEntry js/main/promisify.js
+585 silly gunzTarPerm extractEntry js/main/each.js
+586 silly gunzTarPerm extractEntry js/main/props.js
+587 silly gunzTarPerm extractEntry js/main/direct_resolve.js
+588 silly gunzTarPerm extractEntry js/main/queue.js
+589 silly gunzTarPerm extractEntry js/main/debuggability.js
+590 silly gunzTarPerm extractEntry js/main/race.js
+591 silly gunzTarPerm extractEntry js/main/context.js
+592 silly gunzTarPerm extractEntry js/main/reduce.js
+593 silly gunzTarPerm extractEntry js/main/catch_filter.js
+594 silly gunzTarPerm extractEntry js/main/schedule.js
+595 silly gunzTarPerm extractEntry js/main/captured_trace.js
+596 silly gunzTarPerm extractEntry js/main/settle.js
+597 silly gunzTarPerm extractEntry js/main/cancel.js
+598 silly gunzTarPerm extractEntry js/main/some.js
+599 silly gunzTarPerm extractEntry js/main/call_get.js
+600 silly gunzTarPerm extractEntry js/main/synchronous_inspection.js
+601 silly gunzTarPerm extractEntry js/main/bluebird.js
+602 silly gunzTarPerm extractEntry js/main/thenables.js
+603 silly gunzTarPerm extractEntry js/main/bind.js
+604 silly gunzTarPerm extractEntry js/main/timers.js
+605 silly gunzTarPerm extractEntry js/main/async.js
+606 silly gunzTarPerm extractEntry js/main/using.js
+607 silly gunzTarPerm extractEntry js/main/assert.js
+608 silly gunzTarPerm extractEntry js/main/util.js
+609 silly gunzTarPerm extractEntry js/main/map.js
+610 silly lockFile 5c33f232-udson-npm-bluebird-2-9-3-package tar:///Users/k88hudson/.npm/bluebird/2.9.3/package
+611 silly lockFile 5c33f232-udson-npm-bluebird-2-9-3-package tar:///Users/k88hudson/.npm/bluebird/2.9.3/package
+612 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+613 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+614 verbose chmod /Users/k88hudson/.npm/bluebird/2.9.3/package.tgz 644
+615 verbose chown /Users/k88hudson/.npm/bluebird/2.9.3/package.tgz [ 501, 20 ]
+616 silly lockFile 1862273e--org-bluebird-bluebird-2-9-3-tgz https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz
+617 silly lockFile 1862273e--org-bluebird-bluebird-2-9-3-tgz https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz
+618 silly lockFile 5dbd0f8e-bluebird-2-9-3 bluebird@2.9.3
+619 silly lockFile 5dbd0f8e-bluebird-2-9-3 bluebird@2.9.3
+620 silly lockFile d12458ea-bluebird-2-1-1 bluebird@^2.1.1
+621 silly lockFile d12458ea-bluebird-2-1-1 bluebird@^2.1.1
+622 silly resolved [ { name: 'bluebird',
+622 silly resolved     description: 'Full featured Promises/A+ implementation with exceptionally good performance',
+622 silly resolved     version: '2.9.3',
+622 silly resolved     keywords:
+622 silly resolved      [ 'promise',
+622 silly resolved        'performance',
+622 silly resolved        'promises',
+622 silly resolved        'promises-a',
+622 silly resolved        'promises-aplus',
+622 silly resolved        'async',
+622 silly resolved        'await',
+622 silly resolved        'deferred',
+622 silly resolved        'deferreds',
+622 silly resolved        'future',
+622 silly resolved        'flow control',
+622 silly resolved        'dsl',
+622 silly resolved        'fluent interface' ],
+622 silly resolved     scripts:
+622 silly resolved      { lint: 'node scripts/jshint.js',
+622 silly resolved        test: 'node tools/test.js',
+622 silly resolved        istanbul: 'istanbul',
+622 silly resolved        prepublish: 'node tools/build.js --no-debug --main --zalgo --browser --minify' },
+622 silly resolved     homepage: 'https://github.com/petkaantonov/bluebird',
+622 silly resolved     repository:
+622 silly resolved      { type: 'git',
+622 silly resolved        url: 'git://github.com/petkaantonov/bluebird.git' },
+622 silly resolved     bugs: { url: 'http://github.com/petkaantonov/bluebird/issues' },
+622 silly resolved     license: 'MIT',
+622 silly resolved     author:
+622 silly resolved      { name: 'Petka Antonov',
+622 silly resolved        email: 'petka_antonov@hotmail.com',
+622 silly resolved        url: 'http://github.com/petkaantonov/' },
+622 silly resolved     devDependencies:
+622 silly resolved      { acorn: '~0.6.0',
+622 silly resolved        bluebird: '^2.9.2',
+622 silly resolved        'body-parser': '^1.10.2',
+622 silly resolved        browserify: '^8.1.1',
+622 silly resolved        'cli-table': '~0.3.1',
+622 silly resolved        'cross-spawn': '^0.2.3',
+622 silly resolved        glob: '^4.3.2',
+622 silly resolved        'grunt-saucelabs': '~8.4.1',
+622 silly resolved        istanbul: '^0.3.5',
+622 silly resolved        jshint: '^2.6.0',
+622 silly resolved        'jshint-stylish': '~0.2.0',
+622 silly resolved        mkdirp: '~0.5.0',
+622 silly resolved        mocha: '~2.1',
+622 silly resolved        open: '~0.0.5',
+622 silly resolved        optimist: '~0.6.1',
+622 silly resolved        rimraf: '~2.2.6',
+622 silly resolved        'serve-static': '^1.7.1',
+622 silly resolved        sinon: '~1.7.3',
+622 silly resolved        'uglify-js': '~2.4.16' },
+622 silly resolved     readmeFilename: 'README.md',
+622 silly resolved     main: './js/main/bluebird.js',
+622 silly resolved     browser: './js/browser/bluebird.js',
+622 silly resolved     files: [ 'js/browser', 'js/main', 'js/zalgo', 'LICENSE', 'zalgo.js' ],
+622 silly resolved     readme: '<a href="http://promisesaplus.com/">\n    <img src="http://promisesaplus.com/assets/logo-small.png" alt="Promises/A+ logo"\n         title="Promises/A+ 1.1 compliant" align="right" />\n</a>\n[![Build Status](https://travis-ci.org/petkaantonov/bluebird.svg?branch=master)](https://travis-ci.org/petkaantonov/bluebird)\n[![coverage-98%](http://img.shields.io/badge/coverage-98%-brightgreen.svg?style=flat)](http://petkaantonov.github.io/bluebird/coverage/debug/index.html)\n\n\n#Introduction\n\nBluebird is a fully featured [promise](#what-are-promises-and-why-should-i-use-them) library with focus on innovative features and performance\n\n\n\n#Topics\n\n- [Features](#features)\n- [Quick start](#quick-start)\n- [API Reference and examples](API.md)\n- [Support](#support)\n- [What are promises and why should I use them?](#what-are-promises-and-why-should-i-use-them)\n- [Questions and issues](#questions-and-issues)\n- [Error handling](#error-handling)\n- [Development](#development)\n    - [Testing](#testing)\n    - [Benchmarking](#benchmarks)\n    - [Custom builds](#custom-builds)\n    - [For library authors](#for-library-authors)\n- [What is the sync build?](#what-is-the-sync-build)\n- [License](#license)\n- [Snippets for common problems](https://github.com/petkaantonov/bluebird/wiki/Snippets)\n- [Promise anti-patterns](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns)\n- [Changelog](changelog.md)\n- [Optimization guide](#optimization-guide)\n\n#Features\n<img src="http://petkaantonov.github.io/bluebird/logo.png" alt="bluebird logo" align="right" />\n\n- [Promises A+](http://promisesaplus.com)\n- [Synchronous inspection](API.md#synchronous-inspection)\n- [Concurrency coordination](API.md#collections)\n- [Promisification on steroids](API.md#promisification)\n- [Resource management through a parallel of python `with`/C# `using`](API.md#resource-management)\n- [Cancellation and timeouts](API.md#cancellation)\n- [Parallel for C# `async` and `await`](API.md#generators)\n- Mind blowing utilities such as\n    - [`.bind()`](API.md#binddynamic-thisarg---promise)\n    - [`.call()`](API.md#callstring-propertyname--dynamic-arg---promise)\n    - [`Promise.join()`](API.md#promisejoinpromisethenablevalue-promises-function-handler---promise)\n    - [And](API.md#core) [much](API.md#timers) [more](API.md#utility)!\n- [Practical debugging solutions and sane defaults](#error-handling)\n- [Sick performance](benchmark/)\n\n<hr>\n\n#Quick start\n\n##Node.js\n\n    npm install bluebird\n\nThen:\n\n```js\nvar Promise = require("bluebird");\n```\n\n##Browsers\n\nThere are many ways to use bluebird in browsers:\n\n- Direct downloads\n    - Full build [bluebird.js](https://cdn.jsdelivr.net/bluebird/latest/bluebird.js)\n    - Full build minified [bluebird.min.js](https://cdn.jsdelivr.net/bluebird/latest/bluebird.min.js)\n- You may use browserify on the main export\n- You may use the [bower](http://bower.io) package.\n\nWhen using script tags the global variables `Promise` and `P` (alias for `Promise`) become available.\n\nA [minimal bluebird browser build](#custom-builds) is &asymp;38.92KB minified*, 11.65KB gzipped and has no external dependencies.\n\n*Google Closure Compiler using Simple.\n\n####Browser support\n\nBrowsers that [implement ECMA-262, edition 3](http://en.wikipedia.org/wiki/Ecmascript#Implementations) and later are supported.\n\n[![Selenium Test Status](https://saucelabs.com/browser-matrix/petka_antonov.svg)](https://saucelabs.com/u/petka_antonov)\n\n**Note** that in ECMA-262, edition 3 (IE7, IE8 etc.) it is not possible to use methods that have keyword names like `.catch` and `.finally`. The [API documentation](API.md) always lists a compatible alternative name that you can use if you need to support these browsers. For example `.catch` is replaced with `.caught` and `.finally` with `.lastly`.\n\nAlso, [long stack trace](API.md#promiselongstacktraces---void) support is only available in Chrome, Firefox and Internet Explorer 10+.\n\nAfter quick start, see [API Reference and examples](API.md)\n\n<hr>\n\n#Support\n\n- Mailing list: [bluebird-js@googlegroups.com](https://groups.google.com/forum/#!forum/bluebird-js)\n- IRC: #promises @freenode\n- StackOverflow: [bluebird tag](http://stackoverflow.com/questions/tagged/bluebird)\n- Bugs and feature requests: [github issue tracker](https://github.com/petkaantonov/bluebird/issues?state=open)\n\n<hr>\n\n#What are promises and why should I use them?\n\nYou should use promises to turn this:\n\n```js\nfs.readFile("file.json", function(err, val) {\n    if( err ) {\n        console.error("unable to read file");\n    }\n    else {\n        try {\n            val = JSON.parse(val);\n            console.log(val.success);\n        }\n        catch( e ) {\n            console.error("invalid json in file");\n        }\n    }\n});\n```\n\nInto this:\n\n```js\nfs.readFileAsync("file.json").then(JSON.parse).then(function(val) {\n    console.log(val.success);\n})\n.catch(SyntaxError, function(e) {\n    console.error("invalid json in file");\n})\n.catch(function(e){\n    console.error("unable to read file")\n});\n```\n\n*If you are wondering "there is no `readFileAsync` method on `fs` that returns a promise", see [promisification](API.md#promisification)*\n\nActually you might notice the latter has a lot in common with code that would do the same using synchronous I/O:\n\n```js\ntry {\n    var val = JSON.parse(fs.readFileSync("file.json"));\n    console.log(val.success);\n}\n//Syntax actually not supported in JS but drives the point\ncatch(SyntaxError e) {\n    console.error("invalid json in file");\n}\ncatch(Error e) {\n    console.error("unable to read file")\n}\n```\n\nAnd that is the point - being able to have something that is a lot like `return` and `throw` in synchronous code.\n\nYou can also use promises to improve code that was written with callback helpers:\n\n\n```js\n//Copyright Plato http://stackoverflow.com/a/19385911/995876\n//CC BY-SA 2.5\nmapSeries(URLs, function (URL, done) {\n    var options = {};\n    needle.get(URL, options, function (error, response, body) {\n        if (error) {\n            return done(error)\n        }\n        try {\n            var ret = JSON.parse(body);\n            return done(null, ret);\n        }\n        catch (e) {\n            done(e);\n        }\n    });\n}, function (err, results) {\n    if (err) {\n        console.log(err)\n    } else {\n        console.log(\'All Needle requests successful\');\n        // results is a 1 to 1 mapping in order of URLs > needle.body\n        processAndSaveAllInDB(results, function (err) {\n            if (err) {\n                return done(err)\n            }\n            console.log(\'All Needle requests saved\');\n            done(null);\n        });\n    }\n});\n```\n\nIs more pleasing to the eye when done with promises:\n\n```js\nPromise.promisifyAll(needle);\nvar options = {};\n\nvar current = Promise.resolve();\nPromise.map(URLs, function(URL) {\n    current = current.then(function () {\n        return needle.getAsync(URL, options);\n    });\n    return current;\n}).map(function(responseAndBody){\n    return JSON.parse(responseAndBody[1]);\n}).then(function (results) {\n    return processAndSaveAllInDB(results);\n}).then(function(){\n    console.log(\'All Needle requests saved\');\n}).catch(function (e) {\n    console.log(e);\n});\n```\n\nAlso promises don\'t just give you correspondences for synchronous features but can also be used as limited event emitters or callback aggregators.\n\nMore reading:\n\n - [Promise nuggets](http://spion.github.io/promise-nuggets/)\n - [Why I am switching to promises](http://spion.github.io/posts/why-i-am-switching-to-promises.html)\n - [What is the the point of promises](http://domenic.me/2012/10/14/youre-missing-the-point-of-promises/#toc_1)\n - [Snippets for common problems](https://github.com/petkaantonov/bluebird/wiki/Snippets)\n - [Promise anti-patterns](https://github.com/petkaantonov/bluebird/wiki/Promise-anti-patterns)\n\n#Questions and issues\n\nIf you find a bug in bluebird or have a feature request, file an issue in the [github issue tracker](https://github.com/petkaantonov/bluebird/issues). Anything else, such as questions for help in using the library, should be posted in [StackOverflow](http://stackoverflow.com/questions/tagged/bluebird) under tags `promise` and `bluebird`.\n\n#Error handling\n\nThis is a problem every promise library needs to handle in some way. Unhandled rejections/exceptions don\'t really have a good agreed-on asynchronous correspondence. The problem is that it is impossible to predict the future and know if a rejected promise will eventually be handled.\n\nThere are two common pragmatic attempts at solving the problem that promise libraries do.\n\nThe more popular one is to have the user explicitly communicate that they are done and any unhandled rejections should be thrown, like so:\n\n```js\ndownload().then(...).then(...).done();\n```\n\nFor handling this problem, in my opinion, this is completely unacceptable and pointless. The user must remember to explicitly call `.done` and that cannot be justified when the problem is forgetting to create an error handler in the first place.\n\nThe second approach, which is what bluebird by default takes, is to call a registered handler if a rejection is unhandled by the start of a second turn. The default handler is to write the stack trace to `stderr` or `console.error` in browsers. This is close to what happens with synchronous code - your code doesn\'t work as expected and you open console and see a stack trace. Nice.\n\nOf course this is not perfect, if your code for some reason needs to swoop in and attach error handler to some promise after the promise has been hanging around a while then you will see annoying messages. In that case you can use the `.done()` method to signal that any hanging exceptions should be thrown.\n\nIf you want to override the default handler for these possibly unhandled rejections, you can pass yours like so:\n\n```js\nPromise.onPossiblyUnhandledRejection(function(error){\n    throw error;\n});\n```\n\nIf you want to also enable long stack traces, call:\n\n```js\nPromise.longStackTraces();\n```\n\nright after the library is loaded.\n\nIn node.js use the environment flag `BLUEBIRD_DEBUG`:\n\n```\nBLUEBIRD_DEBUG=1 node server.js\n```\n\nto enable long stack traces in all instances of bluebird.\n\nLong stack traces cannot be disabled after being enabled, and cannot be enabled after promises have already been created. Long stack traces imply a substantial performance penalty, even after using every trick to optimize them.\n\nLong stack traces are enabled by default in the debug build.\n\n####Expected and unexpected errors\n\nA practical problem with Promises/A+ is that it models Javascript `try-catch` too closely for its own good. Therefore by default promises inherit `try-catch` warts such as the inability to specify the error types that the catch block is eligible for. It is an anti-pattern in every other language to use catch-all handlers because they swallow exceptions that you might not know about.\n\nNow, Javascript does have a perfectly fine and working way of creating error type hierarchies. It is still quite awkward to use them with the built-in `try-catch` however:\n\n```js\ntry {\n    //code\n}\ncatch(e) {\n    if( e instanceof WhatIWantError) {\n        //handle\n    }\n    else {\n        throw e;\n    }\n}\n```\n\nWithout such checking, unexpected errors would be silently swallowed. However, with promises, bluebird brings the future (hopefully) here now and extends the `.catch` to [accept potential error type eligibility](API.md#catchfunction-errorclass-function-handler---promise).\n\nFor instance here it is expected that some evil or incompetent entity will try to crash our server from `SyntaxError` by providing syntactically invalid JSON:\n\n```js\ngetJSONFromSomewhere().then(function(jsonString) {\n    return JSON.parse(jsonString);\n}).then(function(object) {\n    console.log("it was valid json: ", object);\n}).catch(SyntaxError, function(e){\n    console.log("don\'t be evil");\n});\n```\n\nHere any kind of unexpected error will automatically reported on `stderr` along with a stack trace because we only register a handler for the expected `SyntaxError`.\n\nOk, so, that\'s pretty neat. But actually not many libraries define error types and it is in fact a complete ghetto out there with ad hoc strings being attached as some arbitrary property name like `.name`, `.type`, `.code`, not having any property at all or even throwing strings as errors and so on. So how can we still listen for expected errors?\n\nBluebird defines a special error type `OperationalError` (you can get a reference from `Promise.OperationalError`). This type of error is given as rejection reason by promisified methods when\ntheir underlying library gives an untyped, but expected error. Primitives such as strings, and error objects that are directly created like `new Error("database didn\'t respond")` are considered untyped.\n\nExample of such library is the node core library `fs`. So if we promisify it, we can catch just the errors we want pretty easily and have programmer errors be redirected to unhandled rejection handler so that we notice them:\n\n```js\n//Read more about promisification in the API Reference:\n//API.md\nvar fs = Promise.promisifyAll(require("fs"));\n\nfs.readFileAsync("myfile.json").then(JSON.parse).then(function (json) {\n    console.log("Successful json")\n}).catch(SyntaxError, function (e) {\n    console.error("file contains invalid json");\n}).catch(Promise.OperationalError, function (e) {\n    console.error("unable to read file, because: ", e.message);\n});\n```\n\nThe last `catch` handler is only invoked when the `fs` module explicitly used the `err` argument convention of async callbacks to inform of an expected error. The `OperationalError` instance will contain the original error in its `.cause` property but it does have a direct copy of the `.message` and `.stack` too. In this code any unexpected error - be it in our code or the `fs` module - would not be caught by these handlers and therefore not swallowed.\n\nSince a `catch` handler typed to `Promise.OperationalError` is expected to be used very often, it has a neat shorthand:\n\n```js\n.error(function (e) {\n    console.error("unable to read file, because: ", e.message);\n});\n```\n\nSee [API documentation for `.error()`](API.md#error-rejectedhandler----promise)\n\nFinally, Bluebird also supports predicate-based filters. If you pass a\npredicate function instead of an error type, the predicate will receive\nthe error as an argument. The return result will be used determine whether\nthe error handler should be called.\n\nPredicates should allow for very fine grained control over caught errors:\npattern matching, error typesets with set operations and many other techniques\ncan be implemented on top of them.\n\nExample of using a predicate-based filter:\n\n```js\nvar Promise = require("bluebird");\nvar request = Promise.promisify(require("request"));\n\nfunction clientError(e) {\n    return e.code >= 400 && e.code < 500;\n}\n\nrequest("http://www.google.com").then(function(contents){\n    console.log(contents);\n}).catch(clientError, function(e){\n   //A client error like 400 Bad Request happened\n});\n```\n\n**Danger:** The JavaScript language allows throwing primitive values like strings. Throwing primitives can lead to worse or no stack traces. Primitives [are not exceptions](http://www.devthought.com/2011/12/22/a-string-is-not-an-error/). You should consider always throwing Error objects when handling exceptions.\n\n<hr>\n\n####How do long stack traces differ from e.g. Q?\n\nBluebird attempts to have more elaborate traces. Consider:\n\n```js\nError.stackTraceLimit = 25;\nQ.longStackSupport = true;\nQ().then(function outer() {\n    return Q().then(function inner() {\n        return Q().then(function evenMoreInner() {\n            a.b.c.d();\n        }).catch(function catcher(e){\n            console.error(e.stack);\n        });\n    })\n});\n```\n\nYou will see\n\n    ReferenceError: a is not defined\n        at evenMoreInner (<anonymous>:7:13)\n    From previous event:\n        at inner (<anonymous>:6:20)\n\nCompare to:\n\n```js\nError.stackTraceLimit = 25;\nPromise.longStackTraces();\nPromise.resolve().then(function outer() {\n    return Promise.resolve().then(function inner() {\n        return Promise.resolve().then(function evenMoreInner() {\n            a.b.c.d()\n        }).catch(function catcher(e){\n            console.error(e.stack);\n        });\n    });\n});\n```\n\n    ReferenceError: a is not defined\n        at evenMoreInner (<anonymous>:7:13)\n    From previous event:\n        at inner (<anonymous>:6:36)\n    From previous event:\n        at outer (<anonymous>:5:32)\n    From previous event:\n        at <anonymous>:4:21\n        at Object.InjectedScript._evaluateOn (<anonymous>:572:39)\n        at Object.InjectedScript._evaluateAndWrap (<anonymous>:531:52)\n        at Object.InjectedScript.evaluate (<anonymous>:450:21)\n\n\nA better and more practical example of the differences can be seen in gorgikosev\'s [debuggability competition](https://github.com/spion/async-compare#debuggability).\n\n<hr>\n\n#Development\n\nFor development tasks such as running benchmarks or testing, you need to clone the repository and install dev-dependencies.\n\nInstall [node](http://nodejs.org/) and [npm](https://npmjs.org/)\n\n    git clone git@github.com:petkaantonov/bluebird.git\n    cd bluebird\n    npm install\n\n##Testing\n\nTo run all tests, run\n\n    node tools/test\n\nIf you need to run generator tests run the `tool/test.js` script with `--harmony` argument and node 0.11+:\n\n    node-dev --harmony tools/test\n\nYou may specify an individual test file to run with the `--run` script flag:\n\n    node tools/test --run=cancel.js\n\n\nThis enables output from the test and may give a better idea where the test is failing. The paramter to `--run` can be any file name located in `test/mocha` folder.\n\n####Testing in browsers\n\nTo run the test in a browser instead of node, pass the flag `--browser` to the test tool\n\n    node tools/test --run=cancel.js --browser\n\nThis will automatically create a server (default port 9999) and open it in your default browser once the tests have been compiled.\n\nKeep the test tab active because some tests are timing-sensitive and will fail if the browser is throttling timeouts. Chrome will do this for example when the tab is not active.\n\n####Supported options by the test tool\n\nThe value of boolean flags is determined by presence, if you want to pass false value for a boolean flag, use the `no-`-prefix e.g. `--no-browser`.\n\n - `--run=String`. Which tests to run (or compile when testing in browser). Default `"all"`. Can also be a glob string (relative to ./test/mocha folder)\n - `--cover=String`. Create code coverage using the String as istanbul reporter. Coverage is created in the ./coverage folder. No coverage is created by default, default reporter is `"html"` (use `--cover` to use default reporter).\n - `--browser` - Whether to compile tests for browsers. Default `false`.\n - `--port=Number` - Whe port where local server is hosted when testing in browser. Default `9999`\n - `--execute-browser-tests` - Whether to execute the compiled tests for browser when using `--browser`. Default `true`.\n - `--open-browser` - Whether to open the default browser when executing browser tests. Default `true`.\n - `--fake-timers` - Whether to use fake timers (`setTimeout` etc) when running tests in node. Default `true`.\n - `--js-hint` - Whether to run JSHint on source files. Default `true`.\n - `--saucelabs` Wheter to create a tunnel to sauce labs and run tests in their VMs instead of your browser when compiling tests for browser.Default `false`.\n\n##Benchmarks\n\nTo run a benchmark, run the given command for a benchmark while on the project root. Requires bash (on windows the mingw32 that comes with git works fine too).\n\nNode 0.11.2+ is required to run the generator examples.\n\n###1\\. DoxBee sequential\n\nCurrently the most relevant benchmark is @gorkikosev\'s benchmark in the article [Analysis of generators and other async patterns in node](http://spion.github.io/posts/analysis-generators-and-other-async-patterns-node.html). The benchmark emulates a situation where n amount of users are making a request in parallel to execute some mixed async/sync action. The benchmark has been modified to include a warm-up phase to minimize any JITing during timed sections.\n\nCommand: `bench doxbee`\n\n###2\\. Made-up parallel\n\nThis made-up scenario runs 15 shimmed queries in parallel.\n\nCommand: `bench parallel`\n\n##Custom builds\n\nCustom builds for browsers are supported through a command-line utility.\n\n\n<table>\n    <caption>The following features can be disabled</caption>\n    <thead>\n        <tr>\n            <th>Feature(s)</th>\n            <th>Command line identifier</th>\n        </tr>\n    </thead>\n    <tbody>\n\n        <tr><td><a href="API.md#any---promise"><code>.any</code></a> and <a href="API.md#promiseanyarraydynamicpromise-values---promise"><code>Promise.any</code></a></td><td><code>any</code></td></tr>\n        <tr><td><a href="API.md#race---promise"><code>.race</code></a> and <a href="API.md#promiseracearraypromise-promises---promise"><code>Promise.race</code></a></td><td><code>race</code></td></tr>\n        <tr><td><a href="API.md#callstring-propertyname--dynamic-arg---promise"><code>.call</code></a> and <a href="API.md#getstring-propertyname---promise"><code>.get</code></a></td><td><code>call_get</code></td></tr>\n        <tr><td><a href="API.md#filterfunction-filterer---promise"><code>.filter</code></a> and <a href="API.md#promisefilterarraydynamicpromise-values-function-filterer---promise"><code>Promise.filter</code></a></td><td><code>filter</code></td></tr>\n        <tr><td><a href="API.md#mapfunction-mapper---promise"><code>.map</code></a> and <a href="API.md#promisemaparraydynamicpromise-values-function-mapper---promise"><code>Promise.map</code></a></td><td><code>map</code></td></tr>\n        <tr><td><a href="API.md#reducefunction-reducer--dynamic-initialvalue---promise"><code>.reduce</code></a> and <a href="API.md#promisereducearraydynamicpromise-values-function-reducer--dynamic-initialvalue---promise"><code>Promise.reduce</code></a></td><td><code>reduce</code></td></tr>\n        <tr><td><a href="API.md#props---promise"><code>.props</code></a> and <a href="API.md#promisepropsobjectpromise-object---promise"><code>Promise.props</code></a></td><td><code>props</code></td></tr>\n        <tr><td><a href="API.md#settle---promise"><code>.settle</code></a> and <a href="API.md#promisesettlearraydynamicpromise-values---promise"><code>Promise.settle</code></a></td><td><code>settle</code></td></tr>\n        <tr><td><a href="API.md#someint-count---promise"><code>.some</code></a> and <a href="API.md#promisesomearraydynamicpromise-values-int-count---promise"><code>Promise.some</code></a></td><td><code>some</code></td></tr>\n        <tr><td><a href="API.md#nodeifyfunction-callback---promise"><code>.nodeify</code></a></td><td><code>nodeify</code></td></tr>\n        <tr><td><a href="API.md#promisecoroutinegeneratorfunction-generatorfunction---function"><code>Promise.coroutine</code></a> and <a href="API.md#promisespawngeneratorfunction-generatorfunction---promise"><code>Promise.spawn</code></a></td><td><code>generators</code></td></tr>\n        <tr><td><a href="API.md#progression">Progression</a></td><td><code>progress</code></td></tr>\n        <tr><td><a href="API.md#promisification">Promisification</a></td><td><code>promisify</code></td></tr>\n        <tr><td><a href="API.md#cancellation">Cancellation</a></td><td><code>cancel</code></td></tr>\n        <tr><td><a href="API.md#timers">Timers</a></td><td><code>timers</code></td></tr>\n        <tr><td><a href="API.md#resource-management">Resource management</a></td><td><code>using</code></td></tr>\n\n    </tbody>\n</table>\n\n\nMake sure you have cloned the repo somewhere and did `npm install` successfully.\n\nAfter that you can run:\n\n    node tools/build --features="core"\n\n\nThe above builds the most minimal build you can get. You can add more features separated by spaces from the above list:\n\n    node tools/build --features="core filter map reduce"\n\nThe custom build file will be found from `/js/browser/bluebird.js`. It will have a comment that lists the disabled and enabled features.\n\nNote that the build leaves the `/js/main` etc folders with same features so if you use the folder for node.js at the same time, don\'t forget to build\na full version afterwards (after having taken a copy of the bluebird.js somewhere):\n\n    node tools/build --debug --main --zalgo --browser --minify\n\n####Supported options by the build tool\n\nThe value of boolean flags is determined by presence, if you want to pass false value for a boolean flag, use the `no-`-prefix e.g. `--no-debug`.\n\n - `--main` - Whether to build the main build. The main build is placed at `js/main` directory. Default `false`.\n - `--debug` - Whether to build the debug build. The debug build is placed at `js/debug` directory. Default `false`.\n - `--zalgo` - Whether to build the zalgo build. The zalgo build is placed at `js/zalgo` directory. Default `false`.\n - `--browser` - Whether to compile the browser build. The browser build file is placed at `js/browser/bluebird.js` Default `false`.\n - `--minify` - Whether to minify the compiled browser build. The minified browser build file is placed at `js/browser/bluebird.min.js` Default `true`.\n - `--features=String` - See [custom builds](#custom-builds)\n\n<hr>\n\n##For library authors\n\nBuilding a library that depends on bluebird? You should know about a few features.\n\nIf your library needs to do something obtrusive like adding or modifying methods on the `Promise` prototype, uses long stack traces or uses a custom unhandled rejection handler then... that\'s totally ok as long as you don\'t use `require("bluebird")`. Instead you should create a file\nthat creates an isolated copy. For example, creating a file called `bluebird-extended.js` that contains:\n\n```js\n                //NOTE the function call right after\nmodule.exports = require("bluebird/js/main/promise")();\n```\n\nYour library can then use `var Promise = require("bluebird-extended");` and do whatever it wants with it. Then if the application or other library uses their own bluebird promises they will all play well together because of Promises/A+ thenable assimilation magic.\n\nYou should also know about [`.nodeify()`](API.md#nodeifyfunction-callback---promise) which makes it easy to provide a dual callback/promise API.\n\n<hr>\n\n##What is the sync build?\n\nYou may now use sync build by:\n\n    var Promise = require("bluebird/zalgo");\n\nThe sync build is provided to see how forced asynchronity affects benchmarks. It should not be used in real code due to the implied hazards.\n\nThe normal async build gives Promises/A+ guarantees about asynchronous resolution of promises. Some people think this affects performance or just plain love their code having a possibility\nof stack overflow errors and non-deterministic behavior.\n\nThe sync build skips the async call trampoline completely, e.g code like:\n\n    async.invoke( this.fn, this, val );\n\nAppears as this in the sync build:\n\n    this.fn(val);\n\nThis should pressure the CPU slightly less and thus the sync build should perform better. Indeed it does, but only marginally. The biggest performance boosts are from writing efficient Javascript, not from compromising determinism.\n\nNote that while some benchmarks are waiting for the next event tick, the CPU is actually not in use during that time. So the resulting benchmark result is not completely accurate because on node.js you only care about how much the CPU is taxed. Any time spent on CPU is time the whole process (or server) is paralyzed. And it is not graceful like it would be with threads.\n\n\n```js\nvar cache = new Map(); //ES6 Map or DataStructures/Map or whatever...\nfunction getResult(url) {\n    var resolver = Promise.pending();\n    if (cache.has(url)) {\n        resolver.resolve(cache.get(url));\n    }\n    else {\n        http.get(url, function(err, content) {\n            if (err) resolver.reject(err);\n            else {\n                cache.set(url, content);\n                resolver.resolve(content);\n            }\n        });\n    }\n    return resolver.promise;\n}\n\n\n\n//The result of console.log is truly random without async guarantees\nfunction guessWhatItPrints( url ) {\n    var i = 3;\n    getResult(url).then(function(){\n        i = 4;\n    });\n    console.log(i);\n}\n```\n\n#Optimization guide\n\nArticles about optimization will be periodically posted in [the wiki section](https://github.com/petkaantonov/bluebird/wiki), polishing edits are welcome.\n\nA single cohesive guide compiled from the articles will probably be done eventually.\n\n#License\n\nThe MIT License (MIT)\n\nCopyright (c) 2014 Petka Antonov\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n',
+622 silly resolved     _id: 'bluebird@2.9.3',
+622 silly resolved     dist: { shasum: '29c4a42f0c90258f2e4c0a8d5b6ff9ddb1d46c9f' },
+622 silly resolved     _from: 'bluebird@^2.1.1',
+622 silly resolved     _resolved: 'https://registry.npmjs.org/bluebird/-/bluebird-2.9.3.tgz' } ]
+623 info install bluebird@2.9.3 into /Users/k88hudson/github/cordova-shell
+624 info installOne bluebird@2.9.3
+625 info /Users/k88hudson/github/cordova-shell/node_modules/bluebird unbuild
+626 verbose tar unpack /Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+627 silly lockFile 75e14c0e-dova-shell-node-modules-bluebird tar:///Users/k88hudson/github/cordova-shell/node_modules/bluebird
+628 verbose lock tar:///Users/k88hudson/github/cordova-shell/node_modules/bluebird /Users/k88hudson/.npm/75e14c0e-dova-shell-node-modules-bluebird.lock
+629 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+630 verbose lock tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz /Users/k88hudson/.npm/6473e3f0-n-npm-bluebird-2-9-3-package-tgz.lock
+631 silly gunzTarPerm modes [ '755', '644' ]
+632 silly gunzTarPerm extractEntry package.json
+633 silly gunzTarPerm extractEntry README.md
+634 silly gunzTarPerm extractEntry LICENSE
+635 silly gunzTarPerm extractEntry zalgo.js
+636 silly gunzTarPerm extractEntry js/browser/bluebird.js
+637 silly gunzTarPerm extractEntry js/browser/bluebird.min.js
+638 silly gunzTarPerm extractEntry js/main/any.js
+639 silly gunzTarPerm extractEntry js/main/finally.js
+640 silly gunzTarPerm extractEntry js/main/generators.js
+641 silly gunzTarPerm extractEntry js/main/join.js
+642 silly gunzTarPerm extractEntry js/main/filter.js
+643 silly gunzTarPerm extractEntry js/main/method.js
+644 silly gunzTarPerm extractEntry js/main/nodeify.js
+645 silly gunzTarPerm extractEntry js/main/progress.js
+646 silly gunzTarPerm extractEntry js/main/promise.js
+647 silly gunzTarPerm extractEntry js/main/promise_array.js
+648 silly gunzTarPerm extractEntry js/main/es5.js
+649 silly gunzTarPerm extractEntry js/main/promise_resolver.js
+650 silly gunzTarPerm extractEntry js/main/errors.js
+651 silly gunzTarPerm extractEntry js/main/promisify.js
+652 silly gunzTarPerm extractEntry js/main/each.js
+653 silly gunzTarPerm extractEntry js/main/props.js
+654 silly gunzTarPerm extractEntry js/main/direct_resolve.js
+655 silly gunzTarPerm extractEntry js/main/queue.js
+656 silly gunzTarPerm extractEntry js/main/debuggability.js
+657 silly gunzTarPerm extractEntry js/main/race.js
+658 silly gunzTarPerm extractEntry js/main/context.js
+659 silly gunzTarPerm extractEntry js/main/reduce.js
+660 silly gunzTarPerm extractEntry js/main/catch_filter.js
+661 silly gunzTarPerm extractEntry js/main/schedule.js
+662 silly gunzTarPerm extractEntry js/main/captured_trace.js
+663 silly gunzTarPerm extractEntry js/main/settle.js
+664 silly gunzTarPerm extractEntry js/main/cancel.js
+665 silly gunzTarPerm extractEntry js/main/some.js
+666 silly gunzTarPerm extractEntry js/main/call_get.js
+667 silly gunzTarPerm extractEntry js/main/synchronous_inspection.js
+668 silly gunzTarPerm extractEntry js/main/bluebird.js
+669 silly gunzTarPerm extractEntry js/main/thenables.js
+670 silly gunzTarPerm extractEntry js/main/bind.js
+671 silly gunzTarPerm extractEntry js/main/timers.js
+672 silly gunzTarPerm extractEntry js/main/async.js
+673 silly gunzTarPerm extractEntry js/main/using.js
+674 silly gunzTarPerm extractEntry js/main/assert.js
+675 silly gunzTarPerm extractEntry js/main/util.js
+676 silly gunzTarPerm extractEntry js/main/map.js
+677 silly lockFile 75e14c0e-dova-shell-node-modules-bluebird tar:///Users/k88hudson/github/cordova-shell/node_modules/bluebird
+678 silly lockFile 75e14c0e-dova-shell-node-modules-bluebird tar:///Users/k88hudson/github/cordova-shell/node_modules/bluebird
+679 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+680 silly lockFile 6473e3f0-n-npm-bluebird-2-9-3-package-tgz tar:///Users/k88hudson/.npm/bluebird/2.9.3/package.tgz
+681 info preinstall bluebird@2.9.3
+682 verbose readDependencies using package.json deps
+683 verbose readDependencies using package.json deps
+684 silly resolved []
+685 verbose about to build /Users/k88hudson/github/cordova-shell/node_modules/bluebird
+686 info build /Users/k88hudson/github/cordova-shell/node_modules/bluebird
+687 verbose linkStuff [ false,
+687 verbose linkStuff   false,
+687 verbose linkStuff   false,
+687 verbose linkStuff   '/Users/k88hudson/github/cordova-shell/node_modules' ]
+688 info linkStuff bluebird@2.9.3
+689 verbose linkBins bluebird@2.9.3
+690 verbose linkMans bluebird@2.9.3
+691 verbose rebuildBundles bluebird@2.9.3
+692 info install bluebird@2.9.3
+693 info postinstall bluebird@2.9.3
+694 error peerinvalid The package react does not satisfy its siblings' peerDependencies requirements!
+694 error peerinvalid Peer react-router@0.11.6 wants react@0.12.x
+694 error peerinvalid Peer rrouter@0.4.2 wants react@0.10.0 - 0.11.x
+695 error System Darwin 14.0.0
+696 error command "node" "/usr/local/bin/npm" "install" "rrouter" "--save"
+697 error cwd /Users/k88hudson/github/cordova-shell
+698 error node -v v0.10.26
+699 error npm -v 1.4.3
+700 error code EPEERINVALID
+701 verbose exit [ 1, true ]

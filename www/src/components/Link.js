@@ -1,6 +1,6 @@
 var React = require('react');
 var Navigation = require('react-router').Navigation;
-var Click = require('./Click');
+var Click = require('./formComponents').Click;
 
 var Link = React.createClass({
     mixins: [Navigation],

@@ -1,12 +1,13 @@
+@duration: 0.3s;
 /*********************************************************
 * right
 */
 .moveOver-enter {
-  position: absolute;
-  transition-duration: .3s;
+ // position: absolute;
+  transition-duration: @duration;
   transition-property: transform, opacity;
   transition-timing-function: ease-out;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   z-index: 10000;
 }
 
@@ -15,9 +16,9 @@
 }
 
 .moveOver-leave {
-  position: absolute;
+ // position: absolute;
 
-  transition-duration: .3s;
+  transition-duration: @duration;
   transition-property: transform, opacity;
   transition-timing-function: ease-out;
   transform: translateX(0);
@@ -25,17 +26,16 @@
 }
 
 .moveOver-leave.moveOver-leave-active {
-  transform: translateX(100%);
+  transform: translateX(-100%);
   opacity: 0.3;
 }
 
 /*********************************************************
 * down
 */
-
 .moveDown-enter {
     position: absolute;
-    transition-duration: .6s;
+    transition-duration: @duration;
     transition-property: transform, opacity;
     transition-timing-function: ease;
     transform: translateY(100%);
@@ -48,7 +48,7 @@
 
 .moveDown-leave {
     position: absolute;
-    transition-duration: .6s;
+    transition-duration: @duration;
     transition-property: transform, opacity;
     transition-timing-function: ease;
     transform: translateY(0);
@@ -58,4 +58,85 @@
 .moveDown-leave.moveDown-leave-active {
     transform: translateY(-100%);
     opacity: 0;
+}
+
+
+.fade-enter {
+  opacity: 0.01;
+  transition: opacity .3s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-leave {
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+}
+
+/*********************************************************
+* fadein
+*/
+@_d: 0.3s;
+.fadein-enter {
+  transition: transform @_d ease,
+    opacity @_d ease;
+  transform: translateX(-20%);
+  z-index: 10000;
+  opacity: 0;
+}
+
+.fadein-enter.fadein-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fadein-leave {
+  transition: opacity 0 ease @_d;
+  opacity: 1;
+  z-index: -1;
+}
+
+.fadein-leave.fadein-leave-active {
+  opacity: 0
+}
+
+// fadeout
+.fadeout-enter {
+  transition: transform @_d ease,
+    opacity @_d ease;
+  transform: translateX(20%);
+  z-index: 10000;
+  opacity: 0;
+}
+
+.fadeout-enter.fadeout-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fadeout-leave {
+  transition: opacity 0 ease @_d;
+  opacity: 1;
+  z-index: -1;
+}
+
+.fadeout-leave.fadeout-leave-active {
+  opacity: 0
+}
+
+
+/*********************************************************
+* Button stuff
+*/
+
+@keyframes blueFadeInOut {
+  0%   { background-color: @blue; }
+  50% { background-color: lighten(@blue, 15%) }
+  100%   { background-color: @blue; }
 }

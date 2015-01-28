@@ -16,6 +16,7 @@ var isApp = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'h
 
 if (isApp) {
     app.initialize();
+    console.log('is app');
 } else {
     console.log('not app!');
     app.receivedEvent();

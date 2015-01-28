@@ -1,28 +1,20 @@
 var React = require('react/addons');
-var Router = require('react-router');
-var { State, Route, DefaultRoute, RouteHandler } = Router;
 var TransitionGroup = React.addons.CSSTransitionGroup;
-var Link = require('./components/Link');
+var cloneWithProps = React.addons.cloneWithProps
+
+var Router = require('rrouter');
+var { Routes, Route, Link } = Router;
+var Router = require('rrouter');
 
 var App = React.createClass({
     mixins: [ State ],
-    getInitialState: function () {
-        return {
-            transitionName: 'fadein'
-        };
-    },
-    statics: {
-        willTransitionTo: function (transition, params, query) {
-            console.log(transition, params, query);
-        }
-    },
     render: function () {
         var name = this.getRoutes().reverse()[0].name;
         return (
             <div className="wrapper">
                 <Nav />
-                <TransitionGroup component="div" className="page-container" transitionName={this.state.transitionName}>
-                    <RouteHandler key={name} willTransitionTo={this.willTransitionTo} />
+                <TransitionGroup component="div" className="page-container" transitionName="fadein">
+                    <RouteHandler key={name} />
                 </TransitionGroup>
             </div>
         );
@@ -38,7 +30,7 @@ var Nav = React.createClass({
         ];
         return (
             <ul className="nav">
-                {links.map(link => <li key={link[0]}><Link transition="fadeout" to={link[0]}><span className={link[1]} /></Link></li>)}
+                {links.map(link => <li key={link[0]}><Link to={link[0]}><span className={link[1]} /></Link></li>)}
             </ul>
         );
     }
