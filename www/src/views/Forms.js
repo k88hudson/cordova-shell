@@ -1,7 +1,10 @@
 var React = require('react');
 var {Click, Switch, Checkbox, Input} = require('../components/formComponents');
+var Link = require('../components/Link');
+var Animation = require('../mixins/Animation');
 
 var Forms = React.createClass({
+    mixins: [Animation],
     getInitialState: function() {
         return {
             isOn: false
@@ -27,6 +30,7 @@ var Forms = React.createClass({
                 <div className="caret ion-chevron-down" />
             </label>
             <p><Checkbox>Hello world</Checkbox></p>
+            <Link to="japanese" transitionName="back">Go back</Link>
         </main>);
     }
 });

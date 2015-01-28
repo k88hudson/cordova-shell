@@ -1,5 +1,8 @@
 var React = require('react');
+var Animation = require('../mixins/Animation');
+
 var Japanese = React.createClass({
+    mixins: [Animation],
     render: function () {
         return (
             <main>

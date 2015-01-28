@@ -1,6 +1,8 @@
 var React = require('react');
+var Animation = require('../mixins/Animation');
 
 var Headers = React.createClass({
+    mixins: [Animation],
     render: function() {
         return (<div>
             <header>

@@ -88,6 +88,20 @@ var Input = module.exports.Input = React.createClass({
     },
     render: function () {
         return (<div className="input-group">
+            <input
+                placeholder={this.props.label}
+                type={this.props.type || 'text'} required />
+        </div>);
+    }
+});
+
+var InputMaterial = module.exports.InputMaterial = React.createClass({
+    onFocus: function () {
+        // We need this because of http://css-tricks.com/webkit-sibling-bug. Sigh
+        this.setState({hasFocus: true});
+    },
+    render: function () {
+        return (<div className="input-group-material">
             <input type={this.props.type || 'text'} onFocus={this.onFocus} required />
             <span className="bar">
                 <span className="left"></span>

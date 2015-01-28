@@ -128,7 +128,7 @@ body,
 }
 
 main {
-    padding: 10px;
+    padding: 20px;
 }
 
 
@@ -137,6 +137,25 @@ main {
 */
 
 .input-group {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    input         {
+      padding:10px 10px 10px 0;
+      display: block;
+      width: 100%;
+      border: none;
+      box-shadow: 0 1px 0 0 #CCC;
+      transition: box-shadow 0.1s ease;
+      &:focus {
+        outline: none;
+        box-shadow: 0 2px 0 0 @blue;
+      }
+    }
+}
+
+// Choppy on 4.2 :(
+.input-group-material {
     position: relative;
     margin-bottom:45px;
     margin-top: 45px;
@@ -243,7 +262,7 @@ main {
         transition: box-shadow 0.2s ease-in-out;
         &:focus {
             outline: none;
-            box-shadow: 0 2px 0 0 blue;
+            box-shadow: 0 2px 0 0 @blue;
         }
     }
 }

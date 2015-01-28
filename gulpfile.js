@@ -53,7 +53,7 @@ function webpackTask(options) {
 gulp.task('webpack', webpackTask({sourcemaps: true}));
 gulp.task('webpack-optimized', webpackTask({optimize: true}));
 
-gulp.task('watch-webpack', webpackTask({ watch: true }));
+gulp.task('watch-webpack', webpackTask({ watch: true, sourcemaps: true }));
 
 gulp.task('build', ['less', 'webpack']);
 

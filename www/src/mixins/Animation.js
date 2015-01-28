@@ -1,21 +1,27 @@
 var React = require('react');
 
-var AnimationContext = {
+var DEFAULT_ANIMATION = 'forward';
+var animationName = DEFAULT_ANIMATION;
 
-    childContextTypes: {
-        getAnimation: React.PropTypes.func.isRequired,
-        setAnimation: React.PropTypes.func.isRequired
-    },
+var Animation = {
 
     getAnimation: function () {
-        return this.context.getAnimation();
+        return animationName;
     },
 
     setAnimation: function (animation) {
-        return this.context.setAnimation(animation);
-    },
+        animationName = animation || DEFAULT_ANIMATION;
+    }
 
+    // statics: {
+    //     willTransitionTo: function (transition, params, callback) {
+    //         console.log(transition, params);
+    //     },
+    //     willTransitionFrom: function (transition, component) {
+    //         console.log(component);
+    //     }
+    // }
 
 };
 
-module.exports = AnimationContext;
+module.exports = Animation;

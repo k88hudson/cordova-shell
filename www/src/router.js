@@ -2,54 +2,38 @@ var React = require('react/addons');
 var Router = require('react-router');
 var { State, Route, DefaultRoute, RouteHandler } = Router;
 var TransitionGroup = React.addons.CSSTransitionGroup;
+
+var Nav = require('./components/Nav')
 var Link = require('./components/Link');
+var Animation = require('./mixins/Animation');
+
+var links = [
+    ['forms', 'ion-ios-list', require('./views/Forms')],
+    ['japanese', 'ion-document-text', require('./views/Japanese')],
+    ['headers', 'ion-ios-settings-strong', require('./views/Headers')]
+];
 
 var App = React.createClass({
-    mixins: [ State ],
-    getInitialState: function () {
-        return {
-            transitionName: 'fadein'
-        };
-    },
-    statics: {
-        willTransitionTo: function (transition, params, query) {
-            console.log(transition, params, query);
-        }
-    },
+    mixins: [ State, Animation ],
     render: function () {
         var name = this.getRoutes().reverse()[0].name;
         return (
             <div className="wrapper">
-                <Nav />
-                <TransitionGroup component="div" className="page-container" transitionName={this.state.transitionName}>
-                    <RouteHandler key={name} willTransitionTo={this.willTransitionTo} />
+                <Nav links={links} />
+                <TransitionGroup component="div" className="page-container" transitionName={this.getAnimation()}>
+                    <RouteHandler key={name} />
                 </TransitionGroup>
             </div>
         );
     }
 });
 
-var Nav = React.createClass({
-    render: function () {
-        var links = [
-            ['forms', 'ion-ios-list'],
-            ['japanese', 'ion-document-text'],
-            ['headers', 'ion-ios-settings-strong']
-        ];
-        return (
-            <ul className="nav">
-                {links.map(link => <li key={link[0]}><Link transition="fadeout" to={link[0]}><span className={link[1]} /></Link></li>)}
-            </ul>
-        );
-    }
-});
-
 var routes = (
   <Route name="app" path="/" handler={App}>
-    <Route name="forms" handler={require('./views/Forms')}/>
-    <Route name="japanese" handler={require('./views/Japanese')}/>
-    <Route name="headers" handler={require('./views/Headers')}/>
-    <DefaultRoute handler={require('./views/Forms')}/>
+    {links.map((link) => {
+        return <Route name={link[0]} handler={link[2]} key={link[0]} />
+    })}
+    <DefaultRoute handler={links[0][2]}/>
   </Route>
 );
 
@@ -58,7 +42,8 @@ module.exports = function () {
     React.initializeTouchEvents(true);
 
     // Router.HistoryLocation,
-    Router.run(routes, function (Handler) {
+    Router.run(routes, function (Handler, state) {
+        if (state.action === 'pop') Animation.setAnimation('back');
         React.render(<Handler/>, document.body);
     });
 };

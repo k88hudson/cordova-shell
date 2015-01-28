@@ -1,132 +1,53 @@
-@duration: 0.3s;
 /*********************************************************
-* right
-*/
-.moveOver-enter {
- // position: absolute;
-  transition-duration: @duration;
-  transition-property: transform, opacity;
-  transition-timing-function: ease-out;
-  transform: translateX(100%);
-  z-index: 10000;
-}
-
-.moveOver-enter.moveOver-enter-active {
-  transform: translateX(0);
-}
-
-.moveOver-leave {
- // position: absolute;
-
-  transition-duration: @duration;
-  transition-property: transform, opacity;
-  transition-timing-function: ease-out;
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.moveOver-leave.moveOver-leave-active {
-  transform: translateX(-100%);
-  opacity: 0.3;
-}
-
-/*********************************************************
-* down
-*/
-.moveDown-enter {
-    position: absolute;
-    transition-duration: @duration;
-    transition-property: transform, opacity;
-    transition-timing-function: ease;
-    transform: translateY(100%);
-    z-index: 10000;
-}
-
-.moveDown-enter.moveDown-enter-active {
-    transform: translateY(0);
-}
-
-.moveDown-leave {
-    position: absolute;
-    transition-duration: @duration;
-    transition-property: transform, opacity;
-    transition-timing-function: ease;
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.moveDown-leave.moveDown-leave-active {
-    transform: translateY(-100%);
-    opacity: 0;
-}
-
-
-.fade-enter {
-  opacity: 0.01;
-  transition: opacity .3s ease-in;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-}
-
-.fade-leave {
-  opacity: 1;
-  transition: opacity .3s ease-in;
-}
-
-.fade-leave.fade-leave-active {
-  opacity: 0.01;
-}
-
-/*********************************************************
-* fadein
+* page transitions
 */
 @_d: 0.3s;
-.fadein-enter {
+.forward-enter {
   transition: transform @_d ease,
     opacity @_d ease;
   transform: translateX(-20%);
   z-index: 10000;
   opacity: 0;
+  overflow: hidden !important;
 }
 
-.fadein-enter.fadein-enter-active {
+.forward-enter.forward-enter-active {
   transform: translateX(0);
   opacity: 1;
 }
 
-.fadein-leave {
+.forward-leave {
   transition: opacity 0 ease @_d;
   opacity: 1;
   z-index: -1;
 }
 
-.fadein-leave.fadein-leave-active {
+.forward-leave.forward-leave-active {
   opacity: 0
 }
 
 // fadeout
-.fadeout-enter {
+.back-enter {
   transition: transform @_d ease,
     opacity @_d ease;
   transform: translateX(20%);
   z-index: 10000;
   opacity: 0;
+  overflow: hidden !important;
 }
 
-.fadeout-enter.fadeout-enter-active {
+.back-enter.back-enter-active {
   transform: translateX(0);
   opacity: 1;
 }
 
-.fadeout-leave {
+.back-leave {
   transition: opacity 0 ease @_d;
   opacity: 1;
   z-index: -1;
 }
 
-.fadeout-leave.fadeout-leave-active {
+.back-leave.back-leave-active {
   opacity: 0
 }
 
