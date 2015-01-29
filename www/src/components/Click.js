@@ -64,9 +64,9 @@ module.exports = React.createClass({
         this.setState({touchdown: false});
         this.setState({timeout: window.setTimeout(() => {
           if (this.isMounted()) {
-            this.setState(this.defaults)
+            this.setState(this.defaults);
           }
-        }, 300)});
+        }, 305)});
     },
 
     onTouchCancel: function() {
