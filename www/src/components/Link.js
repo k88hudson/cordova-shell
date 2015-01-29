@@ -84,8 +84,7 @@ var Link = React.createClass({
       nodeName: this.props.nodeName || 'a',
       href: this.getHref(),
       className: this.getClassName(),
-      handler: this.handleClick,
-      noPreventDefault: true
+      handler: this.handleClick
     });
 
     return (<Click {...props} >{inner}</Click>);
