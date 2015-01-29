@@ -3,8 +3,6 @@
 */
 @_d: 0.3s;
 .forward-enter {
-  transition: transform @_d ease,
-    opacity @_d ease;
   transform: translateX(-30%);
   z-index: 10000;
   opacity: 0;
@@ -12,24 +10,24 @@
 }
 
 .forward-enter.forward-enter-active {
+  transition: transform @_d ease,
+    opacity @_d ease;
   transform: translateX(0);
   opacity: 1;
 }
 
 .forward-leave {
-  transition: opacity 0 ease @_d;
   opacity: 1;
   z-index: -1;
 }
 
 .forward-leave.forward-leave-active {
+  transition: opacity 0.1s ease @_d;
   opacity: 0
 }
 
 // fadeout
 .back-leave {
-  transition: transform @_d ease,
-    opacity @_d ease;
   transform: translateX(0%);
   z-index: 10000;
   opacity: 1;
@@ -37,18 +35,20 @@
 }
 
 .back-leave.back-leave-active {
+  transition: transform @_d ease,
+    opacity @_d ease;
   transform: translateX(-30%);
   opacity: 0;
 }
 
 .back-enter {
-  transition: opacity 0 ease @_d;
-  opacity: 1;
+  opacity: 0;
   z-index: -1;
 }
 
 .back-enter.back-enter-active {
-  opacity: 0
+  transition: opacity 0.1s ease;
+  opacity: 1
 }
 
 

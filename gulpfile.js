@@ -1,18 +1,31 @@
 var gulp = require('gulp');
 var webserver = require('gulp-webserver');
 var prefix = require('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
 var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
 var gulpWebpack = require('gulp-webpack');
 var webpack = require('webpack');
 var path = require('path');
+var gutil = require('gulp-util');
+var plumber = require('gulp-plumber');
+
+function onError(err) {
+    gutil.log(gutil.colors.red(err));
+    gutil.beep();
+    this.emit('end');
+}
+
+function handleError() {
+    return plumber({
+        errorHandler: onError
+    });
+};
 
 var COMPILED_DIR = './www/compiled/';
 
 gulp.task('less', function() {
     return gulp.src('./www/less/style.less')  // only compile the entry file
-        .pipe(plumber())
+        .pipe(handleError())
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(prefix('last 2 versions', 'android >= 4.2'), {cascade:true})

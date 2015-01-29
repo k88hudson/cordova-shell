@@ -12,6 +12,8 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     font-family: 'Fira Sans', sans-serif;
+    color: lighten(#404147, 10%);
+    transform: translate3d(0,0,0);
 }
 
 p {
@@ -24,6 +26,13 @@ p {
 * Buttons and stuff
 */
 @blue: #0183E7;
+
+@darkTurquoise: #47A1A1;
+@turquoise: #7CC4BD;
+@highlight: #C3DECA;
+
+@navHeight: 60px;
+
 button.touchclick {
     position: relative;
     padding: 14px;
@@ -77,27 +86,64 @@ button.touchclick {
 * Menu page + messages
 */
 
-#menu {
-    background: @blue;
-    color: white;
+#main-menu {
+    padding: 0;
+    padding-top: @navHeight;
+    background: @turquoise;
 }
 
-.message-card {
+#menu {
+}
+
+.deck-list-item {
     display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    &.touchdown {
+        background: @highlight;
+    }
     .avatar {
         width: 100px;
         height: 100px;
         flex-shrink: 0;
         border-radius: 50%;
-        background: #F9E977;
-        margin-right: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         img {
-            width: 100%;
+            display: block;
+            max-width: 100%;
         }
+    }
+    .details {
+        flex-grow: 1;
+        overflow: hidden;
+        font-size: 20px;
     }
     h3, h4, h5, p {
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+#deck {
+    padding: 20px;
+    padding-top: @navHeight;
+    background-color: @turquoise;
+}
+
+.card {
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+    background: white;
+    margin-bottom: 20px;
+    img {
+        max-width: 75%;
+        display: inline-block;
     }
 }
 
@@ -106,20 +152,26 @@ button.touchclick {
 * Nav
 */
 nav.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: @turquoise;
+    height: @navHeight;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     a {
         width: auto;
-        height: 50px;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 10px;
+        padding: 0 20px;
         font-size: 24px;
         color: white;
         &.touchdown {
-            background: darken(@blue, 10%);
+            background: @highlight;
         }
     }
     h1 {
@@ -131,7 +183,7 @@ nav.nav {
     }
 }
 
-.nav {
+ul.nav {
     position: absolute;
     height: 50px;
     top: 0;
@@ -174,7 +226,6 @@ body,
 }
 .page-container {
     position: relative;
-    transform: translate3d(0,0,0);
 }
 .page-container > * {
     position: absolute;
@@ -183,11 +234,14 @@ body,
     height: 100%;
     overflow-y: scroll;
     background: white;
+    perspective: 1000;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 main {
-    padding: 20px;
-    padding-top: 60px;
+    padding: 10px;
+    padding-top: (@navHeight + 10);
 }
 
 

@@ -18,7 +18,7 @@ var App = React.createClass({
         var name = this.getRoutes().reverse()[0].name;
         return (
             <TransitionGroup component="div" className="page-container" transitionName={this.getAnimation()}>
-                <RouteHandler key={name} />
+                <RouteHandler key={name} {...this.props} />
             </TransitionGroup>
         );
     }
@@ -26,9 +26,10 @@ var App = React.createClass({
 
 var routes = (
   <Route name="app" path="/" handler={App}>
-    <Route name="messages" handler={require('./views/Messages')} />
+    <Route name="main" handler={require('./views/Main')} />
     <Route name="menu" handler={require('./views/Menu')} />
-    <DefaultRoute handler={require('./views/Messages')}/>
+    <Route name="deck" path="deck/:deckId" handler={require('./views/Deck')} />
+    <DefaultRoute handler={require('./views/Main')}/>
   </Route>
 );
 
@@ -39,7 +40,7 @@ module.exports = function () {
     // Router.HistoryLocation,
     Router.run(routes, function (Handler, state) {
         if (state.action === 'pop') Animation.setAnimation('back');
-        React.render(<Handler/>, document.body);
+        React.render(<Handler params={state.params}/>, document.body);
     });
 };
 
