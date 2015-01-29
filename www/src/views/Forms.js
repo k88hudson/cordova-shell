@@ -15,6 +15,11 @@ var Forms = React.createClass({
     },
     render: function () {
         return (<main>
+
+            <ul className="nav">
+                <li><Link transition="forward" to="japanese">ア</Link></li>
+            </ul>
+
             <p><Click
                 nodeName="button"
                 handler={this.flip}>

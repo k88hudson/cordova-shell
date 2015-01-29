@@ -5,7 +5,7 @@
 .forward-enter {
   transition: transform @_d ease,
     opacity @_d ease;
-  transform: translateX(-20%);
+  transform: translateX(-30%);
   z-index: 10000;
   opacity: 0;
   overflow: hidden !important;
@@ -27,27 +27,27 @@
 }
 
 // fadeout
-.back-enter {
+.back-leave {
   transition: transform @_d ease,
     opacity @_d ease;
-  transform: translateX(20%);
+  transform: translateX(0%);
   z-index: 10000;
-  opacity: 0;
+  opacity: 1;
   overflow: hidden !important;
 }
 
-.back-enter.back-enter-active {
-  transform: translateX(0);
-  opacity: 1;
+.back-leave.back-leave-active {
+  transform: translateX(-30%);
+  opacity: 0;
 }
 
-.back-leave {
+.back-enter {
   transition: opacity 0 ease @_d;
   opacity: 1;
   z-index: -1;
 }
 
-.back-leave.back-leave-active {
+.back-enter.back-enter-active {
   opacity: 0
 }
 

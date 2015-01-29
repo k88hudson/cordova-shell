@@ -73,8 +73,66 @@ button.touchclick {
     transform: translateX(100%);
 }
 
+/*********************************************************
+* Menu page + messages
+*/
+
+#menu {
+    background: @blue;
+    color: white;
+}
+
+.message-card {
+    display: flex;
+    .avatar {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: #F9E977;
+        margin-right: 5px;
+        img {
+            width: 100%;
+        }
+    }
+    h3, h4, h5, p {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*********************************************************
+* Nav
+*/
+nav.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    a {
+        width: auto;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        font-size: 24px;
+        color: white;
+        &.touchdown {
+            background: darken(@blue, 10%);
+        }
+    }
+    h1 {
+        padding: 0 10px;
+        margin: 0;
+        font-size: 18px;
+        color: white;
+        font-weight: normal;
+    }
+}
+
 .nav {
-    position: fixed;
+    position: absolute;
     height: 50px;
     top: 0;
     left: 0;
@@ -107,7 +165,7 @@ button.touchclick {
 
 html,
 body,
-.wrapper,
+.wrapper, // not needed anymore really
 .page-container {
     padding: 0;
     margin: 0;
@@ -115,8 +173,8 @@ body,
     overflow: hidden;
 }
 .page-container {
-    margin-top: 50px;
     position: relative;
+    transform: translate3d(0,0,0);
 }
 .page-container > * {
     position: absolute;
@@ -129,6 +187,7 @@ body,
 
 main {
     padding: 20px;
+    padding-top: 60px;
 }
 
 

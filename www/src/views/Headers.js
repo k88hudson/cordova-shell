@@ -1,10 +1,14 @@
 var React = require('react');
 var Animation = require('../mixins/Animation');
+var Link = require('../components/Link');
 
 var Headers = React.createClass({
     mixins: [Animation],
     render: function() {
-        return (<div>
+        return (<main>
+            <ul className="nav">
+                <li><Link transition="forward" to="japanese">ア</Link></li>
+            </ul>
             <header>
                 <h1>Header</h1>
             </header>
@@ -18,7 +22,7 @@ var Headers = React.createClass({
                 <h1>Header with really long text that goes over</h1>
                 <button className="right">Next</button>
             </header>
-        </div>);
+        </main>);
     }
 });
 
