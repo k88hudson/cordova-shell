@@ -55,6 +55,10 @@ var Click = module.exports.Click = React.createClass({
         this.setState({touchdown: false});
     },
 
+    onTouchCancel: function() {
+        this.setState(this.defaults);
+    },
+
     onClick: function(e) {
         e.preventDefault();
         if (this.state.touched) {
@@ -76,6 +80,7 @@ var Click = module.exports.Click = React.createClass({
         onTouchStart: this.onTouchStart,
         onTouchMove: this.onTouchMove,
         onTouchEnd: this.onTouchEnd,
+        onTouchCancel: this.onTouchCancel,
         onClick: this.onClick
       }, this.props.children)
     }

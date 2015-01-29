@@ -27,6 +27,9 @@ var Main = React.createClass({
                 <Link to="menu">
                     <span className="ion-android-menu"></span>
                 </Link>
+                <Link to="click-test">
+                   Click
+                </Link>
                 <h1>日本語の語彙</h1>
             </nav>
             {decks.map(deck => <CardGroup key={deck.deckId} {...deck} />)}
