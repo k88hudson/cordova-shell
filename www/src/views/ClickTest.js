@@ -2,8 +2,13 @@ var React = require('react');
 var Click = require('../components/Click');
 
 module.exports = React.createClass({
+    getInitialState: function () {
+        return {
+            on: false
+        };
+    },
     onClick: function () {
-        console.log('done');
+        this.setState({on: !this.state.on});
     },
     render: function () {
         return (<main>
@@ -13,7 +18,7 @@ module.exports = React.createClass({
                 handler={this.onClick}>
                     Button test
             </Click>
-            <div id="log"></div>
+            <div id="log">{this.state.on.toString()}</div>
 
         </main>);
     }

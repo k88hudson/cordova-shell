@@ -28,11 +28,14 @@ module.exports = React.createClass({
         }
     },
 
-    onTouchStart: function(e) {
+    clearTimeout: function () {
         if (this.state.timeout) {
             window.clearTimeout(this.state.timeout);
-            this.setState(this.defaults);
         }
+    },
+
+    onTouchStart: function(e) {
+        this.clearTimeout();
         this.setState({
             touched: true,
             touchdown: true,
@@ -59,7 +62,7 @@ module.exports = React.createClass({
             this.handler.call(this, this.state.evObj);
         }
         this.setState({touchdown: false});
-        this.setState({timeout: setTimeout(() => {
+        this.setState({timeout: window.setTimeout(() => {
           if (this.isMounted()) {
             this.setState(this.defaults)
           }
@@ -71,12 +74,13 @@ module.exports = React.createClass({
     },
 
     onClick: function(e) {
+        this.clearTimeout();
         e.preventDefault();
         if (this.state.touched) {
             return;
         }
+        this.setState(this.defaults);
         this.handler.apply(this, arguments);
-        this.setState(this.defaults)
     },
 
     render: function() {
