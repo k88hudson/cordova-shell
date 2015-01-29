@@ -56,8 +56,8 @@ var Click = module.exports.Click = React.createClass({
     },
 
     onClick: function(e) {
-        e.preventDefault();
-        if ( this.state.touched ) {
+        if (!this.props.noPreventDefault) e.preventDefault();
+        if (this.state.touched) {
             return;
         }
         this.handler.apply(this, arguments)

@@ -42,9 +42,6 @@ var Link = React.createClass({
     if (clickResult === false || event.defaultPrevented === true)
       allowTransition = false;
 
-
-    event.preventDefault();
-
     if (allowTransition) {
       if (this.props.back) {
           this.setAnimation(this.props.transitionName || 'back');
@@ -87,7 +84,8 @@ var Link = React.createClass({
       nodeName: this.props.nodeName || 'a',
       href: this.getHref(),
       className: this.getClassName(),
-      handler: this.handleClick
+      handler: this.handleClick,
+      noPreventDefault: true
     });
 
     return (<Click {...props} >{inner}</Click>);
