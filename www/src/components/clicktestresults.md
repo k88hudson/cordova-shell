@@ -7,6 +7,7 @@ Click drag on element
     mouseup
     click
 Click drag start on element end off
+Multiple fast clicks
     mouseover
     mousedown
 Click drag start off element end on
@@ -15,6 +16,7 @@ Click drag start off element end on
 
 ## Chrome - simulated touch
 Click
+Multiple fast clicks
     touchstart
     touchend
     mousedown

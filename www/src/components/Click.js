@@ -6,7 +6,8 @@ module.exports = React.createClass({
         touched: false,
         touchdown: false,
         coords: { x:0, y:0 },
-        evObj: {}
+        evObj: {},
+        timeout: false
     },
 
     getInitialState: function() {
@@ -27,42 +28,55 @@ module.exports = React.createClass({
         }
     },
 
-    log: function (text) {
-        var el = document.createElement('p');
-        el.innerHTML = text;
-        document.getElementById('log').appendChild(el);
-    },
-
-    onMouseOver: function (e) {
-        this.log('mouseover');
-    },
-
-    onMouseDown: function (e) {
-        this.log('mousedown');
-    },
-
-    onMouseUp: function (e) {
-        this.log('mouseup');
-    },
-
     onTouchStart: function(e) {
-        this.log('touchstart');
+        if (this.state.timeout) {
+            window.clearTimeout(this.state.timeout);
+            this.setState(this.defaults);
+        }
+        this.setState({
+            touched: true,
+            touchdown: true,
+            coords: this.getCoords(e),
+            evObj: e,
+            timeout: false
+        });
     },
 
     onTouchMove: function(e) {
-        this.log('touchmove');
+        if (this.props.swipe) return;
+        var coords = this.getCoords(e);
+        var distance = Math.max(
+            Math.abs(this.state.coords.x - coords.x),
+            Math.abs(this.state.coords.y - coords.y)
+        );
+        if (distance > 6) {
+            this.setState({ touchdown: false });
+        }
     },
 
-    onTouchEnd: function() {
-        this.log('touchend');
+    onTouchEnd: function(e) {
+        if (this.state.touchdown) {
+            this.handler.call(this, this.state.evObj);
+        }
+        this.setState({touchdown: false});
+        this.setState({timeout: setTimeout(() => {
+          if (this.isMounted()) {
+            this.setState(this.defaults)
+          }
+        }, 300)});
     },
 
     onTouchCancel: function() {
-        this.log('touchcancel');
+        this.setState(this.defaults);
     },
 
     onClick: function(e) {
-        this.log('click');
+        e.preventDefault();
+        if (this.state.touched) {
+            return;
+        }
+        this.handler.apply(this, arguments);
+        this.setState(this.defaults)
     },
 
     render: function() {
@@ -74,9 +88,6 @@ module.exports = React.createClass({
       return React.DOM[this.props.nodeName || 'button']({
         className: classNames.join(' '),
         href: this.props.href,
-        onMouseOver: this.onMouseOver,
-        onMouseDown: this.onMouseDown,
-        onMouseUp: this.onMouseUp,
         onTouchStart: this.onTouchStart,
         onTouchMove: this.onTouchMove,
         onTouchEnd: this.onTouchEnd,
