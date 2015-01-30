@@ -28,7 +28,7 @@ var routes = (
   <Route name="app" path="/" handler={App}>
     <Route name="main" handler={require('./views/Main')} />
     <Route name="menu" handler={require('./views/Menu')} />
-    <Route name="click-test" handler={require('./views/ClickTest')} />
+    <Route name="thanks" handler={require('./views/ClickTest')} />
     <Route name="deck" path="deck/:deckId" handler={require('./views/Deck')} />
     <DefaultRoute handler={require('./views/Main')}/>
   </Route>

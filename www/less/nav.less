@@ -11,6 +11,9 @@ nav.nav {
     background: @white;
     border-bottom: 1px solid @lightGrey;
     color: @turquoise;
+    &.no-bottom {
+        border-bottom: none;
+    }
     a, button {
         background: none;
         font-size: inherit;
@@ -23,6 +26,11 @@ nav.nav {
         flex-shrink: 0;
         color: @turquoise;
         font-size: 24px;
+        .icon {
+            display: block;
+            min-width: 15px;
+            text-align: center;
+        }
         &.right {
             margin-left: auto;
         }
