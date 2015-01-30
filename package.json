@@ -32,10 +32,13 @@
     "uglify": "^0.1.1",
     "uglifyify": "^3.0.1",
     "gulp-uglify": "^1.1.0",
-    "gulp-util": "^3.0.2"
+    "gulp-util": "^3.0.2",
+    "json-loader": "^0.5.1"
   },
   "dependencies": {
     "react": "^0.12.2",
-    "react-router": "^0.11.6"
+    "react-router": "^0.11.6",
+    "firebase": "^2.1.2",
+    "reactfire": "^0.4.0"
   }
 }

@@ -1,0 +1,38 @@
+nav.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @navHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: @white;
+    border-bottom: 1px solid @lightGrey;
+    color: @turquoise;
+    a, button {
+        background: none;
+        font-size: inherit;
+        border: none;
+        height: 100%;
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        color: @turquoise;
+        font-size: 24px;
+        &.right {
+            margin-left: auto;
+        }
+    }
+    h1 {
+        flex-grow: 1;
+        font-size: 18px;
+        margin: 0;
+        text-align: center;
+        line-height: 1.2;
+        font-weight: normal;
+    }
+}

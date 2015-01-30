@@ -10,8 +10,12 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js/,
+                test: /\.js$/,
                 loaders: ['es6', 'jsx-loader']
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
         ]
     }

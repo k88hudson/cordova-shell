@@ -48,7 +48,16 @@ function webpackTask(options) {
         output: { filename: outputName },
         module: {
             output: { filename: outputName },
-            loaders: [ { test: /\.js/, loaders:  ['es6', 'jsx-loader'] } ],
+            loaders: [
+                {
+                    test: /\.js/,
+                    loaders:  ['es6', 'jsx-loader']
+                }
+                // {
+                //     test: /\.json$/,
+                //     loader: 'json-loader'
+                // }
+            ]
         }
     };
     if (options.sourcemaps) config.devtool = 'source-map';

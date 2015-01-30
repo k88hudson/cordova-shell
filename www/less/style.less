@@ -17,29 +17,48 @@ body {
     transform: translate3d(0,0,0);
 }
 
-p {
-    margin-top: 0;
+html,
+body,
+.wrapper, // not needed anymore really
+.page-container {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.page-container {
+    position: relative;
+}
+.page-container > * {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background: @extraGrey;
+    perspective: 1000;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
-#log {
-    margin-top: 30px;
-    font-family: monospace;
-    p {
-        margin: 0;
-    }
+main {
+    padding: 10px;
+    padding-top: (@navHeight + 10);
+}
+
+p {
+    margin-top: 0;
 }
 
 
 /*********************************************************
 * Buttons and stuff
 */
+
+@import './colors';
+
 @blue: #0183E7;
-
-@darkTurquoise: #47A1A1;
-@turquoise: #7CC4BD;
-@highlight: #C3DECA;
-
-@navHeight: 60px;
+@navHeight: 50px;
 
 button.touchclick {
     position: relative;
@@ -97,7 +116,7 @@ button.touchclick {
 #main-menu {
     padding: 0;
     padding-top: @navHeight;
-    background: @turquoise;
+    padding-bottom: 120px;
 }
 
 #menu {
@@ -159,99 +178,12 @@ button.touchclick {
 /*********************************************************
 * Nav
 */
-nav.nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: @turquoise;
-    height: @navHeight;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    a {
-        width: auto;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 20px;
-        font-size: 24px;
-        color: white;
-        &.touchdown {
-            background: @highlight;
-        }
-    }
-    h1 {
-        padding: 0 10px;
-        margin: 0;
-        font-size: 18px;
-        color: white;
-        font-weight: normal;
-    }
-}
+@import './nav';
 
-ul.nav {
-    position: absolute;
-    height: 50px;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 10px;
-    z-index: 10001;
-    background: @blue;
-}
-.nav li {
-    display: inline-block;
-}
-.nav li a {
-    display: block;
-    text-decoration: none;
-    padding: 10px 15px;
-    color: white;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    &.touchdown {
-        background: darken(@blue, 10%);
-    }
-}
-
-html,
-body,
-.wrapper, // not needed anymore really
-.page-container {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-}
-.page-container {
-    position: relative;
-}
-.page-container > * {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    background: white;
-    perspective: 1000;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-}
-
-main {
-    padding: 10px;
-    padding-top: (@navHeight + 10);
-}
-
+/*********************************************************
+* Message Form
+*/
+@import './message-form';
 
 /*********************************************************
 * Forms
