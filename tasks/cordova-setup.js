@@ -9,8 +9,8 @@ fs.removeSync('./platforms');
 fs.removeSync('./plugins');
 
 async.series([
-    doExec('cordova platform add android ios'),
-    doExec('cordova plugin add org.apache.cordova.contacts')
+    doExec('cordova platform add android ios firefoxos'),
+    doExec('cordova plugin add org.apache.cordova.camera ')
 ], function (err) {
     if (err) return console.log('Finished build with errors.'.redBg);
     console.log('Finished build without errors'.magentaBg);

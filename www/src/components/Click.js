@@ -75,12 +75,18 @@ module.exports = React.createClass({
 
     onClick: function(e) {
         this.clearTimeout();
+
+        // Todo: make these option?
         e.preventDefault();
+        // This is a bit overkill atm, but needed for 4.2 since it fires 2 events otherwise
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+
         if (this.state.touched) {
             return;
         }
-        this.setState(this.defaults);
+
         this.handler.apply(this, arguments);
+        this.setState(this.defaults);
     },
 
     render: function() {

@@ -28,7 +28,7 @@ gulp.task('less', function() {
         .pipe(handleError())
         .pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(prefix('last 2 versions', 'android >= 4.2'), {cascade:true})
+        .pipe(prefix('last 2 versions', 'Firefox >= 28', 'android >= 4.2'), {cascade:true}) // ffos 1.3 = 28
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(COMPILED_DIR + 'css'));
 });

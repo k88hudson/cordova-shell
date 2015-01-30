@@ -2,7 +2,7 @@ var React = require('react');
 var Animation = require('../mixins/Animation');
 var Link = require('../components/Link');
 // var Link = require('react-router').Link;
-var {Click} = require('../components/formComponents');
+var Click = require('../components/Click');
 
 var CardGroup = React.createClass({
     render: function () {
@@ -26,9 +26,6 @@ var Main = React.createClass({
             <nav className="nav">
                 <Link to="menu">
                     <span className="ion-android-menu"></span>
-                </Link>
-                <Link to="click-test">
-                   Click
                 </Link>
                 <h1>日本語の語彙</h1>
             </nav>

@@ -1,7 +1,7 @@
 var React = require('react');
 var Animation = require('../mixins/Animation');
 var Link = require('../components/Link');
-var {Click} = require('../components/formComponents');
+var Click = require('../components/Click');
 
 var Message = React.createClass({
     mixins: [Animation],

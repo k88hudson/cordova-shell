@@ -1,5 +1,6 @@
 var React = require('react');
-var {Click, Switch, Checkbox, Input} = require('../components/formComponents');
+var Click = require('../components/Click');
+var {Switch, Checkbox, Input} = require('../components/formComponents');
 var Link = require('../components/Link');
 var Animation = require('../mixins/Animation');
 

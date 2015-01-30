@@ -2,7 +2,7 @@ var React = require('react');
 var classSet = require('react/lib/cx');
 var assign = require('react/lib/Object.assign');
 var {Navigation, State} = require('react-router');
-var Click = require('./formComponents').Click;
+var Click = require('./Click');
 var Animation = require('../mixins/Animation');
 
 function isModifiedEvent(event) {
@@ -39,7 +39,7 @@ var Link = React.createClass({
     if (isModifiedEvent(event))
       return;
 
-    if (clickResult === false || event.defaultPrevented === true)
+    if (clickResult === false)
       allowTransition = false;
 
     if (allowTransition) {
