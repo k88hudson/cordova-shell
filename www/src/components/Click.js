@@ -1,5 +1,7 @@
 var React = require('react');
 
+var deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0;
+
 module.exports = React.createClass({
 
     defaults: {
@@ -76,12 +78,9 @@ module.exports = React.createClass({
     onClick: function(e) {
         this.clearTimeout();
 
-        // Todo: make these option?
-        e.preventDefault();
-        // This is a bit overkill atm, but needed for 4.2 since it fires 2 events otherwise
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-
-        if (this.state.touched) {
+        if (deviceIsAndroid || this.state.touched) {
+            e.preventDefault();
+            e.nativeEvent.stopImmediatePropagation();
             return;
         }
 
