@@ -65,7 +65,10 @@ function webpackTask(options) {
 gulp.task('copy-fonts', function () {
     var destDir = path.join(COMPILED_DIR, 'fonts');
     fs.removeSync(destDir);
-    return gulp.src('./node_modules/webmaker-app-icons/fonts/**.{ttf,woff}')
+    return gulp.src([
+        './node_modules/webmaker-app-icons/fonts/*.{ttf,woff}',
+        './node_modules/fira/{ttf,woff}/{FiraSans-Regular,FiraSans-Italic,FiraSans-SemiBold}.{ttf,woff}',
+        ])
         .pipe(gulp.dest(destDir));
 });
 
