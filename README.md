@@ -6,6 +6,18 @@ npm install
 npm start
 ```
 
+# Why Webpack?
+
+I've seen a number of other React-based projects using Webpack lately, so I decided to give it a try. These are my findings:
+
+* I was able to get external sourcemaps, production optimization (uglify etc.) and gulp integration working pretty much immediately with es6 and jsx 'loaders' (the webpack version of transforms). These are all things I have spent considerable time figuring out how to do properly with browserify.
+* When comparing the output of my browserify + uglify strategy against the production optimizations built with webpack, the browserify output is about 30kb larger. You can test this yourself by running `npm test`. There are probably further optimizations I can do with uglify, but this is where I'm at so far:
+```
+BROWSERIFY      256.625kb
+WEBPACK         227.051kb
+```
+* A big downside of webpack is that loaders cannot be specified for dependencies; the app developer has to manage all loader configuration. This could end up being a problem for some dependencies we need to use
+
 # Fonts
 
 * `.woff` is sufficient for modern builds of Firefox/Chrome/Safari, as well as webview on Android 4.4, but **not** on Android 4.2 (see [caniuse](http://caniuse.com/#search=woff)).
