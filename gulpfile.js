@@ -9,6 +9,9 @@ var path = require('path');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var fs = require('fs-extra');
+var cssmin = require('gulp-cssmin');
+
+var COMPILED_DIR = './www/compiled/';
 
 function onError(err) {
     gutil.log(gutil.colors.red(err));
@@ -21,31 +24,6 @@ function handleError() {
         errorHandler: onError
     });
 };
-
-var COMPILED_DIR = './www/compiled/';
-
-gulp.task('copy-fonts', function () {
-    var destDir = path.join(COMPILED_DIR, 'fonts');
-    fs.removeSync(destDir);
-    return gulp.src('./node_modules/webmaker-app-icons/fonts/**.{ttf,woff}')
-        .pipe(gulp.dest(destDir));
-});
-
-gulp.task('less', function() {
-    var destDir = path.join(COMPILED_DIR, 'css');
-    fs.removeSync(destDir);
-    return gulp.src('./src/less/style.less')  // only compile the entry file
-        .pipe(handleError())
-        .pipe(sourcemaps.init())
-        .pipe(less())
-        .pipe(prefix('last 2 versions', 'Firefox >= 28', 'android >= 4.2'), {cascade:true}) // ffos 1.3 = 28
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(destDir));
-});
-
-gulp.task('watch-less', ['less'], function () {
-    gulp.watch('./src/less/**/*.less', ['less']);
-});
 
 function webpackTask(options) {
     options = options || {};
@@ -83,12 +61,34 @@ function webpackTask(options) {
     };
 }
 
+
+gulp.task('copy-fonts', function () {
+    var destDir = path.join(COMPILED_DIR, 'fonts');
+    fs.removeSync(destDir);
+    return gulp.src('./node_modules/webmaker-app-icons/fonts/**.{ttf,woff}')
+        .pipe(gulp.dest(destDir));
+});
+
+gulp.task('less', function() {
+    var destDir = path.join(COMPILED_DIR, 'css');
+    fs.removeSync(destDir);
+    return gulp.src('./src/less/style.less')  // only compile the entry file
+        .pipe(handleError())
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(prefix('last 2 versions', 'Firefox >= 28', 'android >= 4.2'), {cascade:true}) // ffos 1.3 = 28
+        .pipe(cssmin())
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(destDir));
+});
+
+gulp.task('watch-less', ['less'], function () {
+    gulp.watch('./src/less/**/*.less', ['less']);
+});
+
 gulp.task('webpack', webpackTask({sourcemaps: true}));
 gulp.task('webpack-optimized', webpackTask({optimize: true}));
-
 gulp.task('watch-webpack', webpackTask({ watch: true, sourcemaps: true }));
-
-gulp.task('build', ['copy-fonts', 'less', 'webpack-optimized']);
 
 gulp.task('server', function () {
     return gulp.src('www')
@@ -102,24 +102,5 @@ gulp.task('server', function () {
         }));
 });
 
+gulp.task('build', ['copy-fonts', 'less', 'webpack-optimized']);
 gulp.task('dev',  ['copy-fonts', 'watch-less', 'watch-webpack', 'server']);
-
-gulp.task('browserify', function (done) {
-    var command = 'browserify -t [reactify --es6] ./src/js/index.js -o ./www/compiled/browserify-bundle.js';
-    require('child_process').exec(command, done);
-});
-
-gulp.task('browserify-uglify', ['browserify'], function () {
-    var uglify = require('gulp-uglify');
-    return gulp.src('./www/compiled/browserify-bundle.js')
-      .pipe(uglify())
-      .pipe(gulp.dest('./www/compiled/'));
-});
-
-gulp.task('compare', ['webpack-optimized', 'browserify-uglify'], function () {
-    var fs = require('fs');
-    var sizeW = fs.statSync('./www/compiled/bundle.js').size * 0.001;
-    var sizeB = fs.statSync('./www/compiled/browserify-bundle.js').size * 0.001;
-    console.log('Webpack: ' + sizeW);
-    console.log('Browserify: ' + sizeB);
-});

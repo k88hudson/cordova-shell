@@ -2,10 +2,12 @@
   "name": "cordova-shell",
   "version": "0.0.0",
   "description": "",
+  "repository": "https://github.com/k88hudson/cordova-shell",
   "main": "index.js",
   "scripts": {
     "start": "gulp build && node ./tasks/cordova-setup.js && cordova prepare && cordova run android",
-    "android": "gulp build && cordova prepare && cordova run android"
+    "android": "gulp build && cordova prepare && cordova run android",
+    "test": "mocha -R spec --compilers js:mocha-traceur "
   },
   "author": "",
   "license": "MPL-2.0",
@@ -29,11 +31,19 @@
     "reactify": "^1.0.0",
     "gulp-filesize": "0.0.6",
     "browserify": "^8.1.1",
-    "uglify": "^0.1.1",
     "uglifyify": "^3.0.1",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.2",
-    "json-loader": "^0.5.1"
+    "json-loader": "^0.5.1",
+    "should": "^4.6.2",
+    "mocha": "^2.1.0",
+    "temporary": "0.0.8",
+    "uglify-js": "^2.4.16",
+    "uglify": "^0.1.1",
+    "mocha-traceur": "^2.1.0",
+    "factor-bundle": "^2.3.3",
+    "gulp-cssmin": "^0.1.6",
+    "glob": "^4.3.5"
   },
   "dependencies": {
     "react": "^0.12.2",
