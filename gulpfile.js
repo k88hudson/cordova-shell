@@ -31,7 +31,7 @@ gulp.task('copy-fonts', function () {
         .pipe(gulp.dest(destDir));
 });
 
-gulp.task('less', ['copy-fonts'], function() {
+gulp.task('less', function() {
     var destDir = path.join(COMPILED_DIR, 'css');
     fs.removeSync(destDir);
     return gulp.src('./src/less/style.less')  // only compile the entry file
@@ -88,24 +88,21 @@ gulp.task('webpack-optimized', webpackTask({optimize: true}));
 
 gulp.task('watch-webpack', webpackTask({ watch: true, sourcemaps: true }));
 
-gulp.task('build', ['less', 'webpack-optimized']);
+gulp.task('build', ['copy-fonts', 'less', 'webpack-optimized']);
 
 gulp.task('server', function () {
     return gulp.src('www')
         .pipe(webserver({
             livereload: {
-                port: '1523',
-                // not working
-                filter: function (filename) {
-                    return !!filename.match(/.map$/);
-                }
+                port: 1523,
+                enable: true
             },
             fallback: 'index.html',
             port: 4242
         }));
 });
 
-gulp.task('dev',  ['watch-less', 'watch-webpack', 'server']);
+gulp.task('dev',  ['copy-fonts', 'watch-less', 'watch-webpack', 'server']);
 
 gulp.task('browserify', function (done) {
     var command = 'browserify -t [reactify --es6] ./src/js/index.js -o ./www/compiled/browserify-bundle.js';

@@ -6,6 +6,11 @@ npm install
 npm start
 ```
 
+# Fonts
+
+*`.woff` is sufficient for modern builds of Firefox/Chrome/Safari, as well as webview on Android 4.4, but **not** on Android 4.2 (see [caniuse](http://caniuse.com/#search=woff)).
+* for Android 4.2 we need to use `.ttf`.
+
 # Icons
 
 The icons in this app are a subset generated from [Ionicons](http://ionicons.com). This is done via a fork (see https://github.com/k88hudson/ionicons), and installed via npm.
@@ -30,3 +35,5 @@ fontawesome.css     28.747 kb
 fontawesome.ttf     122.092 kb
 fontawesome.woff    71.508 kb
 ```
+
+Note that `ionicons.css` is not actually used on its own, but rather bundled and minified in `style.less`.
