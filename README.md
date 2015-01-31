@@ -8,7 +8,7 @@ npm start
 
 # Fonts
 
-*`.woff` is sufficient for modern builds of Firefox/Chrome/Safari, as well as webview on Android 4.4, but **not** on Android 4.2 (see [caniuse](http://caniuse.com/#search=woff)).
+* `.woff` is sufficient for modern builds of Firefox/Chrome/Safari, as well as webview on Android 4.4, but **not** on Android 4.2 (see [caniuse](http://caniuse.com/#search=woff)).
 * for Android 4.2 we need to use `.ttf`.
 
 # Icons
