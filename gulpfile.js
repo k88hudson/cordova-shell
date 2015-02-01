@@ -12,6 +12,11 @@ var fs = require('fs-extra');
 var cssmin = require('gulp-cssmin');
 
 var COMPILED_DIR = './www/compiled/';
+var JS_SOURCE = [
+    'src/js/**/*.js',
+    'gulpfile.js',
+    'webpack.config.js'
+];
 
 function onError(err) {
     gutil.log(gutil.colors.red(err));
@@ -31,29 +36,19 @@ function webpackTask(options) {
     var outputPath = path.join(__dirname, COMPILED_DIR, 'js');
     fs.removeSync(outputPath);
     var outputName = 'bundle.js';
-    var config = {
-        watch: !!options.watch,
-        entry: srcFile,
-        output: { filename: outputName },
-        module: {
-            output: { filename: outputName },
-            loaders: [
-                {
-                    test: /\.js/,
-                    loaders:  ['es6', 'jsx-loader']
-                }
-                // {
-                //     test: /\.json$/,
-                //     loader: 'json-loader'
-                // }
-            ]
-        }
-    };
+    var config = require('./webpack.config');
+
+    config.entry = srcFile;
+    config.output = { filename: outputName };
+
+    // Let's add some extra stuff.
+    config.watch = options.watch;
     if (options.sourcemaps) config.devtool = 'source-map';
     if (options.optimize) config.plugins = [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin()
     ];
+
     return function () {
         return gulp.src(srcFile)
             .pipe(gulpWebpack(config))
@@ -93,6 +88,26 @@ gulp.task('webpack', webpackTask({sourcemaps: true}));
 gulp.task('webpack-optimized', webpackTask({optimize: true}));
 gulp.task('watch-webpack', webpackTask({ watch: true, sourcemaps: true }));
 
+gulp.task('jscs', function() {
+    var jsxcs = require('gulp-jsxcs');
+    return gulp.src(JS_SOURCE)
+        .pipe(jsxcs());
+});
+
+gulp.task('jshint', function() {
+    var jshint = require('gulp-jshint');
+    var jsxhinter = require('jshint-jsx');
+    jsxhinter.JSHINT = jsxhinter.JSXHINT;
+    return gulp.src(jsxSrc)
+        .pipe(jshint({
+            linter: 'jshint-jsx',
+            esnext: true
+        }))
+        .pipe(jshint.reporter('default'));
+});
+
+gulp.task('lint', ['jscs', 'jshint']);
+
 gulp.task('server', function () {
     return gulp.src('www')
         .pipe(webserver({
@@ -105,5 +120,8 @@ gulp.task('server', function () {
         }));
 });
 
+// Use this for production!
 gulp.task('build', ['copy-fonts', 'less', 'webpack-optimized']);
+
+// Use this for local dev!
 gulp.task('dev',  ['copy-fonts', 'watch-less', 'watch-webpack', 'server']);

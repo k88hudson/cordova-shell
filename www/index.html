@@ -2,6 +2,8 @@
 <html>
     <head>
         <script>
+            // This is needed for the router to work with HTML5 push state,
+            // but still use relative paths on Cordova
             var isCordova = window.location.protocol === 'file:';
             var basePath = isCordova ? window.pathname : '/';
             document.write('<base href="' + basePath + '">');

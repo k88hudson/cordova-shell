@@ -1,23 +1,20 @@
-var main = require('./router');
+// On Cordova, we need to wait for the deviceready event
 var app = {
-    initialize: function() {
-        this.bindEvents();
-    },
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
+    startRouter: require('./router'),
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        app.startRouter();
     },
-    receivedEvent: main
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    }
 };
 
-var isApp = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
-
-if (isApp) {
+// Test for app context
+var isCordova = window.location.protocol === 'file:';
+if (isCordova) {
     app.initialize();
     console.log('is app');
 } else {
     console.log('not app!');
-    app.receivedEvent();
+    app.startRouter();
 }

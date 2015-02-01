@@ -1,7 +1,6 @@
 var React = require('react');
 var Animation = require('../mixins/Animation');
 var Link = require('../components/Link');
-// var Link = require('react-router').Link;
 var Click = require('../components/Click');
 var {Input} = require('../components/formComponents');
 

@@ -43,7 +43,9 @@
     "mocha-traceur": "^2.1.0",
     "factor-bundle": "^2.3.3",
     "gulp-cssmin": "^0.1.6",
-    "glob": "^4.3.5"
+    "glob": "^4.3.5",
+    "gulp-jsxcs": "^0.1.7",
+    "jshint-jsx": "^0.4.1"
   },
   "dependencies": {
     "react": "^0.12.2",

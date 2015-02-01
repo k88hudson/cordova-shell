@@ -1,16 +1,10 @@
 var React = require('react/addons');
+var TransitionGroup = React.addons.CSSTransitionGroup;
 var Router = require('react-router');
 var { State, Route, DefaultRoute, RouteHandler } = Router;
-var TransitionGroup = React.addons.CSSTransitionGroup;
 
 var Link = require('./components/Link');
 var Animation = require('./mixins/Animation');
-
-// var links = [
-//     ['forms', 'ion-ios-list', require('./views/Forms')],
-//     ['japanese', 'ion-document-text', require('./views/Japanese')],
-//     ['headers', 'ion-ios-settings-strong', require('./views/Headers')]
-// ];
 
 var App = React.createClass({
     mixins: [ State, Animation ],
@@ -26,22 +20,19 @@ var App = React.createClass({
 
 var routes = (
   <Route name="app" path="/" handler={App}>
-    <Route name="main" handler={require('./views/Main')} />
     <Route name="menu" handler={require('./views/Menu')} />
-    <Route name="thanks" handler={require('./views/ClickTest')} />
-    <Route name="deck" path="deck/:deckId" handler={require('./views/Deck')} />
-    <DefaultRoute handler={require('./views/Main')}/>
+    <Route name="thanks" handler={require('./views/Thanks')} />
+    <DefaultRoute name="main" handler={require('./views/Main')}/>
   </Route>
 );
 
-module.exports = function () {
+module.exports = function startRouter() {
     var parentElement = document.getElementById('app');
     React.initializeTouchEvents(true);
 
-    // Router.HistoryLocation,
+    // Use Router.HistoryLocation for HTML5 push state.
     Router.run(routes, function (Handler, state) {
         if (state.action === 'pop') Animation.setAnimation('back');
         React.render(<Handler params={state.params}/>, document.body);
     });
 };
-
