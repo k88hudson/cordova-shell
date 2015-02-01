@@ -95,16 +95,17 @@ gulp.task('jscs', function() {
 });
 
 gulp.task('jshint', function() {
-    var jshint = require('gulp-jshint');
-    var jsxhinter = require('jshint-jsx');
-    jsxhinter.JSHINT = jsxhinter.JSXHINT;
-    return gulp.src(jsxSrc)
-        .pipe(jshint({
-            linter: 'jshint-jsx',
-            esnext: true
-        }))
-        .pipe(jshint.reporter('default'));
+  var jshint = require('gulp-jshint');
+  var jsxhinter = require('jshint-jsx');
+  jsxhinter.JSHINT = jsxhinter.JSXHINT;
+  return gulp.src(JS_SOURCE)
+    .pipe(jshint({
+      linter: 'jshint-jsx',
+      esnext: true
+    }))
+    .pipe(jshint.reporter('default'));
 });
+
 
 gulp.task('lint', ['jscs', 'jshint']);
 

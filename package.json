@@ -45,7 +45,8 @@
     "gulp-cssmin": "^0.1.6",
     "glob": "^4.3.5",
     "gulp-jsxcs": "^0.1.7",
-    "jshint-jsx": "^0.4.1"
+    "jshint-jsx": "^0.4.1",
+    "gulp-jshint": "git://github.com/spenceralger/gulp-jshint#overrideJshint"
   },
   "dependencies": {
     "react": "^0.12.2",
