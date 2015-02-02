@@ -2,12 +2,10 @@ var React = require('react/addons');
 var TransitionGroup = React.addons.CSSTransitionGroup;
 var Router = require('react-router');
 var { State, Route, DefaultRoute, RouteHandler } = Router;
-
-var Link = require('./components/Link');
 var Animation = require('./mixins/Animation');
 
 var App = React.createClass({
-    mixins: [ State, Animation ],
+    mixins: [State, Animation],
     render: function () {
         var name = this.getRoutes().reverse()[0].name;
         return (
@@ -27,7 +25,6 @@ var routes = (
 );
 
 module.exports = function startRouter() {
-    var parentElement = document.getElementById('app');
     React.initializeTouchEvents(true);
 
     // Use Router.HistoryLocation for HTML5 push state.

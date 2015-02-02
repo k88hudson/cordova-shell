@@ -1,7 +1,7 @@
 var React = require('react');
 var Click = require('./Click');
 
-var Input = module.exports.Input = React.createClass({
+var Input = React.createClass({
     onFocus: function () {
         // We need this because of http://css-tricks.com/webkit-sibling-bug. Sigh
         this.setState({hasFocus: true});
@@ -15,7 +15,7 @@ var Input = module.exports.Input = React.createClass({
     }
 });
 
-var InputMaterial = module.exports.InputMaterial = React.createClass({
+var InputMaterial = React.createClass({
     onFocus: function () {
         // We need this because of http://css-tricks.com/webkit-sibling-bug. Sigh
         this.setState({hasFocus: true});
@@ -33,7 +33,7 @@ var InputMaterial = module.exports.InputMaterial = React.createClass({
     }
 });
 
-var Checkbox = module.exports.Checkbox = React.createClass({
+var Checkbox = React.createClass({
     getInitialState: function () {
         return {
             checked: false
@@ -58,8 +58,8 @@ var Checkbox = module.exports.Checkbox = React.createClass({
     }
 });
 
-var Switch = module.exports.Switch = React.createClass({
-    getInitialState: function() {
+var Switch = React.createClass({
+    getInitialState: function () {
         return {
             on: false
         };
@@ -75,3 +75,10 @@ var Switch = module.exports.Switch = React.createClass({
         </Click>);
     }
 });
+
+module.exports = {
+    Input: Input,
+    InputMaterial: InputMaterial,
+    Checkbox: Checkbox,
+    Switch: Switch
+};

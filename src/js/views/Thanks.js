@@ -1,5 +1,4 @@
 var React = require('react');
-var Click = require('../components/Click');
 var Link = require('../components/Link');
 
 module.exports = React.createClass({

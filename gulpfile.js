@@ -28,7 +28,7 @@ function handleError() {
     return plumber({
         errorHandler: onError
     });
-};
+}
 
 function webpackTask(options) {
     options = options || {};
@@ -62,12 +62,12 @@ gulp.task('copy-fonts', function () {
     fs.removeSync(destDir);
     return gulp.src([
         './node_modules/webmaker-app-icons/fonts/*.{ttf,woff}',
-        './node_modules/fira/{ttf,woff}/{FiraSans-Regular,FiraSans-Italic,FiraSans-SemiBold}.{ttf,woff}',
+        './node_modules/fira/{ttf,woff}/{FiraSans-Regular,FiraSans-Italic,FiraSans-SemiBold}.{ttf,woff}'
         ])
         .pipe(gulp.dest(destDir));
 });
 
-gulp.task('less', function() {
+gulp.task('less', function () {
     var destDir = path.join(COMPILED_DIR, 'css');
     fs.removeSync(destDir);
     return gulp.src('./src/less/style.less')  // only compile the entry file
@@ -88,13 +88,13 @@ gulp.task('webpack', webpackTask({sourcemaps: true}));
 gulp.task('webpack-optimized', webpackTask({optimize: true}));
 gulp.task('watch-webpack', webpackTask({ watch: true, sourcemaps: true }));
 
-gulp.task('jscs', function() {
+gulp.task('jscs', function () {
     var jsxcs = require('gulp-jsxcs');
     return gulp.src(JS_SOURCE)
         .pipe(jsxcs());
 });
 
-gulp.task('jshint', function() {
+gulp.task('jshint', function () {
     var jshint = require('gulp-jshint');
     var jsxhinter = require('jshint-jsx');
     jsxhinter.JSHINT = jsxhinter.JSXHINT;

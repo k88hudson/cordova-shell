@@ -1,10 +1,10 @@
 // On Cordova, we need to wait for the deviceready event
 var app = {
     startRouter: require('./router'),
-    onDeviceReady: function() {
+    onDeviceReady: function () {
         app.startRouter();
     },
-    initialize: function() {
+    initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     }
 };

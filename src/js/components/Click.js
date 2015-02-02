@@ -12,15 +12,16 @@ module.exports = React.createClass({
         timeout: false
     },
 
-    getInitialState: function() {
+    getInitialState: function () {
         return this.defaults;
     },
 
-    handler: function() {
-        typeof this.props.handler == 'function' && this.props.handler.apply(this, arguments);
+    handler: function () {
+        if (typeof this.props.handler !== 'function') return;
+        this.props.handler.apply(this, arguments);
     },
 
-    getCoords: function(e) {
+    getCoords: function (e) {
         if (e.touches && e.touches.length) {
             var touch = e.touches[0];
             return {
@@ -36,7 +37,7 @@ module.exports = React.createClass({
         }
     },
 
-    onTouchStart: function(e) {
+    onTouchStart: function (e) {
         this.clearTimeout();
         this.setState({
             touched: true,
@@ -47,7 +48,7 @@ module.exports = React.createClass({
         });
     },
 
-    onTouchMove: function(e) {
+    onTouchMove: function (e) {
         if (this.props.swipe) return;
         var coords = this.getCoords(e);
         var distance = Math.max(
@@ -59,23 +60,23 @@ module.exports = React.createClass({
         }
     },
 
-    onTouchEnd: function(e) {
+    onTouchEnd: function (e) {
         if (this.state.touchdown) {
             this.handler.call(this, this.state.evObj);
         }
         this.setState({touchdown: false});
         this.setState({timeout: window.setTimeout(() => {
-          if (this.isMounted()) {
-            this.setState(this.defaults);
-          }
+            if (this.isMounted()) {
+                this.setState(this.defaults);
+            }
         }, 305)});
     },
 
-    onTouchCancel: function() {
+    onTouchCancel: function () {
         this.setState(this.defaults);
     },
 
-    onClick: function(e) {
+    onClick: function (e) {
         this.clearTimeout();
 
         if (deviceIsAndroid || this.state.touched) {
@@ -88,20 +89,20 @@ module.exports = React.createClass({
         this.setState(this.defaults);
     },
 
-    render: function() {
-      var classNames = ['touchclick']
+    render: function () {
+        var classNames = ['touchclick'];
 
-      this.props.className && classNames.push(this.props.className)
-      this.state.touchdown && classNames.push('touchdown')
+        this.props.className && classNames.push(this.props.className);
+        this.state.touchdown && classNames.push('touchdown');
 
-      return React.DOM[this.props.nodeName || 'button']({
-        className: classNames.join(' '),
-        href: this.props.href,
-        onTouchStart: this.onTouchStart,
-        onTouchMove: this.onTouchMove,
-        onTouchEnd: this.onTouchEnd,
-        onTouchCancel: this.onTouchCancel,
-        onClick: this.onClick
-      }, this.props.children)
+        return React.DOM[this.props.nodeName || 'button']({
+            className: classNames.join(' '),
+            href: this.props.href,
+            onTouchStart: this.onTouchStart,
+            onTouchMove: this.onTouchMove,
+            onTouchEnd: this.onTouchEnd,
+            onTouchCancel: this.onTouchCancel,
+            onClick: this.onClick
+        }, this.props.children);
     }
 });

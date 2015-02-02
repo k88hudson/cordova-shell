@@ -2,32 +2,7 @@ var React = require('react');
 
 var Animation = require('../mixins/Animation');
 var Link = require('../components/Link');
-// var Link = require('react-router').Link;
 var Click = require('../components/Click');
-var {Input} = require('../components/formComponents');
-
-// var MessageForm = React.createClass({
-//       handleSubmit: function(e) {
-//         e.preventDefault();
-//         var textEl = this.refs.text.getDOMNode();
-//         var name = 'anonymous';
-//         var text = textEl.value.trim();
-//         this.props.onMessageSubmit({name: name, text: text});
-//         textEl.value = '';
-//         return false;
-//       },
-//       render: function() {
-//         return (
-//           <form className="message-form">
-//             <div className="input-group">
-//                 <input type="text" label="Say something..." ref="text" />
-//             </div>
-//             <Click handler={this.handleSubmit}>Submit</Click>
-//           </form>
-//         );
-//       }
-//     });
-
 
 var Counter = React.createClass({
     getInitialState: function () {
@@ -65,7 +40,7 @@ var ProductBlock = React.createClass({
 
 var Main = React.createClass({
     mixins: [Animation],
-    getInitialState: function() {
+    getInitialState: function () {
         return {data: [
             {
                 image: 'img/green-tea.svg',
@@ -93,17 +68,7 @@ var Main = React.createClass({
             }
         ]};
     },
-    // handleMessageSubmit: function (message) {
-    //   var messages = this.state.data;
-    //   messages.push(message);
-    //   this.setState({data: messages});
-
-    //   this.firebaseRefs['data'].push(message);
-    // },
-    // componentWillMount: function() {
-    //     this.bindAsArray(new Firebase(firebaseApp + 'messages'), 'data');
-    // },
-    render: function() {
+    render: function () {
         return (<main id="main-menu">
             <nav className="nav">
                 <Link to="menu">

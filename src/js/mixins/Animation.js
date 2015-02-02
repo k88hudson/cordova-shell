@@ -1,4 +1,3 @@
-var React = require('react');
 var DEFAULT_ANIMATION = 'forward';
 
 // Cache current animation here

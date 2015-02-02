@@ -4,7 +4,7 @@ var Link = require('../components/Link');
 
 var Headers = React.createClass({
     mixins: [Animation],
-    render: function() {
+    render: function () {
         return (<main>
             <ul className="nav">
                 <li><Link transition="forward" to="japanese">ア</Link></li>

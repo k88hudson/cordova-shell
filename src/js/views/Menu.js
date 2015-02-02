@@ -13,16 +13,16 @@ var Menu = React.createClass({
     },
     openCamera: function () {
         if (!navigator.camera) return;
-        navigator.camera.getPicture( (data) => {
+        navigator.camera.getPicture((data) => {
             this.setState({photoSrc: 'data:image/jpeg;base64,' + data});
         }, function (onErr) {
             alert(onErr);
         }, {
-             destinationType : Camera.DestinationType.DATA_URL,
-             quality: 50
+            destinationType: window.Camera.DestinationType.DATA_URL,
+            quality: 50
         });
     },
-    render: function() {
+    render: function () {
         return (<main id="menu">
             <nav className="nav">
                 <Link back to="main" />
