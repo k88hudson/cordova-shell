@@ -10,10 +10,11 @@ var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var fs = require('fs-extra');
 var cssmin = require('gulp-cssmin');
+var glob = require('glob');
 
 var COMPILED_DIR = './www/compiled/';
 var JS_SOURCE = [
-    'src/js/**/*.js',
+    'src/**/*.js',
     'gulpfile.js',
     'webpack.config.js'
 ];
@@ -32,7 +33,7 @@ function handleError() {
 
 function webpackTask(options) {
     options = options || {};
-    var srcFile = './src/js/index.js';
+    var srcFile = './src/index.js';
     var outputPath = path.join(__dirname, COMPILED_DIR, 'js');
     fs.removeSync(outputPath);
     var outputName = 'bundle.js';
@@ -56,6 +57,14 @@ function webpackTask(options) {
     };
 }
 
+function bundleLess(srcFile) {
+    var lessString = fs.readFileSync(srcFile, {encoding: 'utf-8'});
+    var files = glob.sync('./{components,views}/**/*.less', {cwd: './src'});
+    var importString = files.map(function (filename) {
+        return '@import "' + filename + '"';
+    }).join(';\n') + ';\n';
+    return lessString + importString;
+}
 
 gulp.task('copy-fonts', function () {
     var destDir = path.join(COMPILED_DIR, 'fonts');
@@ -68,20 +77,31 @@ gulp.task('copy-fonts', function () {
 });
 
 gulp.task('less', function () {
+    var srcFile = './src/index.less';
     var destDir = path.join(COMPILED_DIR, 'css');
+    var tempFilePath = './src/bundle.less';
     fs.removeSync(destDir);
-    return gulp.src('./src/less/style.less')  // only compile the entry file
+    fs.outputFileSync(tempFilePath, bundleLess(srcFile));
+
+    function rmTemp() {
+        fs.removeSync(tempFilePath);
+    }
+
+    return gulp.src([tempFilePath])  // only compile the entry file
         .pipe(handleError())
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(prefix('last 2 versions', 'Firefox >= 28', 'android >= 4.2'), {cascade:true}) // ffos 1.3 = 28
-        .pipe(cssmin())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(destDir));
+        .pipe(gulp.dest(destDir))
+        .on('error', rmTemp)
+        .on('done', rmTemp);
 });
 
+
+
 gulp.task('watch-less', ['less'], function () {
-    gulp.watch('./src/less/**/*.less', ['less']);
+    gulp.watch('./src/**/*.less', ['less']);
 });
 
 gulp.task('webpack', webpackTask({sourcemaps: true}));

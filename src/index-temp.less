@@ -1,7 +1,7 @@
-@import 'normalize';
-@import 'animations';
-@import (less) '../../node_modules/webmaker-app-icons/css/ionicons.css';
-@import 'fonts';
+@import './less/normalize';
+@import './less/animations';
+@import (less) '../node_modules/webmaker-app-icons/css/ionicons.css';
+@import './less/fonts';
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
     -moz-box-sizing: border-box;
@@ -89,7 +89,7 @@ p {
 * Buttons and stuff
 */
 
-@import './colors';
+@import './less/colors';
 
 @blue: #0183E7;
 //@blue: @turquoise;
@@ -213,12 +213,12 @@ button.touchclick {
 /*********************************************************
 * Nav
 */
-@import './nav';
+@import './less/nav';
 
 /*********************************************************
 * Message Form
 */
-@import './message-form';
+@import './less/message-form';
 
 /*********************************************************
 * Forms
@@ -436,3 +436,4 @@ header {
         }
     }
 }
+
