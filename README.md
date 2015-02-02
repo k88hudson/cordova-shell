@@ -6,6 +6,39 @@ npm install
 npm start
 ```
 
+# Structure
+```bash
+- src/
+    - components/
+    # This is where you add react components and any less associated with them
+        - {ComponentName}
+            - {ComponentName}.js
+            - {ComponentName}.less
+        - ...
+    - less/
+        - variables.less
+        - ...
+    - lib/
+        - router.js
+        - ...
+    - mixins/
+        - Animations.js
+        - ...
+    - views/
+        - {ViewName}
+            - {ViewName}.js
+            - {ViewName}.less
+        - ...
+    - index.js
+    - index.less
+- www/
+    - compiled/
+    - img/
+        ...
+    - cordova.js
+    - index.html
+```
+
 # Why Webpack?
 
 I've seen a number of other React-based projects using Webpack lately, so I decided to give it a try. These are my findings:
