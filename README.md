@@ -8,7 +8,7 @@ npm start
 
 # Structure
 
-## Primary content (`src/`, `www/`)
+#### Primary content (`src/`, `www/`)
 ```bash
 - src/
     - components/
@@ -55,7 +55,7 @@ npm start
     # This is the base html page.
 ```
 
-## Supporting content ( `_docs/`, 'tasks/', `test/`)
+#### Supporting content ( `_docs/`, 'tasks/', `test/`)
 
 ```bash
 - _docs
@@ -69,7 +69,7 @@ npm start
 # More work needs to be done here.
 ```
 
-## Built/gitignored content (`node_modules/`, `platforms/`, `plugins/`)
+#### Built/gitignored content (`node_modules/`, `platforms/`, `plugins/`)
 
 ```bash
 - node_modules/
