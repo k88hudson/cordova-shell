@@ -1,3 +1,47 @@
+## What does this app cover (so far)?
+
+### Mobile Web App with React
+* Views/Components with React + es6
+* Routing via react-router (hash-based, but will also work with push-state)
+* Configurable page transitions via custom `Animation` mixin and `Link` component
+* Styles and component style bundling with less
+* Fira sans and icons via Ionicons
+
+### Mobile/Android 4.2 optimizations
+* Custom `Click` component based on fastclick to normalize/speed up touch events
+* CSS transitions optimized for hardware acceleration and performance
+* Interaction states, form element css with (1) technically optimized transitions and (2) design choices that give the illusion of better responsiveness
+* no raster images; svg images only (<10kb for all images total)
+
+### Device integration
+* npm scripts for grabbing/building dependencies, building on device, and development workflow
+* Cordova bootstraping
+* Example of device integration with camera
+# mock cordova.js for web-app testing
+* TODO: icon build step for android/ios/firefox os
+
+### Development optimizations
+* gulp task for compiling assets
+* fast file watching with ~100ms re-builds
+* dev server with optimized livereload + fallback for push-state routing
+* source maps for css/js
+* jscs, jshint
+
+### Production optimizations
+* webpack production-optimized build task
+* icon font subsetting to dramatically reduce file size
+* TODO: css minification
+
+### Tests
+* browserify/webpack size comparison
+* TODO: example unit tests
+* TODO: smoke tests with phantomjs
+
+### TODO:
+* travis deployment configuration
+* app configuration
+* docs
+
 ## Web dev setup
 
 ```
