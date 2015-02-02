@@ -52,8 +52,6 @@
   "dependencies": {
     "react": "^0.12.2",
     "react-router": "^0.11.6",
-    "firebase": "^2.1.2",
-    "reactfire": "^0.4.0",
     "webmaker-app-icons": "k88hudson/ionicons#webmaker-app",
     "fira": "k88hudson/Fira#npm"
   }

@@ -9,7 +9,6 @@ var path = require('path');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var fs = require('fs-extra');
-var cssmin = require('gulp-cssmin');
 var glob = require('glob');
 
 var COMPILED_DIR = './www/compiled/';
@@ -95,10 +94,8 @@ gulp.task('less', function () {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(destDir))
         .on('error', rmTemp)
-        .on('done', rmTemp);
+        .on('end', rmTemp);
 });
-
-
 
 gulp.task('watch-less', ['less'], function () {
     gulp.watch('./src/**/*.less', ['less']);
