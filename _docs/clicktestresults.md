@@ -2,78 +2,78 @@
 
 Click
 Click drag on element
-    mouseover
-    mousedown
-    mouseup
-    click
+- mouseover
+- mousedown
+- mouseup
+- click
 Click drag start on element end off
 Multiple fast clicks
-    mouseover
-    mousedown
+- mouseover
+- mousedown
 Click drag start off element end on
-    mouseover
-    mouseup
+- mouseover
+- mouseup
 
 ## Chrome - simulated touch
 Click
 Multiple fast clicks
-    touchstart
-    touchend
-    mousedown
-    mouseup
-    click
+- touchstart
+- touchend
+- mousedown
+- mouseup
+- click
 Click drag on element
 Click drag start on element end off
-    touchstart
-    touchmove (*32)
-    touchend
+- touchstart
+- touchmove (*32)
+- touchend
 Click drag start off element end on
-    (none)
+- (none)
 
 ## Android
 Click
-    mouseover
-    touchstart
-    touchend
-    mousedown
-    mouseup
-    click
+- mouseover
+- touchstart
+- touchend
+- mousedown
+- mouseup
+- click
     //
-    touchstart
-    touchend
-    mousedown
-    mouseup
-    click
+- touchstart
+- touchend
+- mousedown
+- mouseup
+- click
     //
-    mouseover
-    mousedown
-    mouseup
-    click
+- mouseover
+- mousedown
+- mouseup
+- click
     //
 Fast double clicking
-    (mouseover - when not focused)
-    touchstart
-    touchend
-    touchstart
-    touchend
+- (mouseover - when not focused)
+- touchstart
+- touchend
+- touchstart
+- touchend
     //
-    touchstart
-    touchend
-    touchstart
-    touchend
-    touchstart
-    touchend
-    mousedown
-    mouseup
-    click
+- touchstart
+- touchend
+- touchstart
+- touchend
+- touchstart
+- touchend
+- mousedown
+- mouseup
+- click
 
 Click drag on element
 Click drag start on element end off
-    (mouseover - when not focused)
-    touchstart
-    touchmove (*10)
-    touchend
+- (mouseover - when not focused)
+- touchstart
+- touchmove (*10)
+- touchend
 Click drag start off element end on
-    (nothing)
+- (nothing)
 
 
