@@ -69,7 +69,7 @@ npm start
 # More work needs to be done here.
 ```
 
-## Built/gitignored content (`node_modules/`, 'platforms/', 'plugins/')
+## Built/gitignored content (`node_modules/`, `platforms/`, `plugins/`)
 
 ```bash
 - node_modules/
