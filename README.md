@@ -11,20 +11,28 @@ npm start
 - src/
     - components/
     # This is where you add react components and any less associated with them
+    # You should create a folder per component
+    # Use uppercase (e.g. Click) for files that export a single component,
+    #  and lowercase for files that export an object of many components
         - {ComponentName}
             - {ComponentName}.js
             - {ComponentName}.less
         - ...
     - less/
+    # This is for less files that aren't directly associated with a component or view
         - variables.less
         - ...
     - lib/
+    # This is for js files that aren't directly associated with a component or view
         - router.js
         - ...
     - mixins/
+    # React mixins
         - Animations.js
         - ...
     - views/
+    # This is for view components (i.e. routes) and associated styles
+    # You should create a folder per view. Use uppercase
         - {ViewName}
             - {ViewName}.js
             - {ViewName}.less
@@ -32,11 +40,17 @@ npm start
     - index.js
     - index.less
 - www/
+# This is for static files and compiled bundles
     - compiled/
+    # Don't touch this folder - it is where compiled less/css goes
     - img/
+    # Image assets
         ...
     - cordova.js
+    # This is a mock or shim for any device apis provided by cordova.js
+    # It is only included on web apps (cordova overwrites it)
     - index.html
+    # This is the base html page.
 ```
 
 # Why Webpack?
