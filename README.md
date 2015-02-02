@@ -7,6 +7,8 @@ npm start
 ```
 
 # Structure
+
+## Primary content (`src/`, `www/`)
 ```bash
 - src/
     - components/
@@ -51,6 +53,31 @@ npm start
     # It is only included on web apps (cordova overwrites it)
     - index.html
     # This is the base html page.
+```
+
+## Supporting content ( `_docs/`, 'tasks/', `test/`)
+
+```bash
+- _docs
+# This is where docs will go.
+# More work needs to be done here.
+# Should be linked from README.md and be formatted for gitbook
+- tasks/
+# These are build tasks and utilities.
+- test/
+# Unit tests to be run with mocha
+# More work needs to be done here.
+```
+
+## Built/gitignored content (`node_modules/`, 'platforms/', 'plugins/')
+
+```bash
+- node_modules/
+# Node/js dependencies via npm
+- platforms/
+# This contains assets for cordova
+- plugins/
+# This contains assets for cordova
 ```
 
 # Why Webpack?
