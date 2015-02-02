@@ -1,0 +1,211 @@
+
+/*********************************************************
+* Forms
+*/
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    input         {
+      padding:10px 10px 10px 0;
+      display: block;
+      width: 100%;
+      border: none;
+      box-shadow: 0 1px 0 0 @lightGrey;
+      transition: box-shadow 0.1s ease;
+      background: transparent;
+      &:focus {
+        outline: none;
+        box-shadow: 0 2px 0 0 @blue;
+      }
+    }
+}
+
+// Choppy on 4.2 :(
+.input-group-material {
+    position: relative;
+    margin-bottom:45px;
+    margin-top: 45px;
+    input         {
+      padding:10px 10px 10px 5px;
+      display:block;
+      width: 100%;
+      border:none;
+      border-bottom:1px solid #CCC;
+    }
+    input:focus     { outline:none; }
+
+    /*********************************************************
+    * Label
+    */
+    label          {
+      color:#999;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left:5px;
+      top:10px;
+      transition:0.2s ease all;
+    }
+    input:focus ~ label, input:valid ~ label {
+      top: -20px;
+      font-size: 14px;
+      color: @blue;
+    }
+
+    /*********************************************************
+    * Bar
+    */
+    .bar  {
+        position: relative;
+        display: block;
+        width: 100%;
+        .left, .right  {
+          height: 2px;
+          width: 0;
+          bottom: 0;
+          position: absolute;
+          background: @blue;
+          transition: width 0.2s ease;
+        }
+        .left { left: 50%; }
+        .right { right: 50%; }
+    }
+    input:focus + .bar {
+        .left, .right {
+            width:50%;
+        }
+    }
+
+    /*********************************************************
+    * Highlighter
+    */
+    .highlight {
+      position:absolute;
+      height:60%;
+      width:100px;
+      top:25%;
+      left:0;
+      pointer-events:none;
+      opacity:0.5;
+    }
+    /* active state */
+    input:focus ~ .highlight {
+      animation:inputHighlighter 0.3s ease;
+    }
+
+    /* ANIMATIONS ================ */
+    @keyframes inputHighlighter {
+      from  { background: lighten(@blue, 15%) }
+      to    { width:0; background:transparent; }
+    }
+
+}
+
+.select {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    .caret {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        color: #CCC;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 10px;
+        padding-left: 0;
+        display: block;
+        width: 100%;
+        border: none;
+        box-shadow: 0 1px 0 0 @lightGrey;
+        border-radius: 0;
+        background: transparent;
+        transition: box-shadow 0.2s ease-in-out;
+        &:focus {
+            outline: none;
+            box-shadow: 0 2px 0 0 @blue;
+        }
+    }
+}
+
+
+.checkbox {
+    input {
+        visibility: hidden;
+    }
+    a.touchclick {
+        display: flex;
+        align-items: center;
+        box-align: center;
+        padding: 5px;
+        padding-left: 0;
+        background: transparent;
+        color: inherit;
+        text-decoration: none;
+        &.touchdown {
+            background: transparent;
+            color: @blue;
+        }
+    }
+}
+.checkbox-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FFF;
+    border: 2px solid @blue;
+    margin-right: 10px;
+
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+
+    .check {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+    .on & {
+        background: @blue;
+        .check {
+            opacity: 1;
+        }
+    }
+}
+
+/*********************************************************
+* Switch
+*/
+.touchclick.switch {
+    background: #CCC;
+    padding: 2px;
+    border-radius: 30px;
+    display: inline-block;
+    width: auto;
+    transition: background-color 0.1s ease-in-out;
+}
+.track {
+    width: 60px;
+    border-radius: 30px;
+}
+.switch-toggle {
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+.switch.on {
+    background-color: #0181E4;
+}
+.switch.on .switch-toggle {
+    transform: translateX(100%);
+}
