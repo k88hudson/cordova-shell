@@ -14,7 +14,7 @@ npm start
     # You should create a folder per component
     # Use uppercase (e.g. Click) for files that export a single component,
     #  and lowercase for files that export an object of many components
-        - {ComponentName}
+        - {ComponentName}/
             - {ComponentName}.js
             - {ComponentName}.less
         - ...
@@ -33,7 +33,7 @@ npm start
     - views/
     # This is for view components (i.e. routes) and associated styles
     # You should create a folder per view. Use uppercase
-        - {ViewName}
+        - {ViewName}/
             - {ViewName}.js
             - {ViewName}.less
         - ...
