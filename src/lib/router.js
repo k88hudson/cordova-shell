@@ -2,7 +2,7 @@ var React = require('react/addons');
 var TransitionGroup = React.addons.CSSTransitionGroup;
 var Router = require('react-router');
 var { State, Route, DefaultRoute, RouteHandler } = Router;
-var Animation = require('./mixins/Animation');
+var Animation = require('../mixins/Animation');
 
 var App = React.createClass({
     mixins: [State, Animation],
@@ -18,9 +18,9 @@ var App = React.createClass({
 
 var routes = (
   <Route name="app" path="/" handler={App}>
-    <Route name="menu" handler={require('./views/Menu/Menu')} />
-    <Route name="thanks" handler={require('./views/Thanks/Thanks')} />
-    <DefaultRoute name="main" handler={require('./views/Main/Main')}/>
+    <Route name="menu" handler={require('../views/Menu/Menu')} />
+    <Route name="thanks" handler={require('../views/Thanks/Thanks')} />
+    <DefaultRoute name="main" handler={require('../views/Main/Main')}/>
   </Route>
 );
 
