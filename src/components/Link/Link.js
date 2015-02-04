@@ -45,6 +45,8 @@ var Link = React.createClass({
             allowTransition = false;
         }
 
+        e.preventDefault();
+
         if (!allowTransition) {
             return;
         }
