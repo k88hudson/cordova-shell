@@ -11,16 +11,22 @@ module.exports = React.createClass({
             photoSrc: ''
         };
     },
+    onDone: function () {
+        console.log('ok!');
+        console.log('ok!');
+    },
     render: function () {
         return (<main id="add">
             <nav className="nav">
-                <Link transition="back" to="main" />
+                <Link transition="back" to="main"><span className="ion-android-arrow-back"/></Link>
                 <h1>Add new product</h1>
-                <Click nodeName="a" className="done"><span className="ion-android-done"/></Click>
+                <Click nodeName="a" className="done" handler={this.onDone}><span className="ion-android-done"/></Click>
             </nav>
-            <Input label="Title" />
-            <Input label="Color" />
-            <Input label="Image" />
+            <div className="inner-page-container">
+                <Input label="Title" />
+                <Input label="Color" />
+                <Input label="Image" />
+            </div>
         </main>);
     }
 });

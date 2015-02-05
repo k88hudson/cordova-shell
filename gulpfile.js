@@ -11,6 +11,7 @@ var plumber = require('gulp-plumber');
 var fs = require('fs-extra');
 var glob = require('glob');
 var exec = require('child_process').exec;
+var sequence = require('run-sequence');
 
 var COMPILED_DIR = './www/compiled/';
 var JS_SOURCE = [
@@ -32,14 +33,28 @@ function handleError() {
 }
 
 function webpackTask(options) {
-     options = options || {};
-        var srcFile = './src/index.js';
-        var outputPath = path.join(__dirname, COMPILED_DIR, 'js');
-        var outputName = 'bundle.js';
+    options = options || {};
+    var srcFile = './src/index.js';
+    var outputPath = path.join(__dirname, COMPILED_DIR, 'js');
+    var outputName = 'bundle.js';
 
     return function () {
         fs.removeSync(outputPath);
-        var config = require('./webpack.config');
+        var config = {
+            module: {
+                loaders: [
+                    {
+                        test: /\.js/,
+                        loaders:  ['es6', 'jsx-loader'],
+                        exclude: /node_modules/
+                    },
+                    {
+                        test: /\.json$/,
+                        loader: 'json-loader'
+                    }
+                ]
+            }
+        };
 
         config.entry = srcFile;
         config.output = { filename: outputName };
@@ -59,23 +74,6 @@ function webpackTask(options) {
             .pipe(gulp.dest(outputPath));
     };
 }
-
-// function webpackTask(options) {
-//     var srcFile = './src/index.js';
-//     var destFile = path.join(__dirname, COMPILED_DIR, 'js', 'bundle.js');
-//     var command = 'webpack ' + srcFile + ' ' + destFile + ' --config ./webpack.config.js';
-//     if (options.watch) command += ' --watch';
-//     if (options.sourcemaps) command += ' -d';
-//     if (options.optimize) command += ' -p';
-//     return function (done) {
-//         console.log(command);
-//         exec(command, function (err, stdout, stderr) {
-//             if (stdout) console.log(stdout);
-//             if (stderr) console.log(stderr);
-//             done(err);
-//         });
-//     }
-// };
 
 function bundleLess(srcFile) {
     var lessString = fs.readFileSync(srcFile, {encoding: 'utf-8'});
@@ -163,4 +161,6 @@ gulp.task('server', function () {
 gulp.task('build', ['copy-fonts', 'less', 'webpack-optimized']);
 
 // Use this for local dev!
-gulp.task('dev',  ['copy-fonts', 'watch-less', 'watch-webpack', 'server']);
+gulp.task('dev', function (done) {
+    sequence('build', 'server', ['watch-less', 'watch-webpack'], done);
+});
