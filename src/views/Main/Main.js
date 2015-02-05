@@ -79,18 +79,20 @@ var Main = React.createClass({
                     <span className="icon ion-android-person"></span>
                 </Link>
             </nav>
-            <div className="blocks">
-                <div className="block-lead">
-                    <img src="img/shop-transparent.svg" />
-                    <div className="pad">
-                        <h3>Feeling hungry?</h3>
-                        <p>My cafe serves delicious treats. Please order something for you our a friend!</p>
+            <div className="inner-page-container">
+                <div className="blocks">
+                    <div className="block-lead">
+                        <img src="img/shop-transparent.svg" />
+                        <div className="pad">
+                            <h3>Feeling hungry?</h3>
+                            <p>My cafe serves delicious treats. Please order something for you our a friend!</p>
+                        </div>
                     </div>
+                    {this.state.data.map( product => <ProductBlock {...product} /> )}
                 </div>
-                {this.state.data.map( product => <ProductBlock {...product} /> )}
-            </div>
-            <div className="order-form">
-                <Link nodeName="button" to="thanks">Order Now</Link>
+                <div className="order-form">
+                    <Link nodeName="button" to="thanks">Order Now</Link>
+                </div>
             </div>
         </main>);
     }
