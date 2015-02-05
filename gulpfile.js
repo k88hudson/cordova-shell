@@ -10,6 +10,7 @@ var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var fs = require('fs-extra');
 var glob = require('glob');
+var exec = require('child_process').exec;
 
 var COMPILED_DIR = './www/compiled/';
 var JS_SOURCE = [
@@ -31,30 +32,50 @@ function handleError() {
 }
 
 function webpackTask(options) {
-    options = options || {};
-    var srcFile = './src/index.js';
-    var outputPath = path.join(__dirname, COMPILED_DIR, 'js');
-    fs.removeSync(outputPath);
-    var outputName = 'bundle.js';
-    var config = require('./webpack.config');
-
-    config.entry = srcFile;
-    config.output = { filename: outputName };
-
-    // Let's add some extra stuff.
-    config.watch = options.watch;
-    if (options.sourcemaps) config.devtool = 'source-map';
-    if (options.optimize) config.plugins = [
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin()
-    ];
+     options = options || {};
+        var srcFile = './src/index.js';
+        var outputPath = path.join(__dirname, COMPILED_DIR, 'js');
+        var outputName = 'bundle.js';
 
     return function () {
+        fs.removeSync(outputPath);
+        var config = require('./webpack.config');
+
+        config.entry = srcFile;
+        config.output = { filename: outputName };
+
+        // Let's add some extra stuff.
+        if (options.watch) config.watch = true;
+        if (options.sourcemaps) config.devtool = 'source-map';
+        if (options.optimize) {
+            config.plugins = [
+            new webpack.optimize.DedupePlugin(),
+            new webpack.optimize.UglifyJsPlugin()
+            ]
+        }
+
         return gulp.src(srcFile)
             .pipe(gulpWebpack(config))
             .pipe(gulp.dest(outputPath));
     };
 }
+
+// function webpackTask(options) {
+//     var srcFile = './src/index.js';
+//     var destFile = path.join(__dirname, COMPILED_DIR, 'js', 'bundle.js');
+//     var command = 'webpack ' + srcFile + ' ' + destFile + ' --config ./webpack.config.js';
+//     if (options.watch) command += ' --watch';
+//     if (options.sourcemaps) command += ' -d';
+//     if (options.optimize) command += ' -p';
+//     return function (done) {
+//         console.log(command);
+//         exec(command, function (err, stdout, stderr) {
+//             if (stdout) console.log(stdout);
+//             if (stderr) console.log(stderr);
+//             done(err);
+//         });
+//     }
+// };
 
 function bundleLess(srcFile) {
     var lessString = fs.readFileSync(srcFile, {encoding: 'utf-8'});
@@ -103,7 +124,7 @@ gulp.task('watch-less', ['less'], function () {
 
 gulp.task('webpack', webpackTask({sourcemaps: true}));
 gulp.task('webpack-optimized', webpackTask({optimize: true}));
-gulp.task('watch-webpack', webpackTask({ watch: true, sourcemaps: true }));
+gulp.task('watch-webpack', webpackTask({ watch: true, optimize: false, sourcemaps: true }));
 
 gulp.task('jscs', function () {
     var jsxcs = require('gulp-jsxcs');

@@ -75,8 +75,8 @@ var Main = React.createClass({
                     <span className="icon ion-android-menu"></span>
                 </Link>
                 <h1>Mari&rsquo;s Cafe</h1>
-                <Link to="menu">
-                    <span className="icon ion-android-person"></span>
+                <Link to="add">
+                    <span className="icon ion-android-add"></span>
                 </Link>
             </nav>
             <div className="inner-page-container">

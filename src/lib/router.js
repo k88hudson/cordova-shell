@@ -19,6 +19,7 @@ var App = React.createClass({
 var routes = (
   <Route name="app" path="/" handler={App}>
     <Route name="menu" handler={require('../views/Menu/Menu')} />
+    <Route name="add" handler={require('../views/Add/Add')} />
     <Route name="thanks" handler={require('../views/Thanks/Thanks')} />
     <DefaultRoute name="main" handler={require('../views/Main/Main')}/>
   </Route>
