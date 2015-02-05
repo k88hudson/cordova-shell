@@ -1,5 +1,5 @@
 var React = require('react');
-
+var assign = require('react/lib/Object.assign');
 var deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0;
 
 module.exports = React.createClass({
@@ -95,14 +95,15 @@ module.exports = React.createClass({
         this.props.className && classNames.push(this.props.className);
         this.state.touchdown && classNames.push('touchdown');
 
-        return React.DOM[this.props.nodeName || 'button']({
+        var props = assign({}, this.props, {
             className: classNames.join(' '),
-            href: this.props.href,
             onTouchStart: this.onTouchStart,
             onTouchMove: this.onTouchMove,
             onTouchEnd: this.onTouchEnd,
             onTouchCancel: this.onTouchCancel,
             onClick: this.onClick
-        }, this.props.children);
+        });
+
+        return React.DOM[this.props.nodeName || 'button'](props, this.props.children);
     }
 });
